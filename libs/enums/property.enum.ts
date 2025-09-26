@@ -1,7 +1,7 @@
 export enum PropertyType {
 	HOTEL = 'HOTEL',
 	HISTORICAL = 'HISTORICAL',
-	RESORT = 'RESORT',
+	CULINARY = 'CULINARY',
 }
 
 export enum PropertyStatus {
