@@ -322,21 +322,23 @@ const HeaderFilter = (props: HeaderFilterProps) => {
 				<Stack className={'search-box'}>
 					<Stack className={'select-box'}>
 						<Box component={'div'} className={`box ${openLocation ? 'on' : ''}`} onClick={locationStateChangeHandler}>
-							<span>{searchFilter?.search?.locationList ? searchFilter?.search?.locationList[0] : t('Location')} </span>
+							<span>
+								{searchFilter?.search?.locationList ? searchFilter?.search?.locationList[0] : t('Destination')}{' '}
+							</span>
 							<ExpandMoreIcon />
 						</Box>
 						<Box className={`box ${openType ? 'on' : ''}`} onClick={typeStateChangeHandler}>
-							<span> {searchFilter?.search?.typeList ? searchFilter?.search?.typeList[0] : t('Property type')} </span>
+							<span> {searchFilter?.search?.typeList ? searchFilter?.search?.typeList[0] : t('Category')} </span>
 							<ExpandMoreIcon />
 						</Box>
-						<Box className={`box ${openRooms ? 'on' : ''}`} onClick={roomStateChangeHandler}>
+						{/* <Box className={`box ${openRooms ? 'on' : ''}`} onClick={roomStateChangeHandler}>
 							<span>
 								{searchFilter?.search?.roomsList ? `${searchFilter?.search?.roomsList[0]} rooms}` : t('Rooms')}
 							</span>
 							<ExpandMoreIcon />
-						</Box>
+						</Box> */}
 					</Stack>
-					<Stack className={'search-box-other'}>
+					{/* <Stack className={'search-box-other'}>
 						<Box className={'advanced-filter'} onClick={() => advancedFilterHandler(true)}>
 							<img src="/img/icons/tune.svg" alt="" />
 							<span>{t('Advanced')}</span>
@@ -344,7 +346,7 @@ const HeaderFilter = (props: HeaderFilterProps) => {
 						<Box className={'search-btn'} onClick={pushSearchHandler}>
 							<img src="/img/icons/search_white.svg" alt="" />
 						</Box>
-					</Stack>
+					</Stack> */}
 
 					{/*MENU */}
 					<div className={`filter-location ${openLocation ? 'on' : ''}`} ref={locationRef}>
@@ -372,7 +374,7 @@ const HeaderFilter = (props: HeaderFilterProps) => {
 						})}
 					</div>
 
-					<div className={`filter-rooms ${openRooms ? 'on' : ''}`} ref={roomsRef}>
+					{/* <div className={`filter-rooms ${openRooms ? 'on' : ''}`} ref={roomsRef}>
 						{[1, 2, 3, 4, 5].map((room: number) => {
 							return (
 								<span onClick={() => propertyRoomSelectHandler(room)} key={room}>
@@ -380,7 +382,7 @@ const HeaderFilter = (props: HeaderFilterProps) => {
 								</span>
 							);
 						})}
-					</div>
+					</div> */}
 				</Stack>
 
 				{/* ADVANCED FILTER MODAL */}
