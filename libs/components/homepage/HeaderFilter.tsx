@@ -80,6 +80,7 @@ const HeaderFilter = (props: HeaderFilterProps) => {
 	}, []);
 
 	/** HANDLERS **/
+
 	const advancedFilterHandler = (status: boolean) => {
 		setOpenLocation(false);
 		setOpenRooms(false);
@@ -338,15 +339,17 @@ const HeaderFilter = (props: HeaderFilterProps) => {
 							<ExpandMoreIcon />
 						</Box> */}
 					</Stack>
-					{/* <Stack className={'search-box-other'}>
-						<Box className={'advanced-filter'} onClick={() => advancedFilterHandler(true)}>
-							<img src="/img/icons/tune.svg" alt="" />
-							<span>{t('Advanced')}</span>
-						</Box>
-						<Box className={'search-btn'} onClick={pushSearchHandler}>
-							<img src="/img/icons/search_white.svg" alt="" />
-						</Box>
-					</Stack> */}
+					{
+						<Stack className={'search-box-other'}>
+							<Box className={'advanced-filter'} onClick={() => advancedFilterHandler(true)}>
+								{/* <img src="/img/icons/tune.svg" alt="" /> */}
+								{/* <span>{t('Advanced')}</span> */}
+							</Box>
+							<Box className={'search-btn'} onClick={pushSearchHandler}>
+								<img className={'search-icon'} src="/img/icons/search01.svg" alt="" />
+							</Box>
+						</Stack>
+					}
 
 					{/*MENU */}
 					<div className={`filter-location ${openLocation ? 'on' : ''}`} ref={locationRef}>

@@ -102,32 +102,65 @@ const Top = () => {
 			elevation={0}
 			anchorOrigin={{
 				vertical: 'bottom',
-				horizontal: 'right',
+				horizontal: 'center',
 			}}
 			transformOrigin={{
 				vertical: 'top',
-				horizontal: 'right',
+				horizontal: 'center',
 			}}
 			{...props}
 		/>
 	))(({ theme }) => ({
 		'& .MuiPaper-root': {
 			top: '109px',
-			borderRadius: 6,
-			marginTop: theme.spacing(1),
+			borderRadius: 12,
+			marginTop: theme.spacing(1.5),
 			minWidth: 160,
-			color: theme.palette.mode === 'light' ? 'rgb(55, 65, 81)' : theme.palette.grey[300],
-			boxShadow:
-				'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
+			background: 'rgba(255, 255, 255, 0)', // to'liq shaffof
+			backdropFilter: 'blur(12px) saturate(150%)',
+			WebkitBackdropFilter: 'blur(12px) saturate(150%)',
+			boxShadow: '0 8px 25px rgba(0, 0, 0, 0.1)',
+			transition: 'all 0.3s ease',
+
 			'& .MuiMenu-list': {
 				padding: '4px 0',
 			},
+
 			'& .MuiMenuItem-root': {
+				display: 'flex',
+				alignItems: 'center',
+				gap: '10px',
+				padding: '8px 16px',
+				borderRadius: 8,
+				transition: 'all 0.3s ease',
+				cursor: 'pointer',
+
+				'&:hover': {
+					background: 'rgba(255, 255, 255, 0.05)',
+					transform: 'translateX(2px)',
+				},
+
+				// Text rangi uchun maxsus targeting
+				'& .MuiTypography-root': {
+					color: '#1e293b', // endi ishlaydi
+				},
+
 				'& .MuiSvgIcon-root': {
 					fontSize: 18,
-					color: theme.palette.text.secondary,
+					color: '#1e293b', // icon rangi
 					marginRight: theme.spacing(1.5),
 				},
+
+				'& img.img-flag': {
+					width: 24,
+					height: 17,
+					borderRadius: 4,
+					transition: 'transform 0.3s ease',
+					'&:hover': {
+						transform: 'scale(1.1)',
+					},
+				},
+
 				'&:active': {
 					backgroundColor: alpha(theme.palette.primary.main, theme.palette.action.selectedOpacity),
 				},
@@ -176,13 +209,13 @@ const Top = () => {
 									<div>{t('Home')}</div>
 								</Link>
 								<Link href={'/property'}>
-									<div>{t('Properties')}</div>
+									<div>{t('Places')}</div>
 								</Link>
 								<Link href={'/agent'}>
 									<div> {t('Agents')} </div>
 								</Link>
 								<Link href={'/community?articleCategory=FREE'}>
-									<div> {t('Community')} </div>
+									<div> {t('Experiences')} </div>
 								</Link>
 								{user?._id && (
 									<Link href={'/mypage'}>
@@ -250,7 +283,13 @@ const Top = () => {
 										</Box>
 									</Button>
 
-									<StyledMenu anchorEl={anchorEl2} open={drop} onClose={langClose} sx={{ position: 'absolute' }}>
+									<StyledMenu
+										className={'styled-menu'}
+										anchorEl={anchorEl2}
+										open={drop}
+										onClose={langClose}
+										sx={{ position: 'absolute' }}
+									>
 										<MenuItem disableRipple onClick={langChoice} id="en">
 											<img
 												className="img-flag"
@@ -270,6 +309,16 @@ const Top = () => {
 												alt={'koreanFlag'}
 											/>
 											{t('Korean')}
+										</MenuItem>
+										<MenuItem disableRipple onClick={langChoice} id="ru">
+											<img
+												className="img-flag"
+												src={'/img/flag/langtr.png'}
+												onClick={langChoice}
+												id="ru"
+												alt={'turkiyeFlag'}
+											/>
+											{t('Turkish')}
 										</MenuItem>
 										<MenuItem disableRipple onClick={langChoice} id="ru">
 											<img
