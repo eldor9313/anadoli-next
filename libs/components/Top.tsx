@@ -196,7 +196,24 @@ const Top = () => {
 		return (
 			<Stack>
 				<Stack className={'navbar'}>
-					<Stack className={'home-top'}></Stack>
+					<Stack className={'home-top'}>
+						<Box className={'top-left'}>
+							<span className={'text first-text'}>Welcome to Anadoli.</span>
+							<span className={'text second-text'}>
+								Discover the soul of Turkey through its hotels, historical treasures, and culinary delights.
+							</span>
+						</Box>
+						<Box className={'top-right'}>
+							<svg className={'icon1'} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+								<path
+									d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.2.48 2.53.74 3.9.74a1 1 0 011 1v3.5a1 1 0 01-1 1C10.07 22 2 13.93 2 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.37.26 2.7.74 3.9a1 1 0 01-.21 1.11l-2.2 2.2z"
+									fill="currentColor"
+								/>
+							</svg>
+
+							<span className={'phone'}>+82 10 8747-9313</span>
+						</Box>
+					</Stack>
 					<Stack className={`navbar-main ${colorChange ? 'transparent' : ''} ${bgColor ? 'transparent' : ''}`}>
 						<Stack className={'container'}>
 							<Box component={'div'} className={'logo-box'}>

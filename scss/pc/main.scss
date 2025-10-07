@@ -51,7 +51,94 @@ body::-webkit-scrollbar {
 				width: 100%;
 				height: 37px;
 				background: linear-gradient(90deg, #67a0c9, #15bfdd, #a8ddbe);
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-around;
+				overflow: hidden;
+				position: relative;
 			}
+			.top-left {
+				position: relative;
+				width: 70%; /* joy ajratiladi, shunda matn siqilmaydi */
+				height: 20px;
+				color: white;
+				font-size: 15px;
+				font-weight: 500;
+				text-align: center;
+				overflow: hidden;
+			}
+			.text {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				text-align: start;
+				opacity: 0;
+				animation: fadeText 8s infinite;
+				white-space: nowrap;
+			}
+
+			.first-text {
+				animation-delay: 0s;
+			}
+
+			.second-text {
+				animation-delay: 4s;
+			}
+
+			@keyframes fadeText {
+				0% {
+					opacity: 0;
+				}
+				5% {
+					opacity: 1;
+				}
+				45% {
+					opacity: 1;
+				}
+				50% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+
+			.top-right {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				width: 170px;
+				height: 27px;
+				border-radius: 60px;
+				border: 1px solid rgba(255, 255, 255, 0.7);
+				cursor: pointer;
+				gap: 8px;
+
+				.icon1 {
+					width: 18px;
+					height: 18px;
+					color: #ffffff;
+					transition: color 0.35s ease;
+				}
+
+				.phone {
+					font-family: 'Poppins', sans-serif;
+					font-size: 13px;
+					font-weight: 450;
+					color: #ffffff;
+					letter-spacing: 0.3px;
+					transition: color 0.35s ease;
+				}
+
+				&:hover {
+					background: linear-gradient(90deg, #67a0c9, #15bfdd);
+					box-shadow: 0 4px 12px rgba(103, 160, 201, 0.4);
+				}
+			}
+
 			.navbar-main {
 				position: fixed;
 				top: 40px;
@@ -157,14 +244,14 @@ body::-webkit-scrollbar {
 							font-family: $font;
 							font-size: 14px;
 							font-style: normal;
-							font-weight: 600;
+							font-weight: 550;
 							line-height: normal;
 							color: #1e293b;
 						}
 
 						&:hover {
 							background: linear-gradient(90deg, #67a0c9, #15bfdd);
-							color: #fff;
+							box-shadow: 0 4px 12px rgba(103, 160, 201, 0.4);
 							border: none;
 						}
 					}
@@ -240,6 +327,7 @@ body::-webkit-scrollbar {
 	position: relative;
 	width: 100%;
 	height: 750px;
+	z-index: 10;
 	.header-main {
 		background-size: cover;
 		.header-backgrounds {
@@ -267,23 +355,23 @@ body::-webkit-scrollbar {
 		}
 	}
 	.container {
+		display: flex;
 		position: relative;
 		margin-top: 20px;
 		flex-direction: column;
 		align-items: center;
+		justify-content: center;
 		.search-box {
 			position: relative;
-			margin-top: 520px;
-			margin-left: 600px;
+			margin-top: 500px;
 			padding: 16px 29px;
 			width: 600px;
 			height: 96px;
 			display: flex;
 			flex-direction: row;
-			justify-content: space-between;
+			justify-content: center;
 			align-items: center;
 			border: 1px solid rgb(179, 179, 179);
-
 			background: linear-gradient(90deg, rgba(255, 255, 255, 0.15), rgba(240, 240, 255, 0.15));
 			backdrop-filter: blur(12px) saturate(150%);
 			box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.2);
@@ -353,7 +441,7 @@ body::-webkit-scrollbar {
 					display: flex;
 					align-items: center;
 					justify-content: center;
-					border-radius: 50%; /* radius 55px o‘rniga 50% to‘liq dumaloq */
+					border-radius: 50%;
 					background: rgba(255, 255, 255, 0.575);
 					backdrop-filter: blur(12px) saturate(150%);
 					-webkit-backdrop-filter: blur(12px) saturate(150%);
@@ -369,7 +457,7 @@ body::-webkit-scrollbar {
 					.search-icon {
 						width: 20px;
 						height: 20px;
-						color: #1e293b; // text/icon rangini men yuqoriga moslashtirdim
+						color: #1e293b;
 						transition: transform 0.3s ease;
 					}
 
@@ -380,24 +468,21 @@ body::-webkit-scrollbar {
 			}
 			.filter-location {
 				position: absolute;
-				padding: 40px 60px;
-				width: 1094px;
+				padding: 35px 40px;
+				width: 1050px;
 				min-height: 120px;
 				height: auto;
 				top: 96px;
-				right: 0px;
 				display: flex;
 				flex-direction: row;
+				justify-content: center;
 				flex-wrap: wrap;
-				gap: 40px;
+				gap: 35px;
 				visibility: hidden;
 				border-radius: 16px;
 				background: #ffffff;
 				box-shadow: rgba(0, 0, 0, 0.15) 0px 8px 30px;
 				box-sizing: border-box;
-				z-index: 2;
-
-				// chiqishda biroz smooth animatsiya
 				opacity: 0;
 				transform: translateY(-15px);
 				transition: all 0.8s ease;
@@ -442,7 +527,7 @@ body::-webkit-scrollbar {
 						transition: color 0.3s ease;
 
 						&:hover {
-							color: #ff6b35; // zamonaviy accent rang
+							color: #ff6b35;
 						}
 					}
 
@@ -454,12 +539,11 @@ body::-webkit-scrollbar {
 
 			.filter-type {
 				position: absolute;
-				padding: 50px;
-				width: 1094px;
+				padding: 35px;
+				width: 1000px;
 				min-height: 120px;
 				height: auto;
 				top: 96px;
-				right: 0px;
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
@@ -483,8 +567,8 @@ body::-webkit-scrollbar {
 
 				div {
 					position: relative;
-					width: 272px;
-					height: 168px;
+					width: 252px;
+					height: 148px;
 					border-radius: 15px;
 					cursor: pointer;
 					background-size: cover;
@@ -492,7 +576,6 @@ body::-webkit-scrollbar {
 					overflow: hidden;
 					transition: transform 0.4s ease, box-shadow 0.4s ease;
 
-					// Hover effekt (zoom + shadow)
 					&:hover {
 						transform: scale(1.05);
 						box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 25px;
@@ -500,21 +583,20 @@ body::-webkit-scrollbar {
 
 					span {
 						position: absolute;
-						left: 16px;
-						bottom: 16px;
+						left: 12px;
+						bottom: 12px;
 						padding: 6px 12px;
 						border-radius: 8px;
 						font-family: $font;
 						font-size: 18px;
-						font-weight: 600;
-						line-height: 22px;
+						font-weight: 500;
+						line-height: 20px;
 						color: #fff;
 						text-transform: capitalize;
-						background: rgba(24, 26, 32, 0.6); // matn orqasida yarim shaffof oq rang o‘rniga qora
-						backdrop-filter: blur(4px); // text tagida yumshoq blur
+						background: rgba(66, 70, 82, 0.6);
+						backdrop-filter: blur(4px);
 						transition: background 0.3s ease;
 
-						// Hover qilinganda matn fonini biroz kuchaytirish
 						div:hover & {
 							background: rgba(24, 26, 32, 0.75);
 						}
