@@ -116,7 +116,7 @@ const Top = () => {
 			borderRadius: 12,
 			marginTop: theme.spacing(1.5),
 			minWidth: 160,
-			background: 'rgba(255, 255, 255, 0)', // to'liq shaffof
+			background: 'rgba(255, 255, 255, 0)', 
 			backdropFilter: 'blur(12px) saturate(150%)',
 			WebkitBackdropFilter: 'blur(12px) saturate(150%)',
 			boxShadow: '0 8px 25px rgba(0, 0, 0, 0.1)',
@@ -140,14 +140,13 @@ const Top = () => {
 					transform: 'translateX(2px)',
 				},
 
-				// Text rangi uchun maxsus targeting
 				'& .MuiTypography-root': {
-					color: '#1e293b', // endi ishlaydi
+					color: '#1e293b', 
 				},
 
 				'& .MuiSvgIcon-root': {
 					fontSize: 18,
-					color: '#1e293b', // icon rangi
+					color: '#1e293b', 
 					marginRight: theme.spacing(1.5),
 				},
 

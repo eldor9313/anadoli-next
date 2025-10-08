@@ -14,11 +14,28 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-const slides = [
-	'/img/banner/header01.webp',
-	'/img/banner/header02.webp',
-	'/img/banner/header03.webp',
-	'/img/banner/header04.webp',
+const slideContents = [
+	{
+		type: 'imageGroup',
+		src: '/img/banner/header01.webp',
+		slides: [
+			'/img/banner/header01.webp',
+			'/img/banner/header02.webp',
+			'/img/banner/header03.webp',
+			'/img/banner/header04.webp',
+		],
+		thumb: '/img/thumbs/travel.jpg',
+	},
+	{
+		type: 'video',
+		src: '/video/historic.mp4',
+		thumb: '/img/thumbs/culinary.jpg',
+	},
+	{
+		type: 'video',
+		src: '/video/cuisine.mp4',
+		thumb: '/img/thumbs/history.jpg',
+	},
 ];
 
 const withLayoutMain = (Component: any) => {
@@ -27,13 +44,27 @@ const withLayoutMain = (Component: any) => {
 		const user = useReactiveVar(userVar);
 
 		// Background img handler
-		const [activeSlide, setActiveSlide] = useState(0);
+		const [mainIndex, setMainIndex] = useState(0);
+		const [innerIndex, setInnerIndex] = useState(0);
 
 		useEffect(() => {
-			const interval = setInterval(() => {
-				setActiveSlide((prevIndex) => (prevIndex + 1) % slides.length);
-			}, 5000);
-			return () => clearInterval(interval);
+			if (slideContents[mainIndex]?.type === 'imageGroup') {
+				const innerTimer = setInterval(() => {
+					const current = slideContents[mainIndex];
+					if (current?.type === 'imageGroup' && current.slides?.length) {
+						setInnerIndex((prev) => (prev + 1) % current.slides.length);
+					}
+				}, 8000);
+				return () => clearInterval(innerTimer);
+			}
+		}, [mainIndex]);
+
+		useEffect(() => {
+			const mainTimer = setInterval(() => {
+				setMainIndex((prev) => (prev + 1) % slideContents.length);
+				setInnerIndex(0);
+			}, 8000);
+			return () => clearInterval(mainTimer);
 		}, []);
 
 		/** LIFECYCLES **/
@@ -77,28 +108,46 @@ const withLayoutMain = (Component: any) => {
 						<Stack id={'top'}>
 							<Top />
 						</Stack>
-						<Stack className={'header-top'}>
-							<Stack className={'header-main'}>
-								<div className="header-backgrounds">
-									{slides.map((url, index) => (
-										<div
-											key={url}
-											className={`background-slide ${index === activeSlide ? 'active' : ''}`}
-											style={{
-												backgroundImage: `url('${url}')`,
 
-												zIndex: index === activeSlide ? 2 : 1,
-											}}
-										/>
-									))}
-								</div>
-								{/* <FiberContainer /> */}
-							</Stack>
+						<Stack className={'header-main'}>
 							<Stack className={'container'}>
 								<HeaderFilter />
 							</Stack>
-						</Stack>
+							<Stack className={'main-hero-slider'}>
+								{/* Slides */}
+								{slideContents.map((slide, index) => (
+									<div key={index} className={`main-slide ${index === mainIndex ? 'active' : ''}`}>
+										{slide.type === 'imageGroup' ? (
+											<div className="image-group">
+												{slide.slides?.map((img, i) => (
+													<div
+														key={i}
+														className={`bg ${i === innerIndex ? 'active' : ''}`}
+														style={{ backgroundImage: `url(${img})` }}
+													/>
+												))}
+											</div>
+										) : (
+											<video src={slide.src} autoPlay muted loop playsInline preload="auto" />
+										)}
+									</div>
+								))}
 
+								{/* Overlay */}
+								<div className="overlay">
+									<h1>What's On</h1>
+								</div>
+
+								{/* Thumbnails (chap tomonda) */}
+								<div className="thumbnails">
+									{slideContents.map((slide, i) => (
+										<div key={i} className={`thumb ${i === mainIndex ? 'active' : ''}`} onClick={() => setMainIndex(i)}>
+											<img src={slide.thumb} alt={`thumb-${i}`} />
+										</div>
+									))}
+								</div>
+							</Stack>
+						</Stack>
 						<Stack id={'main'}>
 							<Component {...props} />
 						</Stack>
