@@ -76,8 +76,8 @@ const Events = () => {
 				<Stack className={'container'}>
 					<Stack className={'info-box'}>
 						<Box component={'div'} className={'left'}>
-							<span className={'white'}>Events</span>
-							<p className={'white'}>Events waiting your attention!</p>
+							<span className="white">Festivals & Events</span>
+							<p className="white">Discover Türkiye’s vibrant celebrations</p>
 						</Box>
 					</Stack>
 					<Stack className={'card-wrapper'}>
