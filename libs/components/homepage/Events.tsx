@@ -1,7 +1,6 @@
 import React from 'react';
 import { Stack, Box } from '@mui/material';
 import useDeviceDetect from '../../hooks/useDeviceDetect';
-
 interface EventData {
 	eventTitle: string;
 	city: string;
@@ -10,36 +9,33 @@ interface EventData {
 }
 const eventsData: EventData[] = [
 	{
-		eventTitle: 'Paradise City Theme Park',
-		city: 'Incheon',
-		description:
-			'Experience magic and wonder in Incheon with a visit to the night-themed indoor theme park Wonderbox at Paradise City!',
-		imageSrc: '/img/events/INCHEON.webp',
+		eventTitle: 'Istanbul Tulip Festival',
+		city: 'Istanbul',
+		description: 'Enjoy the stunning tulip displays at Istanbul’s annual festival!',
+		imageSrc: '/img/events/tulip.jpeg',
 	},
 	{
-		eventTitle: 'Taebaeksan Snow Festival',
-		city: 'Seoul',
-		description: 'If you have the opportunity to travel to South Korea, do not miss the Taebaeksan Snow Festival!',
-		imageSrc: '/img/events/SEOUL.webp',
+		eventTitle: 'Whirling Dervishes Festival',
+		city: 'Konya',
+		description: 'Witness the spiritual Whirling Dervishes ceremony in Konya!',
+		imageSrc: '/img/events/mevlana.jpeg',
 	},
 	{
-		eventTitle: 'Suseong Lake Event',
-		city: 'Daegu',
-		description: 'The Suseong Lake Festival is a culture and arts festival held alongside Suseongmot Lake!',
-		imageSrc: '/img/events/DAEGU.webp',
+		eventTitle: 'Camel Wrestling Festival',
+		city: 'Eskisehir',
+		description: 'Experience the thrilling Camel Wrestling Festival in Eskisehir!',
+		imageSrc: '/img/events/camel.jpg',
 	},
+
 	{
-		eventTitle: 'Sand Festival',
-		city: 'Busan',
-		description:
-			'Haeundae Sand Festival, the nation’s largest eco-friendly exhibition on sand, is held at Haeundae Beach!',
-		imageSrc: '/img/events/BUSAN.webp',
+		eventTitle: 'The Hot Air Balloon Festival',
+		city: 'Cappadocia',
+		description: 'See colorful hot air balloons over Cappadocia’s skies!',
+		imageSrc: '/img/events/ballon3.jpg',
 	},
 ];
-
 const EventCard = ({ event }: { event: EventData }) => {
 	const device = useDeviceDetect();
-
 	if (device === 'mobile') {
 		return <div>EVENT CARD</div>;
 	} else {
@@ -64,10 +60,8 @@ const EventCard = ({ event }: { event: EventData }) => {
 		);
 	}
 };
-
 const Events = () => {
 	const device = useDeviceDetect();
-
 	if (device === 'mobile') {
 		return <div>EVENT CARD</div>;
 	} else {
@@ -90,5 +84,4 @@ const Events = () => {
 		);
 	}
 };
-
 export default Events;

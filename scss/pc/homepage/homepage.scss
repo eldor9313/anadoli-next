@@ -735,17 +735,33 @@
 				}
 			}
 		}
+
 		.events {
 			position: relative;
-			padding: 60px 0px 60px;
+			padding: 60px 0 92px;
 			width: 100%;
 			height: 700px;
 			display: flex;
 			flex-direction: row;
-			background: #181a20;
+			background: linear-gradient(135deg, #1a1c24 0%, #2d3039 100%);
+			overflow: hidden;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: radial-gradient(circle at 20% 80%, rgba(22, 81, 190, 0.1) 0%, transparent 50%),
+					radial-gradient(circle at 80% 20%, rgba(242, 163, 101, 0.1) 0%, transparent 50%);
+				pointer-events: none;
+			}
+
 			.container {
 				flex-direction: column;
 				align-items: center;
+
 				.card-wrapper {
 					position: relative;
 					margin-top: 40px;
@@ -754,75 +770,91 @@
 					display: flex;
 					flex-direction: row;
 					justify-content: space-between;
+					gap: 20px;
+
 					.event-card {
 						position: relative;
 						width: 300px;
-						height: 420px;
-						border-radius: 12px;
+						height: 400px;
+						border-radius: 20px;
+						background: linear-gradient(135deg, #292b35, #1e1f28); // gradient fon
 						opacity: 0.9;
 						cursor: pointer;
-						transition: opacity 0.4s;
+						transition: all 0.4s ease;
+						box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+
 						&:hover {
 							opacity: 1;
-							scale: 1.05;
-							transition: 0.3s;
+							transform: scale(1.07);
+							transition: 0.3s ease;
+
 							.more {
 								opacity: 1;
+								transform: translateY(-5px);
+								transition: 0.3s ease;
 							}
 						}
+
 						.info {
 							position: absolute;
 							display: flex;
 							flex-direction: column;
-							top: 35px;
-							left: 10px;
-							right: 10px;
+							top: 15px;
+							left: 15px;
+							right: 15px;
+
 							strong {
-								color: #f64747;
+								color: #1651be;
 								font-family: $font;
-								font-size: 25px;
-								font-style: normal;
+								font-size: 24px;
 								font-weight: 600;
-								line-height: normal;
 								text-transform: capitalize;
+								margin-bottom: 8px;
 							}
+
 							span {
-								color: #f66767;
+								color: #f2a365;
 								font-family: $font;
-								font-size: 20px;
-								font-style: normal;
+								font-size: 14px;
 								font-weight: 500;
-								line-height: 28px;
+								line-height: 22px;
 								text-transform: capitalize;
 							}
 						}
+
 						.more {
 							position: absolute;
 							left: 10px;
 							right: 10px;
-							bottom: 41px;
+							bottom: 10px;
 							display: flex;
 							flex-direction: row;
 							align-items: center;
 							opacity: 0;
+
 							span {
-								padding: 0px 5px;
-								border-radius: 5px;
-								background: #fffdfdc4;
-								color: #9c67f6;
+								padding: 5px 10px;
+								border-radius: 15px;
+								background: rgba(255, 255, 255, 0.3);
+								color: #000000; // yorqin to'q sariq
 								font-family: $font;
-								font-size: 16px;
-								font-style: normal;
-								font-weight: 400;
-								line-height: 26px;
-								text-align: justify;
+								font-size: 15px;
+								font-weight: 500;
+								line-height: 24px;
 								cursor: pointer;
+								transition: background 0.3s, transform 0.3s;
+
+								&:hover {
+									background: rgba(255, 255, 255, 0.8);
+									transform: scale(1.05);
+								}
 							}
 						}
 					}
 				}
 			}
 		}
+
 		.community-board {
 			position: relative;
 			padding: 60px 0px 60px;

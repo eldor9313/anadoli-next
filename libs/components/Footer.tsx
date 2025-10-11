@@ -108,35 +108,19 @@ const Footer = () => {
 								<input type="text" placeholder={'Your Email'} />
 								<span>Subscribe</span>
 							</div>
-						</Box>
 
-						{/* <Box component={'div'} className={'bottom'}>
-							<div>
-								<strong>Popular Search</strong>
-								<span>Property for Rent</span>
-								<span>Property Low to hide</span>
-							</div>
-							<div>
-								<strong>Quick Links</strong>
-								<span>Terms of Use</span>
-								<span>Privacy Policy</span>
-								<span>Pricing Plans</span>
-								<span>Our Services</span>
-								<span>Contact Support</span>
-								<span>FAQs</span>
-							</div>
-							<div>
-								<strong>Discover</strong>
-								<span>Seoul</span>
-								<span>Gyeongido</span>
-								<span>Busan</span>
-								<span>Jejudo</span>
-							</div>
-						</Box> */}
+							<label className={'custom-checkbox'}>
+								<input type="checkbox" />
+								<span className={'checkmark'}></span>
+								<p>Your information is safe and secure. By subscribing, you consent to receive updates.</p>
+							</label>
+						</Box>
 					</Stack>
 				</Stack>
 				<Stack className={'second'}>
-					<span>© Anadoli 2025. All Rights Reserved.</span>
+					<span>
+						Copyright <span className="copyright"> © </span> Anadoli 2025. All Rights Reserved.
+					</span>
 					<div className={'pts'}>
 						<a href="/privacy">Privacy Policy</a>
 						<a href="/terms">Terms of Service</a>
