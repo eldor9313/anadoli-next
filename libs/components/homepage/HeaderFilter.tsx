@@ -376,16 +376,6 @@ const HeaderFilter = (props: HeaderFilterProps) => {
 							);
 						})}
 					</div>
-
-					{/* <div className={`filter-rooms ${openRooms ? 'on' : ''}`} ref={roomsRef}>
-						{[1, 2, 3, 4, 5].map((room: number) => {
-							return (
-								<span onClick={() => propertyRoomSelectHandler(room)} key={room}>
-									{room} room{room > 1 ? 's' : ''}
-								</span>
-							);
-						})}
-					</div> */}
 				</Stack>
 
 				{/* ADVANCED FILTER MODAL */}

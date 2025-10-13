@@ -264,13 +264,32 @@ body::-webkit-scrollbar {
 							border: none;
 						}
 					}
-
 					.login-user {
+						position: relative;
+						display: inline-flex;
+						align-items: center;
+						justify-content: center;
+						cursor: pointer;
+
 						img {
-							width: 42px;
-							height: 42px;
+							width: 45px;
+							height: 45px;
+							border: 1px solid #8f9ec2;
 							border-radius: 50%;
 							object-fit: cover;
+							transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+							box-shadow: 0 4px 12px rgba(74, 144, 226, 0.1);
+							background: linear-gradient(135deg, #f5f7fa 0%, #e3eaf7 100%);
+
+							&:hover {
+								transform: scale(1.08);
+								box-shadow: 0 6px 20px rgba(74, 144, 226, 0.1);
+								border-color: #357abd;
+							}
+
+							&:active {
+								transform: scale(0.95);
+							}
 						}
 					}
 				}
@@ -280,19 +299,42 @@ body::-webkit-scrollbar {
 					align-items: center;
 					padding: 6px 12px;
 					border-radius: 12px;
-
+					gap: 10px;
 					transition: all 0.3s ease;
 
-					&:hover {
-						box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-						transform: translateY(-2px);
-					}
+					// &:hover {
+					// 	// box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+					// 	// transform: translateY(-2px);
+					// }
 
 					.notification-icon {
-						color: #1e293b;
-						font-size: 18px;
-						margin-right: 8px;
-						transition: color 0.3s ease;
+						color: #334155; // biroz chuqurroq kulrang
+						font-size: 22px;
+						margin-right: 10px;
+						cursor: pointer;
+						transition: all 0.25s ease-in-out;
+						position: relative;
+
+						&::after {
+							content: '';
+							position: absolute;
+							top: -4px;
+							right: -4px;
+							width: 8px;
+							height: 8px;
+							background-color: #ef4444; // qizil nuqta (bildirishnoma belgisi)
+							border-radius: 50%;
+							display: none;
+						}
+
+						&:hover {
+							transform: scale(1.12);
+							text-shadow: 0 2px 6px rgba(33, 124, 199, 0.3);
+						}
+
+						&.active::after {
+							display: block;
+						}
 					}
 
 					.btn-lang {
