@@ -509,7 +509,7 @@
 						color: #ffffff;
 						font-family: $font;
 						font-size: 45px;
-						font-style: bold;
+						font-style: normal;
 						font-weight: 600;
 						line-height: 150%;
 						text-transform: capitalize;
@@ -902,9 +902,9 @@
 		}
 		.top-agents {
 			position: relative;
-			padding: 60px 0px 60px;
+			padding: 153px 0px 135px;
 			width: 100%;
-			height: 697px;
+			height: 800px;
 			display: flex;
 			flex-direction: row;
 			background: #f6f6f6;
@@ -949,7 +949,6 @@
 							flex-direction: row;
 							.top-agents-slide {
 								width: auto;
-								height: auto;
 								display: flex;
 							}
 						}
@@ -961,7 +960,7 @@
 							img {
 								width: 209px;
 								height: 209px;
-								border-radius: 50%;
+								border-radius: 15px;
 								cursor: pointer;
 								object-fit: cover;
 							}

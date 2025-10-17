@@ -149,7 +149,7 @@ const withLayoutMain = (Component: any) => {
 										)}
 									</div>
 								))}
-								{/* Thumbnails (chap tomonda) */}
+
 								<div className="thumbnails">
 									{slideContents.map((slide, i) => (
 										<div

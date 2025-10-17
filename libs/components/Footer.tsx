@@ -4,7 +4,7 @@ import TelegramIcon from '@mui/icons-material/Telegram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import useDeviceDetect from '../hooks/useDeviceDetect';
-import { Stack, Box } from '@mui/material';
+import { Stack, Box, Link } from '@mui/material';
 import moment from 'moment';
 
 const Footer = () => {
@@ -94,7 +94,9 @@ const Footer = () => {
 					</Stack>
 					<Stack>
 						<Box className={'footer-box'}>
-							<img src="/img/logo/logofoot001.png" alt="" className={'logo'} />
+							<Link href={'/'}>
+								<img src="/img/logo/logofoot001.png" alt="" className={'logo'} />
+							</Link>
 						</Box>
 					</Stack>
 					<Stack className={'right'}>

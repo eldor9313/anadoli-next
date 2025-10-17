@@ -148,7 +148,7 @@ body::-webkit-scrollbar {
 				top: 30px;
 				left: 0;
 				z-index: 99;
-				padding-top: 0px 20px;
+				padding: 0px 20px;
 				width: 100%;
 				height: 77px;
 				display: flex;
@@ -156,10 +156,10 @@ body::-webkit-scrollbar {
 				box-sizing: border-box;
 				align-items: center;
 
-				backdrop-filter: blur(12px) saturate(150%);
-				-webkit-backdrop-filter: blur(12px);
-				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-				background: linear-gradient(90deg, rgba(255, 255, 255, 0.15), rgba(240, 240, 255, 0.15));
+				// backdrop-filter: blur(12px) saturate(150%);
+				// -webkit-backdrop-filter: blur(12px);
+				// box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+				// background: linear-gradient(90deg, rgba(255, 255, 255, 0.15), rgba(240, 240, 255, 0.15));
 				&.transparent {
 					backdrop-filter: blur(12px) saturate(150%);
 					-webkit-backdrop-filter: blur(12px);
@@ -375,6 +375,7 @@ body::-webkit-scrollbar {
 	.container {
 		position: absolute;
 		top: 65%;
+		display: flex;
 		flex-direction: column;
 		align-items: center;
 		z-index: 10;
@@ -763,7 +764,7 @@ body::-webkit-scrollbar {
 .header-basic {
 	position: relative;
 	width: 100%;
-	height: 557px;
+	height: 470px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -772,11 +773,11 @@ body::-webkit-scrollbar {
 		height: 300px;
 	}
 	.container {
-		margin-top: 175px;
+		top: 80px;
 		strong {
 			color: #fff;
 			font-family: $font;
-			font-size: 48px;
+			font-size: 38px;
 			font-style: normal;
 			font-weight: 600;
 			line-height: normal;
@@ -786,7 +787,7 @@ body::-webkit-scrollbar {
 		span {
 			color: #fff;
 			font-family: $font;
-			font-size: 24px;
+			font-size: 20px;
 			font-style: normal;
 			font-weight: 400;
 			line-height: 26px;

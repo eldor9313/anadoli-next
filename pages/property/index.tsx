@@ -139,28 +139,13 @@ const PropertyList: NextPage = ({ initialInput, ...props }: any) => {
 								{filterSortName}
 							</Button>
 							<Menu anchorEl={anchorEl} open={sortingOpen} onClose={sortingCloseHandler} sx={{ paddingTop: '5px' }}>
-								<MenuItem
-									onClick={sortingHandler}
-									id={'new'}
-									disableRipple
-									sx={{ boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px' }}
-								>
+								<MenuItem onClick={sortingHandler} id={'new'} disableRipple>
 									New
 								</MenuItem>
-								<MenuItem
-									onClick={sortingHandler}
-									id={'lowest'}
-									disableRipple
-									sx={{ boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px' }}
-								>
+								<MenuItem onClick={sortingHandler} id={'lowest'} disableRipple>
 									Lowest Price
 								</MenuItem>
-								<MenuItem
-									onClick={sortingHandler}
-									id={'highest'}
-									disableRipple
-									sx={{ boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px' }}
-								>
+								<MenuItem onClick={sortingHandler} id={'highest'} disableRipple>
 									Highest Price
 								</MenuItem>
 							</Menu>
