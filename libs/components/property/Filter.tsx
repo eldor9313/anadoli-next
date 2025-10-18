@@ -575,6 +575,25 @@ const Filter = (props: FilterType) => {
 					</Stack>
 				</Stack>
 				<Stack className={'find-your-home'} mb={'30px'}>
+					<Typography className={'title'}>Category</Typography>
+					{propertyType.map((type: string) => (
+						<Stack className={'input-box'} key={type}>
+							<Checkbox
+								id={type}
+								className="property-checkbox"
+								color="default"
+								size="small"
+								value={type}
+								onChange={propertyTypeSelectHandler}
+								checked={(searchFilter?.search?.typeList || []).includes(type as PropertyType)}
+							/>
+							<label style={{ cursor: 'pointer' }}>
+								<Typography className="property_type">{type}</Typography>
+							</label>
+						</Stack>
+					))}
+				</Stack>
+				<Stack className={'find-your-home'} mb={'30px'}>
 					<p className={'title'}>Destination</p>
 					<Stack
 						className={`property-location`}
@@ -605,25 +624,7 @@ const Filter = (props: FilterType) => {
 						})}
 					</Stack>
 				</Stack>
-				<Stack className={'find-your-home'} mb={'30px'}>
-					<Typography className={'title'}>Category</Typography>
-					{propertyType.map((type: string) => (
-						<Stack className={'input-box'} key={type}>
-							<Checkbox
-								id={type}
-								className="property-checkbox"
-								color="default"
-								size="small"
-								value={type}
-								onChange={propertyTypeSelectHandler}
-								checked={(searchFilter?.search?.typeList || []).includes(type as PropertyType)}
-							/>
-							<label style={{ cursor: 'pointer' }}>
-								<Typography className="property_type">{type}</Typography>
-							</label>
-						</Stack>
-					))}
-				</Stack>
+
 				<Stack className={'find-your-home'}>
 					<Typography className={'title'}>Price</Typography>
 					<Stack className="square-year-input">

@@ -96,30 +96,64 @@ const PopularPropertyCard = (props: PopularPropertyCardProps) => {
 						''
 					)}
 
-					<div className={'price'}>${property.propertyPrice}</div>
+					<div className={'price-box'}>${property.propertyPrice}</div>
 				</Box>
 				<Box component={'div'} className={'info'}>
 					<strong className={'title'} onClick={() => pushDetailHandler(property._id)}>
 						{property.propertyTitle}
 					</strong>
 					<p className={'desc'}>{property.propertyAddress}</p>
-					<div className={'options'}>
-						<div>
-							<img src="/img/icons/bed.svg" alt="" />
-							<span>{property?.propertyBeds} bed</span>
-						</div>
-						<div>
-							<img src="/img/icons/room.svg" alt="" />
-							<span>{property?.propertyRooms} rooms</span>
-						</div>
-						<div>
-							<img src="/img/icons/expand.svg" alt="" />
-							<span>{property?.propertySquare} m2</span>
-						</div>
-					</div>
+					{property.propertyType === 'HOTEL' && (
+						<Stack className="options">
+							<Stack className="option">
+								<img src="/img/icons/bed.svg" alt="" />
+								<span>{property.propertyBeds} bed</span>
+							</Stack>
+							<Stack className="option">
+								<img src="/img/icons/room.svg" alt="" />
+								<span>{property.propertyRooms} room</span>
+							</Stack>
+							<Stack className="option">
+								<img src="/img/icons/expand.svg" alt="" />
+								<span>{property.propertySquare} m2</span>
+							</Stack>
+						</Stack>
+					)}
+					{property.propertyType === 'HISTORICAL' && (
+						<Stack className="options">
+							<Stack className="option">
+								<img src="/img/icons/card/wifi.svg" alt="" />
+								<span> Wifi</span>
+							</Stack>
+							<Stack className="option">
+								<img src="/img/icons/card/parking.svg" alt="" />
+								<span> Parking</span>
+							</Stack>
+							<Stack className="option">
+								<img src="/img/icons/card/map.svg" alt="" />
+								<span>Map</span>
+							</Stack>
+						</Stack>
+					)}
+					{property.propertyType === 'CULINARY' && (
+						<Stack className="options">
+							<Stack className="option">
+								<img src="/img/icons/card/wifi.svg" alt="" />
+								<span> Wifi</span>
+							</Stack>
+							<Stack className="option">
+								<img src="/img/icons/card/parking.svg" alt="" />
+								<span> Parking</span>
+							</Stack>
+							<Stack className="option">
+								<img src="/img/icons/card/halal1.svg" alt="" />
+								<span>Halal</span>
+							</Stack>
+						</Stack>
+					)}
 					<Divider sx={{ mt: '15px', mb: '17px' }} />
 					<div className={'bott'}>
-						<p>{property?.propertyRent ? 'rent' : 'sale'}</p>
+						<p>{property?.propertyType}</p>
 						<div className="view-like-box">
 							<IconButton color={'default'}>
 								<RemoveRedEyeIcon />

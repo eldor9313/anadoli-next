@@ -44,7 +44,7 @@ const PropertyCard = (props: PropertyCardType) => {
 					{property && property?.propertyRank > topPropertyRank && (
 						<Box component={'div'} className={'top-badge'}>
 							<img src="/img/icons/electricity.svg" alt="" />
-							<Typography>TOP</Typography>
+							<span>TOP</span>
 						</Box>
 					)}
 					<Box component={'div'} className={'price-box'}>
@@ -69,6 +69,54 @@ const PropertyCard = (props: PropertyCardType) => {
 							</Typography>
 						</Stack>
 					</Stack>
+					{property.propertyType === 'HOTEL' && (
+						<Stack className="options">
+							<Stack className="option">
+								<img src="/img/icons/bed.svg" alt="" />
+								<Typography>{property.propertyBeds} bed</Typography>
+							</Stack>
+							<Stack className="option">
+								<img src="/img/icons/room.svg" alt="" />
+								<Typography>{property.propertyRooms} room</Typography>
+							</Stack>
+							<Stack className="option">
+								<img src="/img/icons/expand.svg" alt="" />
+								<Typography>{property.propertySquare} m2</Typography>
+							</Stack>
+						</Stack>
+					)}
+					{property.propertyType === 'HISTORICAL' && (
+						<Stack className="options">
+							<Stack className="option">
+								<img src="/img/icons/card/wifi.svg" alt="" />
+								<Typography> Wifi</Typography>
+							</Stack>
+							<Stack className="option">
+								<img src="/img/icons/card/parking.svg" alt="" />
+								<Typography> Parking</Typography>
+							</Stack>
+							<Stack className="option">
+								<img src="/img/icons/card/map.svg" alt="" />
+								<Typography>Map</Typography>
+							</Stack>
+						</Stack>
+					)}
+					{property.propertyType === 'CULINARY' && (
+						<Stack className="options">
+							<Stack className="option">
+								<img src="/img/icons/card/wifi.svg" alt="" />
+								<Typography> Wifi</Typography>
+							</Stack>
+							<Stack className="option">
+								<img src="/img/icons/card/parking.svg" alt="" />
+								<Typography> Parking</Typography>
+							</Stack>
+							<Stack className="option">
+								<img src="/img/icons/card/halal1.svg" alt="" />
+								<Typography>Halal</Typography>
+							</Stack>
+						</Stack>
+					)}
 					<Stack className="divider"></Stack>
 					<Stack className="type-buttons">
 						<Stack className="type">
@@ -82,9 +130,9 @@ const PropertyCard = (props: PropertyCardType) => {
 								<Typography className="view-cnt">{property?.propertyViews}</Typography>
 								<IconButton color={'default'} onClick={() => likePropertyHandler(user, property?._id)}>
 									{myFavorites ? (
-										<FavoriteIcon color="primary" />
+										<FavoriteIcon color="secondary" />
 									) : property?.meLiked && property?.meLiked[0]?.myFavorite ? (
-										<FavoriteIcon color="primary" />
+										<FavoriteIcon style={{ color: ' #217cc7' }} />
 									) : (
 										<FavoriteBorderIcon />
 									)}

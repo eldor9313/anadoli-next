@@ -90,7 +90,7 @@ const TopAgents = (props: TopAgentsProps) => {
 							<Swiper
 								className={'top-agents-swiper'}
 								slidesPerView={'auto'}
-								spaceBetween={29}
+								spaceBetween={13}
 								modules={[Autoplay, Navigation, Pagination]}
 								navigation={{
 									nextEl: '.swiper-agents-next',
