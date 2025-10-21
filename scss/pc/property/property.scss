@@ -279,8 +279,9 @@
 									align-items: center;
 									gap: 6px;
 									padding: 6px 16px;
+									border: 1px solid #8a8989;
 									border-radius: 20px;
-									background: rgba(247, 46, 43, 0.9);
+									background: rgb(0, 81, 255);
 									color: #fff;
 
 									font-family: $font;
@@ -296,11 +297,6 @@
 										width: 14px;
 										height: 14px;
 										filter: brightness(0) invert(1);
-									}
-
-									&:hover {
-										box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-										background: rgba(233, 44, 40, 1);
 									}
 
 									@media (max-width: 600px) {
@@ -355,7 +351,7 @@
 										height: 23px;
 										overflow: hidden;
 										p {
-											color: #166de0;
+											color: #181a20;
 											font-family: $font;
 											font-size: 17px;
 											font-style: normal;
@@ -413,7 +409,7 @@
 										align-items: center;
 										gap: 7px;
 										p {
-											color: #c77304;
+											color: #166de0;
 											font-family: $font;
 											font-size: 14px;
 											font-weight: 500;
@@ -446,27 +442,34 @@
 							}
 						}
 					}
-					// .pagination-config {
-					// 	width: 442px;
-					// 	height: 86px;
-					// 	align-items: center;
-					// 	gap: 20px;
-					// 	.pagination-box {
-					// 		width: 100%;
-					// 		align-items: center;
-					// 	}
-					// 	.total-result {
-					// 		p {
-					// 			color: #181a20;
-					// 			text-align: center;
-					// 			font-family: $font;
-					// 			font-size: 24px;
-					// 			font-style: normal;
-					// 			font-weight: 275;
-					// 			line-height: 26px;
-					// 		}
-					// 	}
-					// }
+					.pagination-config {
+						width: 442px;
+						height: 86px;
+						align-items: center;
+						gap: 20px;
+
+						.pagination-box {
+							width: 100%;
+							align-items: center;
+
+							.Mui-selected {
+								background-color: #166de0 !important;
+								color: #fff !important;
+							}
+						}
+
+						.total-result {
+							p {
+								color: #181a20;
+								text-align: center;
+								font-family: $font;
+								font-size: 22px;
+								font-style: normal;
+								font-weight: 275;
+								line-height: 26px;
+							}
+						}
+					}
 				}
 			}
 		}

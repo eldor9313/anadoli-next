@@ -120,9 +120,9 @@ const AddProperty = ({ initialValues, ...props }: any) => {
 			insertPropertyData.propertyAddress === '' || // @ts-ignore
 			insertPropertyData.propertyBarter === '' || // @ts-ignore
 			insertPropertyData.propertyRent === '' ||
-			insertPropertyData.propertyRooms === 0 ||
-			insertPropertyData.propertyBeds === 0 ||
-			insertPropertyData.propertySquare === 0 ||
+			// insertPropertyData.propertyRooms === 0 ||
+			// insertPropertyData.propertyBeds === 0 ||
+			// insertPropertyData.propertySquare === 0 ||
 			insertPropertyData.propertyDesc === '' ||
 			insertPropertyData.propertyImages.length === 0
 		) {
@@ -286,111 +286,80 @@ const AddProperty = ({ initialValues, ...props }: any) => {
 								</Stack>
 							</Stack>
 
-							<Stack className="config-row">
-								<Stack className="price-year-after-price">
-									<Typography className="title">Barter</Typography>
-									<select
-										className={'select-description'}
-										value={insertPropertyData.propertyBarter ? 'yes' : 'no'}
-										defaultValue={insertPropertyData.propertyBarter ? 'yes' : 'no'}
-										onChange={({ target: { value } }) =>
-											setInsertPropertyData({ ...insertPropertyData, propertyBarter: value === 'yes' })
-										}
-									>
-										<option disabled={true} selected={true}>
-											Select
-										</option>
-										<option value={'yes'}>Yes</option>
-										<option value={'no'}>No</option>
-									</select>
-									<div className={'divider'}></div>
-									<img src={'/img/icons/Vector.svg'} className={'arrow-down'} />
-								</Stack>
-								<Stack className="price-year-after-price">
-									<Typography className="title">Rent</Typography>
-									<select
-										className={'select-description'}
-										value={insertPropertyData.propertyRent ? 'yes' : 'no'}
-										defaultValue={insertPropertyData.propertyRent ? 'yes' : 'no'}
-										onChange={({ target: { value } }) =>
-											setInsertPropertyData({ ...insertPropertyData, propertyRent: value === 'yes' })
-										}
-									>
-										<option disabled={true} selected={true}>
-											Select
-										</option>
-										<option value={'yes'}>Yes</option>
-										<option value={'no'}>No</option>
-									</select>
-									<div className={'divider'}></div>
-									<img src={'/img/icons/Vector.svg'} className={'arrow-down'} />
-								</Stack>
-							</Stack>
-
-							<Stack className="config-row">
-								<Stack className="price-year-after-price">
-									<Typography className="title">Rooms</Typography>
-									<select
-										className={'select-description'}
-										value={insertPropertyData.propertyRooms || 'select'}
-										defaultValue={insertPropertyData.propertyRooms || 'select'}
-										onChange={({ target: { value } }) =>
-											setInsertPropertyData({ ...insertPropertyData, propertyRooms: parseInt(value) })
-										}
-									>
-										<option disabled={true} selected={true} value={'select'}>
-											Select
-										</option>
-										{[1, 2, 3, 4, 5].map((room: number) => (
-											<option value={`${room}`}>{room}</option>
-										))}
-									</select>
-									<div className={'divider'}></div>
-									<img src={'/img/icons/Vector.svg'} className={'arrow-down'} />
-								</Stack>
-								<Stack className="price-year-after-price">
-									<Typography className="title">Bed</Typography>
-									<select
-										className={'select-description'}
-										value={insertPropertyData.propertyBeds || 'select'}
-										defaultValue={insertPropertyData.propertyBeds || 'select'}
-										onChange={({ target: { value } }) =>
-											setInsertPropertyData({ ...insertPropertyData, propertyBeds: parseInt(value) })
-										}
-									>
-										<option disabled={true} selected={true} value={'select'}>
-											Select
-										</option>
-										{[1, 2, 3, 4, 5].map((bed: number) => (
-											<option value={`${bed}`}>{bed}</option>
-										))}
-									</select>
-									<div className={'divider'}></div>
-									<img src={'/img/icons/Vector.svg'} className={'arrow-down'} />
-								</Stack>
-								<Stack className="price-year-after-price">
-									<Typography className="title">Square</Typography>
-									<select
-										className={'select-description'}
-										value={insertPropertyData.propertySquare || 'select'}
-										defaultValue={insertPropertyData.propertySquare || 'select'}
-										onChange={({ target: { value } }) =>
-											setInsertPropertyData({ ...insertPropertyData, propertySquare: parseInt(value) })
-										}
-									>
-										<option disabled={true} selected={true} value={'select'}>
-											Select
-										</option>
-										{propertySquare.map((square: number) => {
-											if (square !== 0) {
-												return <option value={`${square}`}>{square}</option>;
+							{insertPropertyData.propertyType === 'HOTEL' && (
+								<Stack className="config-row">
+									<Stack className="price-year-after-price">
+										<Typography className="title">Rooms</Typography>
+										<select
+											className={'select-description'}
+											value={insertPropertyData.propertyRooms || 'select'}
+											defaultValue={insertPropertyData.propertyRooms || 'select'}
+											onChange={({ target: { value } }) =>
+												setInsertPropertyData({ ...insertPropertyData, propertyRooms: parseInt(value) })
 											}
-										})}
-									</select>
-									<div className={'divider'}></div>
-									<img src={'/img/icons/Vector.svg'} className={'arrow-down'} />
+										>
+											<option disabled value={'select'}>
+												Select
+											</option>
+											{[1, 2, 3, 4, 5].map((room) => (
+												<option key={room} value={room}>
+													{room}
+												</option>
+											))}
+										</select>
+										<div className={'divider'}></div>
+										<img src={'/img/icons/Vector.svg'} className={'arrow-down'} />
+									</Stack>
+
+									<Stack className="price-year-after-price">
+										<Typography className="title">Bed</Typography>
+										<select
+											className={'select-description'}
+											value={insertPropertyData.propertyBeds || 'select'}
+											defaultValue={insertPropertyData.propertyBeds || 'select'}
+											onChange={({ target: { value } }) =>
+												setInsertPropertyData({ ...insertPropertyData, propertyBeds: parseInt(value) })
+											}
+										>
+											<option disabled value={'select'}>
+												Select
+											</option>
+											{[1, 2, 3, 4, 5].map((bed) => (
+												<option key={bed} value={bed}>
+													{bed}
+												</option>
+											))}
+										</select>
+										<div className={'divider'}></div>
+										<img src={'/img/icons/Vector.svg'} className={'arrow-down'} />
+									</Stack>
+
+									<Stack className="price-year-after-price">
+										<Typography className="title">Square</Typography>
+										<select
+											className={'select-description'}
+											value={insertPropertyData.propertySquare || 'select'}
+											defaultValue={insertPropertyData.propertySquare || 'select'}
+											onChange={({ target: { value } }) =>
+												setInsertPropertyData({ ...insertPropertyData, propertySquare: parseInt(value) })
+											}
+										>
+											<option disabled value={'select'}>
+												Select
+											</option>
+											{propertySquare.map((square) =>
+												square !== 0 ? (
+													<option key={square} value={square}>
+														{square}
+													</option>
+												) : null,
+											)}
+										</select>
+										<div className={'divider'}></div>
+										<img src={'/img/icons/Vector.svg'} className={'arrow-down'} />
+									</Stack>
 								</Stack>
-							</Stack>
+							)}
 
 							<Typography className="property-title">Property Description</Typography>
 							<Stack className="config-column">

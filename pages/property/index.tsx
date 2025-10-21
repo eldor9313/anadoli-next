@@ -179,7 +179,6 @@ const PropertyList: NextPage = ({ initialInput, ...props }: any) => {
 											count={Math.ceil(total / searchFilter.limit)}
 											onChange={handlePaginationChange}
 											shape="circular"
-											color="primary"
 										/>
 									</Stack>
 								)}
@@ -187,7 +186,7 @@ const PropertyList: NextPage = ({ initialInput, ...props }: any) => {
 								{properties.length !== 0 && (
 									<Stack className="total-result">
 										<Typography>
-											Total {total} propert{total > 1 ? 'ies' : 'y'} available
+											{total} {total > 1 ? 'Properties' : 'Property'} Found
 										</Typography>
 									</Stack>
 								)}
