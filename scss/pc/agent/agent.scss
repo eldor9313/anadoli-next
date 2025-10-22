@@ -1,7 +1,7 @@
 #pc-wrap {
 	.agent-list-page {
 		position: relative;
-		padding: 147px 0 75px;
+		padding: 75px 0 75px;
 		width: 100%;
 		height: auto;
 		display: flex;
@@ -19,35 +19,77 @@
 					display: flex;
 					flex-direction: row;
 					input {
-						padding: 22px 10px;
 						width: 333px;
 						height: 50px;
+						padding: 0 20px;
 						border-radius: 40px;
-						border: 1px solid #ddd;
+						border: 1px solid #cccccc;
 						background: #fff;
 						color: #181a20;
 						font-family: $font;
 						font-size: 14px;
-						font-style: normal;
 						font-weight: 400;
 						line-height: 26px;
 						box-sizing: border-box;
+						transition: all 0.3s ease;
+
+						&::placeholder {
+							color: #aaa;
+							font-size: 13px;
+						}
+
+						&:hover {
+							border-color: #217cc7;
+							box-shadow: 0 0 8px rgba(33, 124, 199, 0.2);
+						}
+
+						&:focus {
+							outline: none;
+							border-color: #217cc7;
+							box-shadow: 0 0 10px rgba(33, 124, 199, 0.35);
+							background: #f9fcff;
+						}
 					}
 				}
+
 				.right {
 					display: flex;
-					flex-direction: row;
 					align-items: center;
-					button {
-						margin-left: 10px;
+					gap: 10px;
+
+					span {
 						color: #181a20;
 						font-family: $font;
 						font-size: 14px;
-						font-style: normal;
-						font-weight: bold;
+						font-weight: 500;
+					}
+
+					button {
+						padding: 12px 24px;
+						border-radius: 40px;
+						border: 1px solid #cccccc;
+						background: #fff;
+						color: #181a20;
+						font-family: $font;
+						font-size: 14px;
+						font-weight: 500;
 						line-height: 26px;
+						text-transform: capitalize;
+						transition: all 0.3s ease;
+
 						&:hover {
-							background: none;
+							border-color: #217cc7;
+							box-shadow: 0 0 8px rgba(33, 124, 199, 0.25);
+							color: #217cc7;
+							background: #f9fcff;
+						}
+
+						&:focus {
+							outline: none;
+							border-color: #217cc7;
+							box-shadow: 0 0 10px rgba(33, 124, 199, 0.35);
+							background: #f9fcff;
+							color: #217cc7;
 						}
 					}
 				}
@@ -56,7 +98,7 @@
 				position: relative;
 				margin-top: 35px;
 				width: 100%;
-				min-height: 500px;
+				min-height: 375px;
 				height: auto;
 				display: flex;
 				flex-direction: row;
@@ -66,6 +108,10 @@
 				display: flex;
 				flex-direction: column;
 				align-items: center;
+				.Mui-selected {
+					background-color: #166de0 !important;
+					color: #fff !important;
+				}
 				span {
 					margin-top: 20px;
 					color: #181a20;
@@ -73,7 +119,7 @@
 					font-size: 14px;
 					font-style: normal;
 					font-weight: 400;
-					line-height: 26px; /* 185.714% */
+					line-height: 26px;
 				}
 			}
 		}

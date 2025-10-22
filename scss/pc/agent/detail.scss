@@ -1,7 +1,7 @@
 #pc-wrap {
 	.agent-detail-page {
 		position: relative;
-		padding: 133px 0 75px;
+		padding: 65px 0 55px;
 		width: 100%;
 		height: auto;
 		display: flex;
@@ -12,58 +12,70 @@
 			flex-direction: column;
 			align-items: center;
 			.agent-info {
-				margin-left: 58px;
+				margin-left: 40px;
 				width: 100%;
 				display: flex;
 				flex-direction: row;
 				align-items: center;
+				gap: 25px;
+
 				img {
-					margin-right: 32px;
 					width: 135px;
 					height: 135px;
-					border-radius: 50%;
-					cursor: pointer;
+					border-radius: 40px;
 					object-fit: cover;
+					cursor: pointer;
 				}
+
 				.info {
 					display: flex;
 					flex-direction: column;
+					justify-content: center;
+					gap: 8px;
+
 					strong {
 						color: #181a20;
 						font-family: $font;
-						font-size: 24px;
-						font-style: normal;
+						font-size: 25px;
 						font-weight: 600;
-						line-height: normal;
+						line-height: 28px;
 						text-transform: capitalize;
 						cursor: pointer;
+						transition: color 0.25s ease, text-decoration 0.25s ease;
+
+						&:hover {
+							color: #217cc7;
+						}
 					}
+
 					div {
-						margin-top: 13px;
 						display: flex;
 						flex-direction: row;
 						align-items: center;
+						gap: 10px;
+						margin-top: 10px;
+
 						img {
-							margin-right: 10px;
-							width: 16px;
-							height: 16px;
+							width: 18px;
+							height: 18px;
 						}
+
 						span {
-							color: #181a20;
+							color: #555;
 							font-family: $font;
-							font-size: 20px;
-							font-style: normal;
+							font-size: 18px;
 							font-weight: 400;
-							line-height: 28px;
+							line-height: 24px;
 						}
 					}
 				}
 			}
+
 			.agent-home-list {
 				position: relative;
 				width: 100%;
 				margin-top: 33px;
-				padding: 0px 0 46px;
+				padding: 0px 0 30px;
 				display: flex;
 				flex-direction: column;
 				border-radius: 12px;
@@ -139,6 +151,10 @@
 					display: flex;
 					flex-direction: column;
 					align-items: center;
+					.Mui-selected {
+						background-color: #166de0 !important;
+						color: #fff !important;
+					}
 					span {
 						margin-top: 20px;
 						color: #181a20;
@@ -152,7 +168,7 @@
 			}
 			.review-box {
 				position: relative;
-				margin-top: 75px;
+				margin-top: 10px;
 				padding: 58px 19px;
 				width: 95%;
 				height: auto;
@@ -162,7 +178,7 @@
 					display: flex;
 					flex-direction: column;
 					span {
-						color: #181a20;
+						color: #217cc7;
 						font-family: $font;
 						font-size: 30px;
 						font-style: normal;
@@ -269,70 +285,92 @@
 						height: auto;
 						display: flex;
 						justify-content: center;
+						.Mui-selected {
+							background-color: #166de0 !important;
+							color: #fff !important;
+						}
 					}
 				}
 				.leave-review-config {
-					margin-top: 15px;
+					margin-top: 20px;
 					border-radius: 12px;
-					background: #fff;
-					box-shadow: 0px 1px 4px 0px rgba(24, 26, 32, 0.07);
-					padding: 30px 38px;
+					border: 1px solid #c4c4c4;
+					background-color: #ffffff;
+					box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+					padding: 20px 30px;
+
 					.main-title {
-						color: #181a20;
+						color: #217cc7;
 						font-family: $font;
-						font-size: 17px;
-						font-style: normal;
+						font-size: 19px;
 						font-weight: 600;
-						line-height: normal;
+						line-height: 1.4;
 					}
+
 					.review-title {
-						margin-top: 20px;
+						margin-top: 16px;
+						font-size: 15px;
+						font-weight: 500;
 						color: #181a20;
-						font-family: $font;
-						font-size: 14px;
-						font-style: normal;
-						font-weight: 600;
-						line-height: normal;
+						line-height: 1.5;
 					}
+
 					textarea {
 						width: 100%;
-						height: 120px;
-						margin-top: 8px;
-						padding: 20px;
-						border-radius: 8px;
-						border: 1px solid #ddd;
-						color: #717171;
+						min-height: 110px;
+						margin-top: 10px;
+						padding: 16px;
+						border-radius: 10px;
+						border: 1px solid #dcdcdc;
 						font-family: $font;
 						font-size: 14px;
-						font-style: normal;
-						font-weight: 400;
-						line-height: 26px;
+						line-height: 1.6;
+						color: #333333;
+						resize: vertical;
+						transition: all 0.2s ease;
+
+						&:focus {
+							outline: none;
+							border-color: #1a73e8;
+							box-shadow: 0 0 8px rgba(33, 124, 199, 0.2);
+						}
 					}
+
 					.submit-btn {
-						width: 100%;
 						display: flex;
 						justify-content: flex-end;
+						margin-top: 15px;
+
 						button:disabled {
-							background: #dfdfdf;
+							background-color: #a8c0d4;
+							cursor: not-allowed;
 						}
+
 						.submit-review {
 							display: flex;
-							width: 256px;
-							margin-top: 30px;
-							padding: 16px 30px;
-							justify-content: center;
 							align-items: center;
+							justify-content: center;
 							gap: 10px;
-							border-radius: 12px;
-							border: 1px solid #c4c4c4;
+							padding: 10px 25px;
+							border-radius: 25px;
+							border: none;
+							background-color: #217cc7;
+							color: #ffffff;
+							font-family: $font;
+							font-size: 15px;
+							font-weight: 500;
 							cursor: pointer;
+							transition: background 0.2s ease;
+
+							&:hover:not(:disabled) {
+								background-color: #1d69b6;
+							}
+
 							.title {
-								color: #181a20;
 								font-family: $font;
 								font-size: 15px;
-								font-style: normal;
 								font-weight: 600;
-								line-height: normal;
+								color: #fff;
 							}
 						}
 					}

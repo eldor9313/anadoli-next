@@ -224,7 +224,6 @@ const AgentDetail: NextPage = ({ initialInput, initialComment, ...props }: any) 
 											count={Math.ceil(propertyTotal / searchFilter.limit) || 1}
 											onChange={propertyPaginationChangeHandler}
 											shape="circular"
-											color="primary"
 										/>
 									</Stack>
 									<span>
@@ -261,7 +260,6 @@ const AgentDetail: NextPage = ({ initialInput, initialComment, ...props }: any) 
 										count={Math.ceil(commentTotal / commentInquiry.limit) || 1}
 										onChange={commentPaginationChangeHandler}
 										shape="circular"
-										color="primary"
 									/>
 								</Box>
 							</Stack>

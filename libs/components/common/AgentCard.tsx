@@ -67,7 +67,7 @@ const AgentCard = (props: AgentCardProps) => {
 						<Typography className="view-cnt">{agent?.memberViews}</Typography>
 						<IconButton color={'default'} onClick={() => likeMemberHandler(user, agent?._id)}>
 							{agent?.meLiked && agent?.meLiked[0]?.myFavorite ? (
-								<FavoriteIcon color={'primary'} />
+								<FavoriteIcon sx={{ color: '#217cc7', transition: 'color 0.3s ease' }} />
 							) : (
 								<FavoriteBorderIcon />
 							)}
