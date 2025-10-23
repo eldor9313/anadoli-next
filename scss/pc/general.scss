@@ -294,17 +294,28 @@
 	position: relative;
 	height: auto;
 	gap: 20px;
-	border-radius: 12px;
+	border-radius: 16px;
+	background: #ffffff;
 	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	border: 1px solid #f0f0f0;
+	overflow: hidden;
+
 	.image-box {
 		width: 100%;
 		height: 283px;
+		position: relative;
+		overflow: hidden;
+
 		.card-img {
 			width: 100%;
 			height: 100%;
-			border-radius: 12px;
+			border-radius: 12px 12px 0 0;
+			object-fit: cover;
+			transition: transform 0.3s ease;
 		}
 	}
+
 	.desc-box {
 		display: flex;
 		flex-direction: row;
@@ -312,6 +323,16 @@
 		align-items: center;
 		width: 100%;
 		height: 80px;
+		padding: 0 20px;
+		border-bottom: 1px solid #e8f1f8;
+
+		.text-content {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+		}
+
 		.title {
 			color: #717171;
 			font-family: $font;
@@ -320,58 +341,73 @@
 			font-weight: 400;
 			line-height: normal;
 		}
+
 		.desc {
 			color: #181a20;
 			font-family: $font;
-			font-size: 15px;
+			font-size: 16px;
 			font-style: normal;
 			font-weight: 600;
-			line-height: 26px;
+			line-height: 28px;
 			text-transform: capitalize;
 		}
+
 		.buttons {
-			width: auto;
 			display: flex;
 			flex-direction: row;
-			justify-content: center;
 			align-items: center;
+			margin-top: 20px;
+			gap: 12px;
+
 			svg {
-				width: 24px;
-				height: 24px;
+				width: 20px;
+				height: 20px;
 				cursor: pointer;
+				transition: color 0.2s ease;
 			}
+
 			.view-cnt {
 				font-size: 13px;
+				color: #717171;
+				font-family: $font;
+				white-space: nowrap;
 			}
 		}
 	}
+
 	.date-box {
 		position: absolute;
-		width: 70px;
-		height: 69.014px;
+		width: 80px;
+		height: 50px;
+		display: flex;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		top: 235px;
+		top: 250px;
 		right: 20px;
 		border-radius: 12px;
-		background: #fff;
-		box-shadow: 0px 6px 15px 0px rgba(64, 79, 104, 0.05);
+		background: #217cc7;
+		box-shadow: 0 4px 12px rgba(33, 124, 199, 0.3);
+		backdrop-filter: blur(10px);
+
 		.month {
-			color: #181a20;
+			color: #ffffff;
 			text-align: center;
 			font-family: $font;
-			font-size: 13px;
+			font-size: 12px;
 			font-style: normal;
-			font-weight: 400;
-			line-height: normal;
+			font-weight: 500;
+			line-height: 1.2;
+			text-transform: uppercase;
 		}
+
 		.day {
-			color: #181a20;
+			color: #ffffff;
 			font-family: $font;
 			font-size: 20px;
 			font-style: normal;
-			font-weight: 600;
-			line-height: normal;
+			font-weight: 700;
+			line-height: 1.2;
 		}
 	}
 }

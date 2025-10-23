@@ -13,7 +13,7 @@ import { BoardArticlesInquiry } from '../../libs/types/board-article/board-artic
 import { BoardArticleCategory } from '../../libs/enums/board-article.enum';
 import { LIKE_TARGET_BOARD_ARTICLE } from '../../apollo/user/mutation';
 import { useMutation, useQuery } from '@apollo/client';
-import { GET_BOARD_ARTICLE } from '../../apollo/user/query';
+import { GET_BOARD_ARTICLES } from '../../apollo/user/query';
 import { Messages } from '../../libs/config';
 import { sweetMixinErrorAlert, sweetTopSmallSuccessAlert } from '../../libs/sweetAlert';
 
@@ -41,7 +41,7 @@ const Community: NextPage = ({ initialInput, ...props }: T) => {
 		data: boardArticlesData,
 		error: boardArticlesError,
 		refetch: boardArticlesRefetch,
-	} = useQuery(GET_BOARD_ARTICLE, {
+	} = useQuery(GET_BOARD_ARTICLES, {
 		fetchPolicy: 'cache-and-network',
 		variables: { input: searchCommunity },
 		notifyOnNetworkStatusChange: true,
@@ -109,9 +109,9 @@ const Community: NextPage = ({ initialInput, ...props }: T) => {
 						<Stack className="main-box">
 							<Stack className="left-config">
 								<Stack className={'image-info'}>
-									<img src={'/img/logo/logoText.svg'} />
+									<img src={'/img/logo/logoblue.png'} />
 									<Stack className={'community-name'}>
-										<Typography className={'name'}>Nestar Community</Typography>
+										<Typography className={'name'}>Anadoli Travelers Hub</Typography>
 									</Stack>
 								</Stack>
 
@@ -125,22 +125,22 @@ const Community: NextPage = ({ initialInput, ...props }: T) => {
 								>
 									<Tab
 										value={'FREE'}
-										label={'Free Board'}
+										label={'Travel Stories'}
 										className={`tab-button ${searchCommunity.search.articleCategory == 'FREE' ? 'active' : ''}`}
 									/>
 									<Tab
 										value={'RECOMMEND'}
-										label={'Recommendation'}
+										label={'Local Tips'}
 										className={`tab-button ${searchCommunity.search.articleCategory == 'RECOMMEND' ? 'active' : ''}`}
 									/>
 									<Tab
 										value={'NEWS'}
-										label={'News'}
+										label={'Cultural News'}
 										className={`tab-button ${searchCommunity.search.articleCategory == 'NEWS' ? 'active' : ''}`}
 									/>
 									<Tab
 										value={'HUMOR'}
-										label={'Humor'}
+										label={'Fun Moments'}
 										className={`tab-button ${searchCommunity.search.articleCategory == 'HUMOR' ? 'active' : ''}`}
 									/>
 								</TabList>

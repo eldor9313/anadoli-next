@@ -35,27 +35,27 @@ const withLayoutBasic = (Component: any) => {
 					break;
 				case '/agent':
 					title = 'Agents';
-					desc = 'Home / For Rent';
+					desc = 'Home / Our Agents';
 					bgImage = '/img/banner/places2.jpg';
 					break;
 				case '/agent/detail':
 					title = 'Agent Page';
-					desc = 'Home / For Rent';
+					desc = 'Home / Agent Profile';
 					bgImage = '/img/banner/places2.jpg';
 					break;
 				case '/mypage':
 					title = 'my page';
-					desc = 'Home / For Rent';
+					desc = 'Home / Personal Dashboard';
 					bgImage = '/img/banner/place4.jpg';
 					break;
 				case '/community':
 					title = 'Community';
-					desc = 'Home / For Rent';
+					desc = 'Home / Discussion Board';
 					bgImage = '/img/banner/places55.jpg';
 					break;
 				case '/community/detail':
 					title = 'Community Detail';
-					desc = 'Home / For Rent';
+					desc = 'Home / Post Details';
 					bgImage = '/img/banner/places.jpg';
 					break;
 				case '/cs':
