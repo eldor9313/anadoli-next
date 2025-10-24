@@ -744,7 +744,7 @@ const PropertyDetail: NextPage = ({ initialComment, ...props }: any) => {
 							</Stack>
 						</Stack>
 						{destinationProperties.length !== 0 && (
-							<Stack className={'similar-properties-config'}>
+							<Stack className={'-properties-config'}>
 								<Stack className={'title-pagination-box'}>
 									<Stack className={'title-box'}>
 										<Typography className={'main-title'}>Destination Property</Typography>

@@ -166,17 +166,27 @@
 								}
 							}
 							.right {
-								width: 91px;
-								height: 32px;
-								border-radius: 4px;
-								background: #eb6753;
-								color: #fff;
+								width: 100px;
+								height: 40px;
+								padding: 0 16px;
+								border: 1px solid #777;
+								border-radius: 40px;
+								background: #2d3748;
+								border-color: #4a5568;
+								color: #e2e8f0;
 								font-family: $font;
 								font-size: 13px;
 								font-style: normal;
-								font-weight: 500;
-								line-height: normal;
-								letter-spacing: 0.39px;
+								font-weight: 600;
+								line-height: 32px;
+								white-space: nowrap;
+								transition: all 0.2s ease;
+
+								&:hover {
+									border-color: #217cc7;
+									color: #217cc7;
+									background: rgba(33, 124, 199, 0.04);
+								}
 							}
 						}
 						.list-box {
@@ -223,7 +233,7 @@
 					align-items: center;
 					justify-content: center;
 					.Mui-selected {
-						background-color: #166de0 !important;
+						background-color: #217cc7 !important;
 						color: #fff !important;
 					}
 				}

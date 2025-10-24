@@ -346,8 +346,8 @@ const CommunityDetail: NextPage = ({ initialInput, ...props }: T) => {
 											</Stack>
 										</Stack>
 									</Stack>
-									<Stack>
-										<ToastViewerComponent markdown={boardArticle?.articleContent} className={'ytb_play'} />
+									<Stack className={'ytb_play'}>
+										<ToastViewerComponent markdown={boardArticle?.articleContent} />
 									</Stack>
 									<Stack className="like-and-dislike">
 										<Stack className="top">
@@ -416,7 +416,7 @@ const CommunityDetail: NextPage = ({ initialInput, ...props }: T) => {
 																	updateButtonHandler(commentData?._id, CommentStatus.DELETE);
 																}}
 															>
-																<DeleteForeverIcon sx={{ color: '#757575', cursor: 'pointer' }} />
+																<DeleteForeverIcon sx={{ color: '#b71c1c', cursor: 'pointer' }} />
 															</IconButton>
 															<IconButton
 																onClick={(e) => {
@@ -426,7 +426,7 @@ const CommunityDetail: NextPage = ({ initialInput, ...props }: T) => {
 																	setOpenBackdrop(true);
 																}}
 															>
-																<EditIcon sx={{ color: '#757575' }} />
+																<EditIcon sx={{ color: '#1565c0' }} />
 															</IconButton>
 															<Backdrop
 																sx={{

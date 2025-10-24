@@ -56,7 +56,7 @@ const withLayoutBasic = (Component: any) => {
 				case '/community/detail':
 					title = 'Community Detail';
 					desc = 'Home / Post Details';
-					bgImage = '/img/banner/places.jpg';
+					bgImage = '/img/banner/places55.jpg';
 					break;
 				case '/cs':
 					title = 'CS';

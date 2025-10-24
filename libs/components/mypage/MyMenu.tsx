@@ -79,8 +79,8 @@ const MyMenu = () => {
 												<Typography className={'sub-title'} variant={'subtitle1'} component={'p'}>
 													Add Property
 												</Typography>
-												<IconButton aria-label="delete" sx={{ ml: '40px' }}>
-													<PortraitIcon style={{ color: 'red' }} />
+												<IconButton aria-label="delete" sx={{ ml: '26px' }}>
+													<PortraitIcon style={{ color: '#217cc7' }} />
 												</IconButton>
 											</div>
 										</Link>
@@ -102,8 +102,8 @@ const MyMenu = () => {
 												<Typography className={'sub-title'} variant={'subtitle1'} component={'p'}>
 													My Properties
 												</Typography>
-												<IconButton aria-label="delete" sx={{ ml: '36px' }}>
-													<PortraitIcon style={{ color: 'red' }} />
+												<IconButton aria-label="delete" sx={{ ml: '23px' }}>
+													<PortraitIcon style={{ color: '#217cc7' }} />
 												</IconButton>
 											</div>
 										</Link>
@@ -249,10 +249,10 @@ const MyMenu = () => {
 							</ListItem>
 						</List>
 					</Stack>
-					<Stack className={'section'} sx={{ marginTop: '10px' }}>
+					<Stack className={'section'} sx={{ marginTop: '90px' }}>
 						<div>
 							<Typography className="title" variant={'h5'}>
-								Community
+								COMMUNITY
 							</Typography>
 							<List className={'sub-section'}>
 								<ListItem className={pathname === 'myArticles' ? 'focus' : ''}>
@@ -299,7 +299,7 @@ const MyMenu = () => {
 							</List>
 						</div>
 					</Stack>
-					<Stack className={'section'} sx={{ marginTop: '30px' }}>
+					<Stack className={'section'} sx={{ marginTop: '10px' }}>
 						<Typography className="title" variant={'h5'}>
 							MANAGE ACCOUNT
 						</Typography>
@@ -314,9 +314,9 @@ const MyMenu = () => {
 								>
 									<div className={'flex-box'}>
 										{category === 'myProfile' ? (
-											<img className={'com-icon'} src={'/img/icons/userWhite.svg'} alt={'com-icon'} />
+											<img className={'com-icon'} src={'/img/icons/user1.svg'} alt={'com-icon'} />
 										) : (
-											<img className={'com-icon'} src={'/img/icons/user.svg'} alt={'com-icon'} />
+											<img className={'com-icon'} src={'/img/icons/user1.svg'} alt={'com-icon'} />
 										)}
 										<Typography className={'sub-title'} variant={'subtitle1'} component={'p'}>
 											My Profile
