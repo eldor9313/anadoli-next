@@ -72,16 +72,16 @@ const MyMenu = () => {
 										>
 											<div className={'flex-box'}>
 												{category === 'addProperty' ? (
-													<img className={'com-icon'} src={'/img/icons/whiteTab.svg'} alt={'com-icon'} />
+													<img className={'com-icon'} src={'/img/icons/newTab.svg'} alt={'com-icon'} />
 												) : (
 													<img className={'com-icon'} src={'/img/icons/newTab.svg'} alt={'com_icon'} />
 												)}
 												<Typography className={'sub-title'} variant={'subtitle1'} component={'p'}>
 													Add Property
 												</Typography>
-												<IconButton aria-label="delete" sx={{ ml: '26px' }}>
+												{/* <IconButton aria-label="delete" sx={{ ml: '26px' }}>
 													<PortraitIcon style={{ color: '#217cc7' }} />
-												</IconButton>
+												</IconButton> */}
 											</div>
 										</Link>
 									</ListItem>
@@ -95,16 +95,16 @@ const MyMenu = () => {
 										>
 											<div className={'flex-box'}>
 												{category === 'myProperties' ? (
-													<img className={'com-icon'} src={'/img/icons/homeWhite.svg'} alt={'com-icon'} />
+													<img className={'com-icon'} src={'/img/icons/home.svg'} alt={'com-icon'} />
 												) : (
 													<img className={'com-icon'} src={'/img/icons/home.svg'} alt={'com-icon'} />
 												)}
 												<Typography className={'sub-title'} variant={'subtitle1'} component={'p'}>
 													My Properties
 												</Typography>
-												<IconButton aria-label="delete" sx={{ ml: '23px' }}>
+												{/* <IconButton aria-label="delete" sx={{ ml: '23px' }}>
 													<PortraitIcon style={{ color: '#217cc7' }} />
-												</IconButton>
+												</IconButton> */}
 											</div>
 										</Link>
 									</ListItem>
@@ -120,7 +120,7 @@ const MyMenu = () => {
 								>
 									<div className={'flex-box'}>
 										{category === 'myFavorites' ? (
-											<img className={'com-icon'} src={'/img/icons/likeWhite.svg'} alt={'com-icon'} />
+											<img className={'com-icon'} src={'/img/icons/like.svg'} alt={'com-icon'} />
 										) : (
 											<img className={'com-icon'} src={'/img/icons/like.svg'} alt={'com-icon'} />
 										)}
@@ -141,7 +141,7 @@ const MyMenu = () => {
 								>
 									<div className={'flex-box'}>
 										{category === 'recentlyVisited' ? (
-											<img className={'com-icon'} src={'/img/icons/searchWhite.svg'} alt={'com-icon'} />
+											<img className={'com-icon'} src={'/img/icons/search.svg'} alt={'com-icon'} />
 										) : (
 											<img className={'com-icon'} src={'/img/icons/search.svg'} alt={'com-icon'} />
 										)}
@@ -163,7 +163,7 @@ const MyMenu = () => {
 									<div className={'flex-box'}>
 										<svg
 											className={'com-icon'}
-											fill={category === 'followers' ? 'white' : 'black'}
+											fill={category === 'followers' ? 'black' : 'black'}
 											height="16px"
 											width="16px"
 											version="1.1"
@@ -210,7 +210,7 @@ const MyMenu = () => {
 									<div className={'flex-box'}>
 										<svg
 											className={'com-icon'}
-											fill={category === 'followings' ? 'white' : 'black'}
+											fill={category === 'followings' ? 'black' : 'black'}
 											height="16px"
 											width="16px"
 											version="1.1"
@@ -265,7 +265,7 @@ const MyMenu = () => {
 									>
 										<div className={'flex-box'}>
 											{category === 'myArticles' ? (
-												<img className={'com-icon'} src={'/img/icons/discoveryWhite.svg'} alt={'com-icon'} />
+												<img className={'com-icon'} src={'/img/icons/discovery.svg'} alt={'com-icon'} />
 											) : (
 												<img className={'com-icon'} src={'/img/icons/discovery.svg'} alt={'com-icon'} />
 											)}
@@ -286,7 +286,7 @@ const MyMenu = () => {
 									>
 										<div className={'flex-box'}>
 											{category === 'writeArticle' ? (
-												<img className={'com-icon'} src={'/img/icons/whiteTab.svg'} alt={'com-icon'} />
+												<img className={'com-icon'} src={'/img/icons/newTab.svg'} alt={'com-icon'} />
 											) : (
 												<img className={'com-icon'} src={'/img/icons/newTab.svg'} alt={'com_icon'} />
 											)}
@@ -327,7 +327,7 @@ const MyMenu = () => {
 							<ListItem onClick={logoutHandler}>
 								<div className={'flex-box'}>
 									<img className={'com-icon'} src={'/img/icons/logout.svg'} alt={'com-icon'} />
-									<Typography className={'sub-title'} variant={'subtitle1'} component={'p'}>
+									<Typography className={'sub-title1'} variant={'subtitle1'} component={'p'}>
 										Logout
 									</Typography>
 								</div>

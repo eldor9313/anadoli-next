@@ -110,13 +110,13 @@ const MyProperties: NextPage = ({ initialInput, ...props }: any) => {
 							onClick={() => changeStatusHandler(PropertyStatus.ACTIVE)}
 							className={searchFilter.search.propertyStatus === 'ACTIVE' ? 'active-tab-name' : 'tab-name'}
 						>
-							On Sale
+							Available
 						</Typography>
 						<Typography
-							onClick={() => changeStatusHandler(PropertyStatus.SOLD)}
-							className={searchFilter.search.propertyStatus === 'SOLD' ? 'active-tab-name' : 'tab-name'}
+							onClick={() => changeStatusHandler(PropertyStatus.CLOSED)}
+							className={searchFilter.search.propertyStatus === 'CLOSED' ? 'active-tab-name' : 'tab-name'}
 						>
-							On Sold
+							Unavailable
 						</Typography>
 					</Stack>
 					<Stack className="list-box">

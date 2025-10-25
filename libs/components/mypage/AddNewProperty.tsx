@@ -363,11 +363,11 @@ const AddProperty = ({ initialValues, ...props }: any) => {
 
 							<Typography className="property-title">Property Description</Typography>
 							<Stack className="config-column">
-								<Typography className="title">Description</Typography>
 								<textarea
 									name=""
 									id=""
 									className="description-text"
+									placeholder={'Description'}
 									value={insertPropertyData.propertyDesc}
 									onChange={({ target: { value } }) =>
 										setInsertPropertyData({ ...insertPropertyData, propertyDesc: value })
@@ -416,7 +416,7 @@ const AddProperty = ({ initialValues, ...props }: any) => {
 									</g>
 									<defs>
 										<clipPath id="clip0_7037_5336">
-											<rect width="120" height="120" fill="white" transform="translate(0.960938)" />
+											<rect width="120" height="120" fill="black" transform="translate(0.960938)" />
 										</clipPath>
 									</defs>
 								</svg>
