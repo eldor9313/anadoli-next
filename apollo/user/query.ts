@@ -61,7 +61,7 @@ export const GET_MEMBER = gql(`
         memberLikes
         memberViews
         memberFollowings
-				memberFollowers
+		memberFollowers
         memberRank
         memberWarnings
         memberBlocks

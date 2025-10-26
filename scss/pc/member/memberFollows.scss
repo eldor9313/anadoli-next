@@ -26,17 +26,19 @@
 		}
 		.follows-list-box {
 			width: 100%;
-			margin-top: 85px;
-			gap: 15px;
+			margin-top: 61px;
+			gap: 10px;
 			.listing-title-box {
 				width: 100%;
 				height: auto;
 				flex-direction: row;
-				gap: 110px;
-				padding: 18px 34px 18px 33px;
-				border-radius: 12px;
-				background: #f6f6f6;
 				justify-content: space-between;
+				gap: 110px;
+				padding: 16px 34px 16px 33px;
+				border-radius: 16px;
+				background: rgba(33, 124, 199, 0.04);
+				border: 1px solid rgba(196, 196, 196, 0.79);
+
 				.title-text {
 					color: #181a20;
 					font-family: $font;
@@ -47,14 +49,24 @@
 				}
 			}
 			.follows-card-box {
+				margin-top: 5px;
 				padding-right: 30px;
 				padding-bottom: 5px;
 				width: 100%;
 				height: auto;
+				display: flex;
 				flex-direction: row;
 				align-items: center;
 				gap: 10px;
-				border-bottom: 1px solid #ddd;
+				border-radius: 12px;
+				border: 1px solid #e0e8f0;
+				background: rgba(33, 124, 199, 0.04);
+				transition: all 0.2s ease;
+				&:hover {
+					border-color: #217cc7;
+					background: rgba(33, 124, 199, 0.02);
+					box-shadow: 0 2px 8px rgba(33, 124, 199, 0.1);
+				}
 				.info {
 					width: 300px;
 					display: flex;
@@ -62,15 +74,19 @@
 					align-items: center;
 					cursor: pointer;
 					.image-box {
-						width: 110px;
-						height: 110px;
+						width: 100px;
+						height: 100px;
 						overflow: hidden;
+						margin-left: 10px;
 						margin-right: 25px;
+						display: flex;
+						flex-direction: row;
+						align-items: center;
 						img {
-							width: 100%;
-							height: 100%;
+							width: 90%;
+							height: 90%;
 							object-fit: cover;
-							border-radius: 50%;
+							border-radius: 30px;
 						}
 					}
 					.information-box {
@@ -80,7 +96,7 @@
 						.name {
 							color: #181a20;
 							font-family: $font;
-							font-size: 13px;
+							font-size: 16px;
 							font-style: normal;
 							font-weight: 600;
 							line-height: normal;
@@ -131,20 +147,36 @@
 					justify-content: flex-end;
 					gap: 20px;
 					button {
-						border: 1px solid #b9b9b9;
+						width: 135px;
+						height: 40px;
+						padding: 16px 30px;
+						justify-content: center;
+						align-items: center;
+						gap: 10px;
+						border-radius: 40px;
+						border: 1px solid #e1e8ef;
+						background: rgba(33, 124, 199, 0.08);
+						border-color: #4a5568;
 						color: #181a20;
-						font-family: $font;
-						font-size: 14px;
-						font-style: normal;
-						font-weight: 400;
-						line-height: normal;
+						cursor: pointer;
+						transition: all 0.2s ease;
+						&:hover {
+							background: #2d3748;
+							border-color: #4a5568;
+							color: #ffffff;
+						}
 					}
 					p {
-						color: #b9b9b9;
+						color: #181a20;
 						font-family: $font;
-						font-size: 14px;
-						font-style: italic;
-						font-weight: 400;
+						font-weight: 600;
+						font-style: normal;
+						line-height: normal;
+					}
+					.disabled-type {
+						color: rgba(143, 143, 143, 0.54);
+						font-family: $font;
+						font-style: normal;
 						line-height: normal;
 					}
 				}
@@ -153,9 +185,18 @@
 		.pagination-config {
 			width: 100%;
 			height: auto;
+			display: flex;
 			justify-content: center;
 			align-items: center;
-			margin-top: 30px;
+			margin-top: 32px;
+			.pagination-box {
+				align-items: center;
+				justify-content: center;
+				.Mui-selected {
+					background-color: #217cc7 !important;
+					color: #fff !important;
+				}
+			}
 			.total-result {
 				p {
 					color: #181a20;

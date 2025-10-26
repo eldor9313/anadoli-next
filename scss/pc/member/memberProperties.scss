@@ -152,10 +152,18 @@
 					}
 					.pagination-config {
 						width: 100%;
-						height: auto;
-						justify-content: center;
 						align-items: center;
-						margin-top: 30px;
+						justify-content: center;
+						margin-bottom: 50px;
+						gap: 20px;
+						.pagination-box {
+							align-items: center;
+							justify-content: center;
+							.Mui-selected {
+								background-color: #217cc7 !important;
+								color: #fff !important;
+							}
+						}
 						.total-result {
 							p {
 								color: #181a20;
