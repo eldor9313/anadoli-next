@@ -13,13 +13,13 @@ const Notice = () => {
 		{
 			no: 1,
 			event: true,
-			title: 'Register to use and get discounts',
-			date: '01.03.2024',
+			title: 'Register to explore Turkey’s cultural experiences',
+			date: '01.09.2025',
 		},
 		{
 			no: 2,
-			title: "It's absolutely free to upload and trade properties",
-			date: '31.03.2024',
+			title: 'Discover hidden historical and culinary destinations',
+			date: '30.09.2025',
 		},
 	];
 

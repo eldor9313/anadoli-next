@@ -46,12 +46,14 @@
 						width: 216.612px;
 						height: 36px;
 						padding: 0;
+						margin-bottom: 10px;
 						display: flex;
 						justify-content: center;
 						align-items: center;
 						border-radius: 40px;
-						border: 1.5px solid #e1e5e9;
-						margin-bottom: 10px;
+						border: 1px solid #e1e8ef;
+						background: rgba(33, 124, 199, 0.08);
+						border-color: #4a5568;
 						color: #181a20;
 						font-family: $font;
 						font-size: 14px;
@@ -59,14 +61,13 @@
 						font-weight: 500;
 						line-height: 150%;
 						letter-spacing: -0.266px;
-						background: #ffffff;
 						cursor: pointer;
 						transition: all 0.2s ease-in-out;
 
 						&:hover {
-							border-color: #217cc7;
-							color: #217cc7;
-							background: rgba(33, 124, 199, 0.04);
+							color: #fff;
+							background: #2d3748;
+							border-color: #4a5568;
 						}
 					}
 
@@ -110,14 +111,14 @@
 
 					@media (prefers-color-scheme: dark) {
 						.tab-button {
-							background: #2d3748;
+							background: rgba(33, 124, 199, 0.08);
 							border-color: #4a5568;
-							color: #e2e8f0;
+							color: #181a20;
 
 							&:hover {
-								border-color: #217cc7;
-								color: #217cc7;
-								background: rgba(33, 124, 199, 0.1);
+								color: #fff;
+								background: #2d3748;
+								border-color: #4a5568;
 							}
 						}
 
@@ -171,11 +172,11 @@
 							width: 100px;
 							height: 40px;
 							padding: 0 16px;
-							border: 1px solid #777;
 							border-radius: 40px;
-							background: #2d3748;
+							border: 1px solid #e1e8ef;
+							background: rgba(33, 124, 199, 0.09);
 							border-color: #4a5568;
-							color: #e2e8f0;
+							color: #181a20;
 							font-family: $font;
 							font-size: 13px;
 							font-style: normal;
@@ -185,9 +186,9 @@
 							transition: all 0.2s ease;
 
 							&:hover {
-								border-color: #217cc7;
-								color: #217cc7;
-								background: rgba(33, 124, 199, 0.04);
+								color: #fff;
+								background: #2d3748;
+								border-color: #4a5568;
 							}
 						}
 					}
@@ -346,16 +347,16 @@
 										gap: 8px;
 										border-radius: 40px;
 										border: 1px solid #e1e8ef;
-										background: #2d3748;
+										background: rgba(33, 124, 199, 0.09);
 										border-color: #4a5568;
-										color: #e2e8f0;
+										color: #181a20;
 										cursor: pointer;
 										transition: all 0.2s ease;
 
 										&:hover {
-											border-color: #217cc7;
-											color: #217cc7;
-											background: rgba(33, 124, 199, 0.04);
+											color: #fff;
+											background: #2d3748;
+											border-color: #4a5568;
 										}
 
 										p {
@@ -365,7 +366,7 @@
 											font-weight: 600;
 											line-height: normal;
 											&:hover {
-												color: #217cc7;
+												color: #181a20;
 											}
 										}
 									}
@@ -458,16 +459,16 @@
 										gap: 8px;
 										border-radius: 40px;
 										border: 1px solid #e1e8ef;
-										background: #2d3748;
+										background: rgba(33, 124, 199, 0.09);
 										border-color: #4a5568;
-										color: #e2e8f0;
+										color: #181a20;
 										cursor: pointer;
 										transition: all 0.2s ease;
 
 										&:hover {
-											border-color: #217cc7;
-											color: #217cc7;
-											background: rgba(33, 124, 199, 0.04);
+											color: #fff;
+											background: #2d3748;
+											border-color: #4a5568;
 										}
 
 										p {

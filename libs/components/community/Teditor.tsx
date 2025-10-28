@@ -118,9 +118,9 @@ const TuiEditor = () => {
 
 	return (
 		<Stack>
-			<Stack direction="row" style={{ margin: '40px' }} justifyContent="space-evenly">
+			<Stack direction="row" style={{ margin: '30px' }} justifyContent="space-evenly">
 				<Box component={'div'} className={'form_row'} style={{ width: '300px' }}>
-					<Typography style={{ color: '#7f838d', margin: '10px' }} variant="h3">
+					<Typography style={{ color: '#217cc7', margin: '10px' }} variant="h3">
 						Category
 					</Typography>
 					<FormControl sx={{ width: '100%', background: 'white' }}>
@@ -140,7 +140,7 @@ const TuiEditor = () => {
 					</FormControl>
 				</Box>
 				<Box component={'div'} style={{ width: '300px', flexDirection: 'column' }}>
-					<Typography style={{ color: '#7f838d', margin: '10px' }} variant="h3">
+					<Typography style={{ color: '#217cc7', margin: '10px' }} variant="h3">
 						Title
 					</Typography>
 					<TextField
@@ -156,7 +156,7 @@ const TuiEditor = () => {
 				initialValue={'Type here'}
 				placeholder={'Type here'}
 				previewStyle={'vertical'}
-				height={'640px'}
+				height={'550px'}
 				// @ts-ignore
 				initialEditType={'WYSIWYG'}
 				toolbarItems={[
@@ -178,12 +178,7 @@ const TuiEditor = () => {
 			/>
 
 			<Stack direction="row" justifyContent="center">
-				<Button
-					variant="contained"
-					color="primary"
-					style={{ margin: '30px', width: '250px', height: '45px' }}
-					onClick={handleRegisterButton}
-				>
+				<Button variant="contained" className={'register-button'} onClick={handleRegisterButton}>
 					Register
 				</Button>
 			</Stack>

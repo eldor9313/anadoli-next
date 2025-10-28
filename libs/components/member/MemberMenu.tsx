@@ -64,7 +64,7 @@ const MemberMenu = (props: MemberMenuProps) => {
 						<>
 							<Button
 								variant="outlined"
-								sx={{ background: '#b9b9b9' }}
+								sx={{ background: '#217cc7', ':hover': { background: '#2d3748' } }}
 								onClick={() => unsubscribeHandler(member?._id, getMemberRefetch, memberId)}
 							>
 								Unfollow
@@ -74,7 +74,7 @@ const MemberMenu = (props: MemberMenuProps) => {
 					) : (
 						<Button
 							variant="contained"
-							sx={{ background: '#ff5d18', ':hover': { background: '#ff5d18' } }}
+							sx={{ background: '#217cc7', ':hover': { background: '#2d3748' } }}
 							onClick={() => subscribeHandler(member?._id, getMemberRefetch, memberId)}
 						>
 							Follow
@@ -99,7 +99,7 @@ const MemberMenu = (props: MemberMenuProps) => {
 									>
 										<div className={'flex-box'}>
 											{category === 'properties' ? (
-												<img className={'com-icon'} src={'/img/icons/homeWhite.svg'} alt={'com-icon'} />
+												<img className={'com-icon'} src={'/img/icons/home.svg'} alt={'com-icon'} />
 											) : (
 												<img className={'com-icon'} src={'/img/icons/home.svg'} alt={'com-icon'} />
 											)}
@@ -125,7 +125,7 @@ const MemberMenu = (props: MemberMenuProps) => {
 									<div className={'flex-box'}>
 										<svg
 											className={'com-icon'}
-											fill={category === 'followers' ? 'white' : 'black'}
+											fill={category === 'followers' ? 'black' : 'black'}
 											height="800px"
 											width="800px"
 											version="1.1"
@@ -176,7 +176,7 @@ const MemberMenu = (props: MemberMenuProps) => {
 									<div className={'flex-box'}>
 										<svg
 											className={'com-icon'}
-											fill={category === 'followings' ? 'white' : 'black'}
+											fill={category === 'followings' ? 'black' : 'black'}
 											height="800px"
 											width="800px"
 											version="1.1"
@@ -234,7 +234,7 @@ const MemberMenu = (props: MemberMenuProps) => {
 									>
 										<div className={'flex-box'}>
 											{category === 'articles' ? (
-												<img className={'com-icon'} src={'/img/icons/discoveryWhite.svg'} alt={'com-icon'} />
+												<img className={'com-icon'} src={'/img/icons/discovery.svg'} alt={'com-icon'} />
 											) : (
 												<img className={'com-icon'} src={'/img/icons/discovery.svg'} alt={'com-icon'} />
 											)}

@@ -73,7 +73,7 @@ const Join: NextPage = () => {
 						<Stack className={'left'}>
 							{/* @ts-ignore */}
 							<Box className={'logo'}>
-								<img src="/img/logo/logoText.svg" alt="" />
+								<img src="/img/logo/favicon.png" alt="" />
 								<span>Anadoli</span>
 							</Box>
 							<Box className={'info'}>
@@ -167,12 +167,7 @@ const Join: NextPage = () => {
 								)}
 
 								{loginView ? (
-									<Button
-										variant="contained"
-										endIcon={<img src="/img/icons/rightup.svg" alt="" />}
-										disabled={input.nick == '' || input.password == ''}
-										onClick={doLogin}
-									>
+									<Button variant="contained" disabled={input.nick == '' || input.password == ''} onClick={doLogin}>
 										LOGIN
 									</Button>
 								) : (
@@ -180,9 +175,8 @@ const Join: NextPage = () => {
 										variant="contained"
 										disabled={input.nick == '' || input.password == '' || input.phone == '' || input.type == ''}
 										onClick={doSignUp}
-										endIcon={<img src="/img/icons/rightup.svg" alt="" />}
 									>
-										SIGNUP
+										Create Account
 									</Button>
 								)}
 							</Box>
@@ -206,7 +200,9 @@ const Join: NextPage = () => {
 								)}
 							</Box>
 						</Stack>
-						<Stack className={'right'}></Stack>
+						<Box className={`right ${loginView ? 'login-view' : 'signup-view'}`}>
+							<h2>{loginView ? 'Welcome Back!' : 'Join Our Community!'}</h2>
+						</Box>
 					</Stack>
 				</Stack>
 			</Stack>

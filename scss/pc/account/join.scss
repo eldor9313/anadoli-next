@@ -1,194 +1,247 @@
 #pc-wrap {
-  .join-page {
-    position: relative;
-    padding: 90px 0px;
-    width: 100%;
-    height: auto;
-   .container {
-     align-items: center;
-     .main {
-       width: 1200px;
-       height: 900px;
-       display: flex;
-       flex-direction: row;
-       border-radius: 12px 0px 0px 12px;
-       background: #FFF;
-       box-shadow: 0px 1px 4px 0px rgba(24, 26, 32, 0.07);
-       .left {
-         width: 50%;
-         height: 100%;
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         justify-content: center;
-         .logo {
-           display: flex;
-           flex-direction: row;
-           align-items: center;
-           img {
-             width: 40px;
-             height: 40px;
-           }
-           span {
-             margin-left: 10px;
-             font-family: $font ;
-             font-size: 22px;
-             font-style: normal;
-             font-weight: 600;
-             line-height: normal;
-             letter-spacing: 0.44px;
-             color:#181A20;
-           }
-         }
-         .info {
-           margin-top: 30px;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-           span {
-             font-family: $font;
-             font-size: 20px;
-             font-style: normal;
-             font-weight: 600;
-             line-height: normal;
-             text-transform: uppercase;
-             color:  #181A20;
-           }
-           p {
-             margin-top: 5px;
-             font-family: $font;
-             font-size: 14px;
-             font-style: normal;
-             font-weight: 400;
-             line-height: 26px;
-             color: #181A20;
+	.join-page {
+		position: relative;
+		padding: 60px 0;
+		width: 100%;
+		height: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: linear-gradient(135deg, #f8fafc, #eef2f7);
 
-           }
-         }
-         .input-wrap {
-           margin-top: 45px;
-           width: 470px;
-           display: flex;
-           flex-direction: column;
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
-          .input-box {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            &:first-child {
-              margin-top: 0px;
-            }
-            span {
-              margin-bottom: 8px;
-              font-family: $font;
-              font-size: 14px;
-              font-style: normal;
-              font-weight: 600;
-              line-height: normal;
-              color:  #181A20;
-            }
-            input {
-              padding: 0px 15px;
-              width: 100%;
-              height: 55px;
-              border-radius: 8px;
-              border: 1px solid #DDD;
-              background:  #FFF;
-              font-family: $font;
-              font-size: 14px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: 26px;
-              color: #717171;
-            }
-          }
-         }
-         .register {
-           margin-top: 45px;
-           width: 470px;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-           .type-option {
-             display: flex;
-             flex-direction: row;
-             align-items: center;
-             span.text {
-               font-family: $font;
-               font-size: 14px;
-               font-style: normal;
-               font-weight: 600;
-               line-height: normal;
-               color:  #181A20;
-             }
-             div {
-               margin-left: 20px;
-               display: flex;
-               flex-direction: row;
-               &:nth-child(1){
-                 margin-right: 25px;
-               }
-             }
-           }
-           .remember-info {
-             width: 100%;
-             display: flex;
-             flex-direction: row;
-             justify-content: space-between;
-             align-items: center;
-             a {
-               font-family: $font;
-               font-size: 14px;
-               font-style: normal;
-               font-weight: 400;
-               line-height: 26px;
-               cursor: pointer;
-               color:  #181A20;
-             }
-           }
-           button {
-             margin-top: 25px;
-             width: 100%;
-             height: 55px;
-             border-radius: 12px;
-             background:  #EB6753;
-             font-family: $font;
-             font-size: 15px;
-             font-style: normal;
-             font-weight: 600;
-             line-height: normal;
-             color:  #FFF;
-             img {
-               filter: brightness(0) invert(1);
-             }
-           }
-         }
-         .ask-info {
-           margin-top: 90px;
-           p {
-             font-family: $font;
-             font-size: 20px;
-             font-style: normal;
-             line-height: normal;
-             font-weight: 400;
-             color:  #181A20;
-             b {
-               margin-left: 10px;
-               font-weight: 600;
-               font-size: 32px;
-               cursor: pointer;
-               text-decoration: underline;
-             }
-           }
-         }
-       }
-       .right {
-         width: 50%;
-         height: 100%;
-         background-image: url("/img/banner/joinBg.svg");
-         background-size: cover;
-       }
-     }
-   }
-  }
+			.main {
+				width: 1100px;
+				height: 630px;
+				display: flex;
+				flex-direction: row;
+				border: 1px solid #e1eaf0;
+				border-radius: 30px;
+				background: #eef4f7;
+				box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+				overflow: hidden;
+				transition: all 0.3s ease-in-out;
+
+				.left {
+					width: 50%;
+					padding: 40px 40px;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+
+					.logo {
+						display: flex;
+						align-items: center;
+						gap: 10px;
+
+						img {
+							width: 52px;
+							height: 52px;
+						}
+
+						span {
+							margin-top: 10px;
+							font-family: $font;
+							font-size: 24px;
+							font-weight: 700;
+							color: #1a202c;
+						}
+					}
+
+					.info {
+						margin-top: 10px;
+						text-align: center;
+
+						span {
+							font-family: $font;
+							font-size: 20px;
+							font-weight: 700;
+							color: #2d3748;
+							text-transform: uppercase;
+						}
+
+						p {
+							margin-top: 8px;
+							font-family: $font;
+							font-size: 15px;
+							line-height: 1.7;
+							color: #4a5568;
+						}
+					}
+
+					.input-wrap {
+						margin-top: 30px;
+						width: 100%;
+						max-width: 420px;
+						display: flex;
+						flex-direction: column;
+						gap: 20px;
+
+						.input-box {
+							display: flex;
+							flex-direction: column;
+
+							span {
+								margin-bottom: 8px;
+								font-size: 14px;
+								font-weight: 600;
+								color: #2d3748;
+							}
+
+							input {
+								padding: 14px 16px;
+								border-radius: 10px;
+								border: 1px solid #cbd5e0;
+								background: #f9fafb;
+								color: #2d3748;
+								font-size: 14px;
+								transition: border-color 0.2s, box-shadow 0.2s;
+
+								&:focus {
+									border-color: #3182ce;
+									box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+									outline: none;
+								}
+							}
+						}
+					}
+
+					.register {
+						margin-top: 25px;
+						width: 100%;
+						max-width: 420px;
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						gap: 15px;
+						.type-option {
+							display: flex;
+							flex-direction: row;
+							align-items: center;
+							span.text {
+								font-family: $font;
+								font-size: 14px;
+								font-style: normal;
+								font-weight: 600;
+								line-height: normal;
+								color: #181a20;
+							}
+							div {
+								margin-left: 20px;
+								display: flex;
+								flex-direction: row;
+								&:nth-child(1) {
+									margin-right: 25px;
+								}
+							}
+						}
+						.remember-info {
+							width: 100%;
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+
+							a {
+								font-size: 14px;
+								color: #2b6cb0;
+								text-decoration: none;
+								transition: color 0.2s;
+
+								&:hover {
+									color: #1e40af;
+								}
+							}
+						}
+
+						button {
+							margin-top: 5px;
+							width: 90%;
+							height: 50px;
+							border: 1px solid #e1e8ef;
+							border-radius: 40px;
+							background: rgba(33, 124, 199, 0.08);
+							border-color: #4a5568;
+							color: #181a20;
+							font-size: 15px;
+							font-weight: 600;
+							cursor: pointer;
+							transition: all 0.3s ease;
+
+							&:hover {
+								color: #fff;
+								background: #2d3748;
+								border-color: #4a5568;
+							}
+						}
+					}
+
+					.ask-info {
+						margin-top: 30px;
+						text-align: center;
+
+						p {
+							font-size: 16px;
+							color: #4a5568;
+
+							b {
+								margin-left: 8px;
+								font-size: 18px;
+								color: #c93e34;
+								cursor: pointer;
+
+								transition: color 0.2s;
+
+								&:hover {
+									color: #2b6cb0;
+								}
+							}
+						}
+					}
+				}
+
+				.right {
+					width: 50%;
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-start;
+					align-items: center;
+					position: relative;
+					background-position: center;
+					background-size: cover;
+					background-repeat: no-repeat;
+
+					&::after {
+						content: '';
+						position: absolute;
+						inset: 0;
+						background: rgba(0, 0, 0, 0.3);
+					}
+
+					h2 {
+						margin-top: 30px;
+						position: relative;
+						z-index: 1;
+						font-size: 36px;
+						color: #fff;
+						text-align: center;
+						line-height: 1.3;
+						font-weight: 700;
+					}
+
+					&.login-view {
+						background-image: url('/img/banner/ayasofya.png');
+					}
+
+					&.signup-view {
+						background-image: url('/img/banner/galata.png');
+					}
+				}
+			}
+		}
+	}
 }

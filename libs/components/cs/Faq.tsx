@@ -38,7 +38,7 @@ const Faq = () => {
 
 	/** APOLLO REQUESTS **/
 	/** LIFECYCLES **/
-	
+
 	/** HANDLERS **/
 	const changeCategoryHandler = (category: string) => {
 		setCategory(category);
@@ -52,226 +52,211 @@ const Faq = () => {
 		property: [
 			{
 				id: '00f5a45ed8897f8090116a01',
-				subject: 'Are the properties displayed on the site reliable?',
-				content: 'of course we only have verified properties',
+				subject: 'Are the places featured on the site trustworthy?',
+				content: 'Absolutely. We only share verified and well-reviewed destinations.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a22',
-				subject: 'What types of properties do you offer?',
-				content: 'We offer single-family homes, condos, townhouses, apartments, and penthouses',
+				subject: 'What types of places do you feature?',
+				content:
+					'We showcase historical landmarks, cultural attractions, hotels, and culinary destinations across Turkey.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a21',
-				subject: 'How can I search for properties on your website?',
-				content: 'Simply use our search bar to enter location, price range, bedrooms/bathrooms, and property type.',
+				subject: 'How can I find places I’m interested in?',
+				content: 'Use our search bar to explore by category — Historical, Culinary, or Hotel — or browse by region.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a23',
-				subject: 'Do you provide assistance for first-time homebuyers?',
-				content: 'Yes, we guide you through the process and help find suitable financing.',
+				subject: 'Do you verify the information about each place?',
+				content: 'Yes, our team verifies every listing and collaborates with local experts to ensure accuracy.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a24',
-				subject: 'What should I consider when buying a property?',
-				content: 'Location, condition, size, amenities, and future development plans.',
+				subject: 'What should I consider before visiting a place?',
+				content: 'Check its location, accessibility, opening hours, cultural significance, and nearby attractions.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a25',
-				subject: 'How long does the home-buying process typically take?',
-				content: 'Usually 3 to 6 days, depending on various factors.',
+				subject: 'How often do you update your listings?',
+				content: 'Our listings are regularly updated to reflect new spots, reviews, and travel information.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a29',
-				subject: 'What happens if I encounter issues with the property after purchase?',
-				content: 'We offer post-purchase support to address any concerns promptly.',
+				subject: 'What if I find incorrect information about a place?',
+				content: 'Please report it to us — we’ll verify and update the content immediately.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a28',
-				subject: 'Do you offer properties in specific neighborhoods?',
-				content: 'Yes, we have listings in various neighborhoods based on your preferences.',
+				subject: 'Can I suggest a new place to be added?',
+				content: 'Yes! You can submit recommendations through our “Suggest a Place” form.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a27',
-				subject: 'Can I sell my property through your website?',
-				content: 'Absolutely, we provide services for selling properties as well.',
+				subject: 'Can I leave a review about a place I visited?',
+				content: 'Of course. You can share your experiences and photos in the review section of each place.',
 			},
 			{
 				id: '00f5a45ed8897f8090116b99',
-				subject: 'What if I need help understanding legal aspects of property purchase?',
-				content: 'Our team can provide basic guidance and recommend legal professionals if needed.',
+				subject: 'Do you work directly with local businesses?',
+				content: 'Yes, we collaborate with local hotels, restaurants, and guides to support authentic tourism.',
 			},
 		],
 		payment: [
 			{
 				id: '00f5a45ed8897f8090116a02',
-				subject: 'How can I make the payment?',
-				content: 'you make the payment through an agent!',
+				subject: 'How can I make a booking payment?',
+				content: 'You can make payments directly through our secure booking system or verified partners.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a91',
-				subject: 'Are there any additional fees for using your services?',
-				content: 'No, our services are free for buyers. Sellers pay a commission upon successful sale.',
+				subject: 'Are there any extra fees?',
+				content: 'No hidden fees — you only pay the displayed price for bookings or experiences.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a92',
-				subject: 'Is there an option for installment payments?',
-				content: 'Yes, we offer installment payment plans for certain properties. Please inquire for more details.',
+				subject: 'Do you offer installment options?',
+				content: 'For selected experiences, installment payments may be available. Check details on the booking page.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a93',
-				subject: 'Is my payment information secure on your website?',
-				content:
-					'Yes, we use industry-standard encryption technology to ensure the security of your payment information.',
+				subject: 'Is my payment information safe?',
+				content: 'Yes. We use industry-grade encryption to keep all payment details secure.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a94',
-				subject: 'Can I make payments online through your website?',
-				content: "Yes, you can securely make payments online through our website's payment portal.",
+				subject: 'Can I pay online?',
+				content: 'Yes, you can pay online safely using credit/debit cards or trusted payment platforms.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a95',
-				subject: "What happens if there's an issue with my payment?",
-				content: 'If you encounter any issues with your payment, please contact our support team for assistance.',
+				subject: 'What if there’s a problem with my payment?',
+				content: 'If any issue occurs, please contact our support team — we’ll resolve it quickly.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a96',
-				subject: 'Do you offer refunds for payments made?',
-				content:
-					'Refund policies vary depending on the circumstances. Please refer to our refund policy or contact us for more information.',
+				subject: 'Do you offer refunds?',
+				content: 'Refunds depend on the experience type and cancellation time. Please check our refund policy.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a97',
-				subject: 'Are there any discounts or incentives for early payments?',
-				content:
-					'We occasionally offer discounts or incentives for early payments. Check our promotions or contact us for current offers.',
+				subject: 'Are there discounts available?',
+				content: 'Yes! Seasonal discounts and early-bird offers are available on selected tours and stays.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a99',
-				subject: 'How long does it take for payments to be processed?',
-				content:
-					'Payment processing times vary depending on the payment method used. Typically, credit/debit card payments are processed instantly',
+				subject: 'How long does payment processing take?',
+				content: 'Usually within a few minutes, depending on your payment method.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a98',
-				subject: 'Are there penalties for late payments?',
-				content:
-					'Late payment penalties may apply depending on the terms of your agreement. Please refer to your contract or contact us for details.',
+				subject: 'What happens if I pay late?',
+				content: 'Late payments may lead to booking cancellation — please pay before the due date.',
 			},
 		],
-		buyers: [
+		travelers: [
 			{
 				id: '00f5a45ed8897f8090116a03',
-				subject: 'What should buyers pay attention to?',
-				content: 'Buyers should check and decide whether the property they want to buy or rent is actually suitable!',
+				subject: 'What should travelers prepare before visiting?',
+				content: 'Check travel routes, weather, and local customs before visiting any destination.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a85',
-				subject: 'How can I determine if a property is within my budget?',
-				content:
-					'Calculate your budget by considering your income, down payment, and potential mortgage payments. Our agents can assist you within your budget.',
+				subject: 'How can I plan my trip within budget?',
+				content: 'Plan ahead, compare hotel prices, and take advantage of our special offers.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a84',
-				subject: 'What documents do I need to provide when purchasing a property?',
-				content:
-					"You'll typically need identification, proof of income, bank statements, and any necessary loan documentation. Our team will guide you through.",
+				subject: 'What documents do I need for booking?',
+				content: 'Typically, you only need your name, contact info, and a valid payment method.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a83',
-				subject: 'What factors should I consider when choosing a neighborhood?',
-				content:
-					'Consider factors such as location, safety, schools, amenities, transportation, and future development plans.',
+				subject: 'How do I choose the best destination?',
+				content: 'Consider your interests — culture, history, or food — and read reviews from other travelers.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a82',
-				subject: 'Can I negotiate the price of a property?',
-				content:
-					'Yes, you can negotiate the price of a property. Our agents will assist you in making competitive offers and negotiating terms with the seller.',
+				subject: 'Can I get travel guidance?',
+				content: 'Yes! Our team and local agents can help plan routes or suggest hidden gems.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a81',
-				subject: 'What are some red flags to watch out for when viewing properties?',
-				content:
-					'Watch out for signs of structural damage, water damage, mold, outdated systems, and undesirable neighborhood conditions.',
+				subject: 'What should I watch out for while traveling?',
+				content: 'Always respect cultural sites, local traditions, and safety rules.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a80',
-				subject: 'Do you provide assistance with property inspections?',
-				content:
-					'Yes, we can recommend reputable inspectors and accompany you during property inspections to identify any potential issues.',
+				subject: 'Do you provide local guides?',
+				content: 'Yes, we partner with certified local guides for selected destinations.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a79',
-				subject: 'How long does it typically take to find the right property?',
-				content:
-					'The timeframe varies depending on your preferences and market conditions. Our agents will work diligently to find the right property as quickly as possible.',
+				subject: 'How long should I stay at each place?',
+				content: 'It depends on your interest — culinary trips take a few hours, historical sites may take a full day.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a78',
-				subject: 'What are the advantages of using a real estate agent when buying a property?',
-				content:
-					'Real estate agents provide expertise, negotiation skills, and guidance throughout the buying process, ultimately saving you time and hassle.',
+				subject: 'What’s the advantage of using your platform?',
+				content: 'We bring together authentic experiences, trusted places, and local culture in one place.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a77',
-				subject: 'What happens if I change my mind about a property after making an offer?',
-				content:
-					'Depending on the terms of the offer and the stage of the transaction, you may have options to withdraw your offer.',
+				subject: 'Can I cancel my trip after booking?',
+				content: 'Yes, but cancellation policies vary — please check each booking’s terms.',
 			},
 		],
-
 		agents: [
 			{
 				id: '00f5a45ed8897f8090116a04',
-				subject: 'What do I need to do if I want to become an agent?',
+				subject: 'How can I become a local guide or agent?',
 				content:
-					'If you really decide to become an agent, you should read our terms and conditions and contact the admin!',
+					'You can apply through our “Join as Partner” page and provide basic information about your experience.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a62',
-				subject: 'What qualifications do I need to become a real estate agent?',
-				content: 'Complete pre-licensing course, pass licensing exam, meet state requirements.',
+				subject: 'Do I need special qualifications?',
+				content: 'Not necessarily — local experience, communication skills, and knowledge of culture are key.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a63',
-				subject: 'How do I find clients as a new real estate agent?',
-				content: 'Build network, use online/offline marketing, join reputable brokerage.',
+				subject: 'How do I find travelers as a new agent?',
+				content: 'Create attractive listings and engage through our verified agent network.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a64',
-				subject: 'What are some effective marketing strategies for selling properties?',
-				content: 'Use social media, online platforms, networking events, and direct mail.',
+				subject: 'How can I promote my listed places?',
+				content: 'Use social media, local marketing, and share your listings through our platform.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a65',
-				subject: 'How do I handle negotiations with buyers and sellers?',
-				content: 'Develop strong negotiation skills, understand market trends, represent client interests.',
+				subject: 'How do I handle travelers’ questions or issues?',
+				content: 'Communicate clearly and politely. We offer support for agents if needed.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a66',
-				subject: 'What should I do to stay updated with market trends and changes?',
-				content: 'Attend industry events, follow real estate news, participate in training.',
+				subject: 'How can I stay updated with travel trends?',
+				content: 'Follow our news section and attend cultural tourism events.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a67',
-				subject: 'How do I handle difficult clients or situations?',
-				content:
-					'Approach with professionalism, empathy, and patience. Listen actively, address issues collaboratively.',
+				subject: 'How do I deal with difficult guests?',
+				content: 'Be patient and professional. Focus on resolving issues constructively.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a68',
-				subject: 'What tools and technologies should I utilize as a real estate agent?',
-				content: 'Use CRM software, virtual tours, digital marketing tools, and mobile apps.',
+				subject: 'What tools should I use as an agent?',
+				content: 'Use our dashboard for managing listings, messages, and visitor feedback.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a69',
-				subject: 'How do I ensure compliance with real estate laws and regulations?',
-				content: 'Stay updated with laws, attend education courses, consult legal professionals.',
+				subject: 'Are there rules for agents?',
+				content: 'Yes, all agents must follow our platform’s quality and behavior guidelines.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a70',
-				subject: 'What strategies can I use to grow my real estate business?',
-				content: 'Build relationships, provide exceptional service, seek referrals, and continuously improve skills.',
+				subject: 'How can I grow my reputation as a guide?',
+				content: 'Provide honest service, respond quickly, and collect positive reviews.',
 			},
 		],
 		membership: [
@@ -330,105 +315,50 @@ const Faq = () => {
 		community: [
 			{
 				id: '00f5a45ed8897f8090116a06',
-				subject: 'What should I do if there is abusive or criminal behavior in the community section?',
-				content: 'If you encounter this situation, please report it immediately or contact the admin!',
+				subject: 'What should I do if I see offensive or false posts?',
+				content: 'Please report them immediately or contact our support team.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a44',
-				subject: 'How can I participate in the community section of your website?',
-				content: 'Create an account and engage in discussions.',
+				subject: 'How can I participate in the community?',
+				content: 'Sign up and join discussions about food, culture, and travel tips.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a45',
-				subject: 'Are there guidelines for posting?',
-				content: 'Yes, follow our community guidelines.',
-			},
-			{
-				id: '00f5a45ed8897f8090116a46',
-				subject: 'What should I do if I encounter spam or irrelevant posts?',
-				content: 'Report them to the admin.',
-			},
-			{
-				id: '00f5a45ed8897f8090116a47',
-				subject: 'Can I connect with other members outside of the community section?',
-				content: 'Currently, no.',
+				subject: 'Are there posting rules?',
+				content: 'Yes, please follow our community guidelines to keep discussions respectful.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a48',
-				subject: 'Can I share personal experiences or recommendations?',
-				content: 'Yes, if relevant you can share personal experiences and recommendations.',
-			},
-			{
-				id: '00f5a45ed8897f8090116a49',
-				subject: 'How can I ensure privacy?',
-				content: 'Avoid sharing sensitive information.',
+				subject: 'Can I share my travel experiences?',
+				content: 'Definitely! You can post stories, photos, and reviews of your trips.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a50',
 				subject: 'How can I contribute positively?',
-				content: 'Respect others and engage constructively.',
-			},
-			{
-				id: '00f5a45ed8897f8090116a51',
-				subject: 'What if I notice misinformation?',
-				content: 'Provide correct information or report to the admin.',
-			},
-			{
-				id: '00f5a45ed8897f8090116a52',
-				subject: 'Are there moderators?',
-				content: 'Yes, we have moderators.',
+				content: 'Be respectful, helpful, and share authentic insights.',
 			},
 		],
 		other: [
 			{
 				id: '00f5a45ed8897f8090116a40',
-				subject: 'Who should I contact if I want to buy your site?',
-				content: 'We have no plans to sell the site at this time!',
+				subject: 'Can I collaborate with your project?',
+				content: 'We welcome partnerships related to culture, travel, and culinary tourism.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a39',
-				subject: 'Can I advertise my services on your website?',
-				content: 'We currently do not offer advertising opportunities on our site.',
+				subject: 'Can I advertise my hotel or restaurant?',
+				content: 'Yes, verified partners can apply through our business collaboration page.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a38',
-				subject: 'Are there sponsorship opportunities available on your platform?',
-				content: 'At this time, we do not have sponsorship opportunities.',
-			},
-			{
-				id: '00f5a45ed8897f8090116a36',
-				subject: 'Can I contribute guest posts or articles to your website?',
-				content: "We're not accepting guest posts or articles at the moment.",
-			},
-			{
-				id: '00f5a45ed8897f8090116a35',
-				subject: 'Is there a referral program for recommending your website to others?',
-				content: "We don't have a referral program in place currently.",
-			},
-			{
-				id: '00f5a45ed8897f8090116a34',
-				subject: 'Do you offer affiliate partnerships for promoting your services?',
-				content: 'Affiliate partnerships are not available at this time.',
-			},
-			{
-				id: '00f5a45ed8897f8090116a33',
-				subject: 'Can I purchase merchandise related to your website?',
-				content: "We don't have merchandise available for purchase.",
-			},
-			{
-				id: '00f5a45ed8897f8090116a32',
-				subject: 'Are there any job openings or opportunities to work with your team?',
-				content: 'Currently, we do not have any job openings or opportunities available.',
-			},
-			{
-				id: '00f5a45ed8897f8090116a31',
-				subject: 'Do you host events or webinars related to real estate?',
-				content: "We're not hosting events or webinars at this time.",
+				subject: 'Do you host cultural events?',
+				content: 'Yes, we occasionally host online and local events — check our News page.',
 			},
 			{
 				id: '00f5a45ed8897f8090116a30',
-				subject: 'Can I request custom features or functionalities for your website?',
-				content: "We're not accepting requests for custom features or functionalities.",
+				subject: 'Can I suggest a new feature?',
+				content: 'We always welcome ideas — please contact us through our feedback form.',
 			},
 		],
 	};
@@ -456,12 +386,12 @@ const Faq = () => {
 						Payment
 					</div>
 					<div
-						className={category === 'buyers' ? 'active' : ''}
+						className={category === 'travelers' ? 'active' : ''}
 						onClick={() => {
-							changeCategoryHandler('buyers');
+							changeCategoryHandler('travelers');
 						}}
 					>
-						Foy Buyers
+						Travelers
 					</div>
 					<div
 						className={category === 'agents' ? 'active' : ''}
