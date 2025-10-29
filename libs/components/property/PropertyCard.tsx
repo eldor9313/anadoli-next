@@ -40,6 +40,9 @@ const PropertyCard = (props: PropertyCardType) => {
 						}}
 					>
 						<img src={imagePath} alt="" />
+						<div className={'booking'}>
+							<p>Book Now</p>
+						</div>
 					</Link>
 					{property && property?.propertyRank > topPropertyRank && (
 						<Box component={'div'} className={'top-badge'}>
@@ -51,6 +54,7 @@ const PropertyCard = (props: PropertyCardType) => {
 						<Typography>${formatterStr(property?.propertyPrice)}</Typography>
 					</Box>
 				</Stack>
+
 				<Stack className="bottom">
 					<Stack className="name-address">
 						<Stack className="name">

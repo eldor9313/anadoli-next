@@ -164,6 +164,8 @@
 							background-size: cover;
 							border-radius: 12px 12px 0px 0px;
 							cursor: pointer;
+							overflow: hidden;
+
 							.price-box {
 								position: absolute;
 								padding: 8px 12px;
@@ -183,10 +185,47 @@
 								background: rgba(255, 255, 255, 0.75);
 								border: 1px solid rgba(255, 255, 255, 0.4);
 								box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+								transition: all 0.3s ease;
+								z-index: 2;
+
 								&:hover {
 									box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 									background: rgba(255, 255, 255, 0.9);
 									border-color: rgba(255, 255, 255, 0.6);
+								}
+							}
+
+							.booking {
+								position: absolute;
+								top: 0;
+								right: -80px;
+								width: 40px;
+								height: 100%;
+								background: linear-gradient(to bottom, #1c66aa, #2c8bd4);
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								transition: all 0.3s ease;
+								z-index: 1;
+								border-top-right-radius: 12px;
+
+								p {
+									color: white;
+									font-family: $font;
+									font-size: 14px;
+									font-weight: 600;
+									margin: 0;
+									letter-spacing: 1.2px;
+									writing-mode: vertical-rl;
+									text-orientation: mixed;
+									transform: rotate(180deg);
+									padding: 10px 0;
+								}
+							}
+
+							&:hover {
+								.booking {
+									right: 0;
 								}
 							}
 						}
@@ -826,6 +865,8 @@
 							background-size: cover;
 							border-radius: 12px 12px 0px 0px;
 							cursor: pointer;
+							overflow: hidden;
+
 							.price-box {
 								position: absolute;
 								padding: 8px 12px;
@@ -845,10 +886,47 @@
 								background: rgba(255, 255, 255, 0.75);
 								border: 1px solid rgba(255, 255, 255, 0.4);
 								box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+								transition: all 0.3s ease;
+								z-index: 2;
+
 								&:hover {
 									box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 									background: rgba(255, 255, 255, 0.9);
 									border-color: rgba(255, 255, 255, 0.6);
+								}
+							}
+
+							.booking {
+								position: absolute;
+								top: 0;
+								right: -80px;
+								width: 40px;
+								height: 100%;
+								background: linear-gradient(to bottom, #1c66aa, #2c8bd4);
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								transition: all 0.3s ease;
+								z-index: 1;
+								border-top-right-radius: 12px;
+
+								p {
+									color: white;
+									font-family: $font;
+									font-size: 14px;
+									font-weight: 600;
+									margin: 0;
+									letter-spacing: 1.2px;
+									writing-mode: vertical-rl;
+									text-orientation: mixed;
+									transform: rotate(180deg);
+									padding: 10px 0;
+								}
+							}
+
+							&:hover {
+								.booking {
+									right: 0;
 								}
 							}
 						}
@@ -1172,144 +1250,218 @@
 
 		.community-board {
 			position: relative;
-			padding: 60px 0px 60px;
+			padding: 60px 0px 80px;
 			width: 100%;
-			height: 800px;
+			min-height: 700px;
 			display: flex;
 			flex-direction: row;
+			background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+
 			.container {
 				flex-direction: column;
 				align-items: center;
+
 				.community-main {
 					width: 100%;
-					margin-top: 60px;
+					margin-top: 40px;
 					display: flex;
 					flex-direction: row;
 					justify-content: space-between;
+					gap: 40px;
+
 					.center-line {
-						height: 90%;
-						align-self: end;
+						height: 85%;
+						align-self: center;
+						width: 1px;
+						background: linear-gradient(to bottom, transparent, #e2e8f0, transparent);
 					}
+
 					.content-top {
-						margin-bottom: 26px;
+						margin-bottom: 32px;
 						width: 100%;
-						height: 30px;
 						display: flex;
 						flex-direction: row;
 						justify-content: flex-end;
 						align-items: center;
+
 						span {
 							font-family: $font;
 							font-style: normal;
-							font-weight: 500;
+							font-weight: 600;
 							font-size: 16px;
 							line-height: 36px;
-							color: #616161;
+							color: #64748b;
 							cursor: pointer;
+							transition: all 0.3s ease;
+							padding: 8px 16px;
+							border-radius: 8px;
+
+							&:hover {
+								color: #217cc7;
+								background: rgba(30, 64, 175, 0.1);
+								transform: translateY(-2px);
+							}
 						}
+
 						img {
-							margin-left: 10px;
-							width: 12px;
-							height: 12px;
+							margin-left: 12px;
+							width: 14px;
+							height: 14px;
+							transition: transform 0.3s ease;
+						}
+
+						&:hover img {
+							transform: translateX(3px);
 						}
 					}
+
 					.community-left {
-						width: 642px;
+						width: 650px;
 						height: auto;
 						display: flex;
 						flex-direction: column;
+
 						.card-wrap {
 							display: flex;
 							flex-direction: row;
 							flex-wrap: wrap;
+							gap: 16px;
+
 							.vertical-card {
-								margin-right: 12px;
-								margin-bottom: 18px;
-								width: 202px;
+								width: 200px;
 								display: flex;
 								flex-direction: column;
 								cursor: pointer;
+								transition: all 0.3s ease;
+								border-radius: 20px;
+								background: white;
+								box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+								overflow: hidden;
+
+								&:hover {
+									transform: translateY(-2px);
+									box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+								}
+
 								.community-img {
+									position: relative;
 									width: 100%;
-									height: 141px;
+									height: 140px;
 									background-size: cover;
-									background-repeat: round;
-									border-radius: 5px;
+									background-position: center;
+									background-repeat: no-repeat;
+									border-radius: 15px 15px 0 0;
+
 									div {
-										width: 32px;
-										height: 32px;
+										position: absolute;
+										top: 0;
+										left: 0;
+										width: 40px;
+										height: 40px;
 										display: flex;
 										justify-content: center;
 										align-items: center;
-										background: #f54d56;
-										border-radius: 5px 0px;
+										background: linear-gradient(135deg, #217cc7, #1e40af);
+										border-radius: 15px 0px 20px 0px;
 										font-family: $font;
 										font-style: normal;
-										font-weight: 400;
-										font-size: 19px;
+										font-weight: 600;
+										font-size: 16px;
 										line-height: 36px;
 										letter-spacing: -0.015em;
-										color: #bdbdbd;
+										color: #ffffff;
+										box-shadow: 0 2px 10px rgba(33, 124, 199, 0.3);
 									}
 								}
+
 								strong {
-									margin-top: 10px;
+									margin: 12px 16px 6px;
 									font-family: $font;
 									font-style: normal;
 									font-weight: 700;
-									font-size: 18px;
-									line-height: 36px;
-									letter-spacing: 0.105em;
-									color: #000000;
+									font-size: 16px;
+									line-height: 24px;
+									letter-spacing: 0.05em;
+									color: #1e293b;
+									display: -webkit-box;
+									-webkit-box-orient: vertical;
+									overflow: hidden;
 								}
+
 								span {
+									margin: 0 16px 16px;
 									font-family: $font;
 									font-style: normal;
 									font-weight: 400;
-									font-size: 16px;
-									line-height: 19px;
+									font-size: 14px;
+									line-height: 20px;
 									letter-spacing: -0.015em;
-									color: #d3d3d3;
+									color: #64748b;
 								}
 							}
 						}
 					}
+
 					.community-right {
-						width: 590px;
+						width: 580px;
 						height: auto;
 						display: flex;
 						flex-direction: column;
+
 						.horizontal-card {
 							display: flex;
 							flex-direction: row;
 							cursor: pointer;
-							margin-bottom: 34px;
-							img {
-								width: 180px;
-								height: 111px;
-								border-radius: 7px;
+							margin-bottom: 24px;
+							padding: 16px;
+							border-radius: 16px;
+							background: white;
+							box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+							transition: all 0.3s ease;
+							border: 1px solid #f1f5f9;
+
+							&:hover {
+								transform: translateX(3px);
+								box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+								border-color: #e2e8f0;
 							}
+
+							img {
+								width: 120px;
+								height: 90px;
+								border-radius: 12px;
+								object-fit: cover;
+								flex-shrink: 0;
+							}
+
 							div {
-								margin-left: 25px;
+								margin-left: 20px;
 								display: flex;
 								flex-direction: column;
+								justify-content: center;
+
 								strong {
-									margin-top: 15px;
 									font-family: $font;
 									font-style: normal;
-									font-weight: 500;
-									font-size: 13px;
-									letter-spacing: 0.105em;
-									color: #212121;
+									font-weight: 600;
+									font-size: 15px;
+									line-height: 22px;
+									letter-spacing: 0.03em;
+									color: #1e293b;
+									display: -webkit-box;
+									-webkit-box-orient: vertical;
+									overflow: hidden;
+									margin-bottom: 4px;
 								}
+
 								span {
 									font-family: $font;
 									font-style: normal;
 									font-weight: 500;
 									font-size: 13px;
-									line-height: 36px;
-									letter-spacing: 0.105em;
-									color: #bdbdbd;
+									line-height: 18px;
+									letter-spacing: 0.02em;
+									color: #94a3b8;
 								}
 							}
 						}

@@ -92,6 +92,9 @@ const TrendPropertyCard = (props: TrendPropertyCardProps) => {
 					onClick={() => pushDetailHandler(property._id)}
 				>
 					<div className={'price-box'}>${property.propertyPrice}</div>
+					<div className={'booking'}>
+						<p>Book Now</p>
+					</div>
 				</Box>
 				<Box component={'div'} className={'info'}>
 					<strong className={'title'} onClick={() => pushDetailHandler(property._id)}>
