@@ -616,3 +616,68 @@ export const GET_MEMBER_FOLLOWINGS = gql`
 		}
 	}
 `;
+
+/**************************
+ *      NOTIFICATION      *
+ *************************/
+export const GET_NOTIFICATIONS = gql`
+	query MyNotifs($input: NotificationInquiry!) {
+		myNotifications(input: $input) {
+			list {
+				_id
+				notificationType
+				notificationStatus
+				notificationGroup
+				notificationTitle
+				notificationDesc
+				authorId
+				receiverId
+				propertyId
+				articleId
+				createdAt
+				updatedAt
+			}
+			metaCounter {
+				total
+			}
+		}
+	}
+`;
+
+export const GET_UNREADNOTIFICATIONS = gql`
+	query UnreadNotificationsCount {
+		unreadNotificationsCount
+	}
+`;
+
+export const GET_NOTICE = gql`
+	query GetNotice($id: String!) {
+		getNotice(noticeId: $id) {
+			_id
+			noticeCategory
+			noticeStatus
+			noticeTitle
+			noticeContent
+			memberId
+			createdAt
+			updatedAt
+		}
+	}
+`;
+export const GET_NOTICES = gql`
+	query GetNotices($input: NoticesInquiry!) {
+		getNotices(input: $input) {
+			totalCount
+			page
+			limit
+			notices {
+				_id
+				noticeTitle
+				noticeContent
+				noticeCategory
+				noticeStatus
+				createdAt
+			}
+		}
+	}
+`;

@@ -13,10 +13,15 @@ import { CaretDown } from 'phosphor-react';
 import useDeviceDetect from '../hooks/useDeviceDetect';
 import Link from 'next/link';
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
-import { useReactiveVar } from '@apollo/client';
+import { useQuery, useReactiveVar } from '@apollo/client';
 import { userVar } from '../../apollo/store';
 import { Logout } from '@mui/icons-material';
 import { REACT_APP_API_URL } from '../config';
+import { T } from '../types/common';
+import { GET_UNREADNOTIFICATIONS } from '../../apollo/user/query';
+import Notifications from './Notification';
+import { Notification } from '../types/notification/notification';
+import { RippleBadge } from '../../scss/MaterialTheme/styled';
 
 const Top = () => {
 	const device = useDeviceDetect();
@@ -32,6 +37,9 @@ const Top = () => {
 	const [bgColor, setBgColor] = useState<boolean>(false);
 	const [logoutAnchor, setLogoutAnchor] = React.useState<null | HTMLElement>(null);
 	const logoutOpen = Boolean(logoutAnchor);
+
+	const [notifOpen, setNotifOpen] = useState(false);
+	const [unreadCount, setUnreadCount] = useState<number>(0);
 
 	/** LIFECYCLES **/
 	useEffect(() => {
@@ -57,6 +65,21 @@ const Top = () => {
 		const jwt = getJwtToken();
 		if (jwt) updateUserInfo(jwt);
 	}, []);
+
+	const hasToken = !!getJwtToken();
+	const {
+		loading: getUnreadNotificationsLoading,
+		data: getUnreadNotificationsData,
+		error: getUnreadNotificationsError,
+		refetch: getUnreadNotificationsRefetch,
+	} = useQuery(GET_UNREADNOTIFICATIONS, {
+		skip: !hasToken,
+		fetchPolicy: 'cache-and-network',
+		notifyOnNetworkStatusChange: true,
+		onCompleted: (data: T) => {
+			setUnreadCount(data?.unreadNotificationsCount ?? 0);
+		},
+	});
 
 	/** HANDLERS **/
 	const langClick = (e: any) => {
@@ -116,7 +139,7 @@ const Top = () => {
 			borderRadius: 12,
 			marginTop: theme.spacing(1.5),
 			minWidth: 160,
-			background: 'rgba(255, 255, 255, 0)', 
+			background: 'rgba(255, 255, 255, 0)',
 			backdropFilter: 'blur(12px) saturate(150%)',
 			WebkitBackdropFilter: 'blur(12px) saturate(150%)',
 			boxShadow: '0 8px 25px rgba(0, 0, 0, 0.1)',
@@ -141,12 +164,12 @@ const Top = () => {
 				},
 
 				'& .MuiTypography-root': {
-					color: '#1e293b', 
+					color: '#1e293b',
 				},
 
 				'& .MuiSvgIcon-root': {
 					fontSize: 18,
-					color: '#1e293b', 
+					color: '#1e293b',
 					marginRight: theme.spacing(1.5),
 				},
 
@@ -283,7 +306,17 @@ const Top = () => {
 								)}
 
 								<div className={'lan-box'}>
-									{user?._id && <NotificationsOutlinedIcon className={'notification-icon'} />}
+									{user?._id && (
+										<NotificationsOutlinedIcon
+											className={'notification-icon'}
+											onClick={() => setNotifOpen(true)}
+											style={{ cursor: 'pointer' }}
+										/>
+									)}
+									<RippleBadge style={{ margin: '-18px 0 0 1px' }} badgeContent={unreadCount} />
+
+									<Notifications open={notifOpen} onClose={() => setNotifOpen(false)} />
+
 									<Button
 										disableRipple
 										className="btn-lang"
