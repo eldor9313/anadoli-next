@@ -114,7 +114,7 @@ const AddProperty = ({ initialValues, ...props }: any) => {
 	const doDisabledCheck = () => {
 		if (
 			insertPropertyData.propertyTitle === '' ||
-			insertPropertyData.propertyPrice === 0 || // @ts-ignore
+			(insertPropertyData.propertyType !== 'CULINARY' && insertPropertyData.propertyPrice === 0) || // @ts-ignore
 			insertPropertyData.propertyType === '' || // @ts-ignore
 			insertPropertyData.propertyLocation === '' || // @ts-ignore
 			insertPropertyData.propertyAddress === '' || // @ts-ignore
