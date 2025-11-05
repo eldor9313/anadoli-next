@@ -27,6 +27,8 @@ import {
 	REMOVEALLNOTIFICATION,
 } from '../../apollo/user/mutation';
 import { useTranslation } from 'next-i18next';
+import SubjectIcon from '@mui/icons-material/Subject';
+import MessageIcon from '@mui/icons-material/Message';
 
 type Direction = 'ASC' | 'DESC';
 type TabKey = 'new' | 'read' | 'all';
@@ -125,7 +127,7 @@ const Notifications = ({ initialInput, open, onClose }: NotificationsProps) => {
 			transformOrigin={{ vertical: 'top', horizontal: 'center' }}
 			PaperProps={{
 				sx: {
-					width: 420,
+					width: 450,
 					maxWidth: '95vw',
 					maxHeight: '90vh',
 					overflow: 'auto',
@@ -133,7 +135,7 @@ const Notifications = ({ initialInput, open, onClose }: NotificationsProps) => {
 					borderRadius: 3,
 					boxShadow: '0 8px 25px rgba(0,0,0,0.15)',
 					border: '1px solid #e0e0e0',
-					backgroundColor: 'rgba(255, 255, 255, 0.8)',
+					backgroundColor: 'rgba(201, 228, 250, 0.9)',
 					backdropFilter: 'blur(8px)',
 				},
 			}}
@@ -229,17 +231,18 @@ const Notifications = ({ initialInput, open, onClose }: NotificationsProps) => {
 
 							return (
 								<React.Fragment key={n._id}>
-									<ListItem sx={{ px: 2, py: 1.5 }} disableGutters>
+									<ListItem sx={{ px: 1, py: 1.5 }} disableGutters>
 										<Box sx={{ flex: 1, pr: 2, minWidth: 0 }}>
 											<Stack spacing={0.75}>
-												<Stack direction="row" spacing={1} alignItems="baseline">
-													<Typography sx={{ fontWeight: 800, minWidth: 70 }}>{t('Title')}:</Typography>
-													<Typography variant="h6" sx={{ fontWeight: 700, lineHeight: 1.3, wordBreak: 'break-word' }}>
+												<Stack direction="row" spacing={1} alignItems="center">
+													<SubjectIcon fontSize="small" sx={{ color: 'text.secondary', minWidth: 20 }} />
+													<Typography variant="h6" sx={{ fontWeight: 600, lineHeight: 1.3, wordBreak: 'break-word' }}>
 														{title}
 													</Typography>
 												</Stack>
-												<Stack direction="row" spacing={1} alignItems="baseline">
-													<Typography sx={{ fontWeight: 800, minWidth: 70 }}>{t('Message')}:</Typography>
+
+												<Stack direction="row" spacing={1} alignItems="center">
+													<MessageIcon fontSize="small" sx={{ color: 'text.secondary', minWidth: 20 }} />
 													<Typography
 														variant="body1"
 														sx={{ lineHeight: 1.5, whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}
@@ -250,22 +253,31 @@ const Notifications = ({ initialInput, open, onClose }: NotificationsProps) => {
 											</Stack>
 										</Box>
 
-										<Stack sx={{ width: 260, alignItems: 'flex-end' }} spacing={1}>
+										<Stack sx={{ width: 200, alignItems: 'flex-end' }} spacing={1}>
 											<Typography variant="caption" color="text.secondary">
 												{created}
 											</Typography>
 											<Stack direction="row" spacing={1}>
 												{tab !== 'read' && (
-													<Tooltip title={t('Mark as read') as string}>
+													<Tooltip title={t('Read') as string}>
 														<span>
 															<Button
 																size="small"
+																sx={{
+																	color: '#181a20',
+																	borderColor: '#007bff',
+																	'&:hover': {
+																		backgroundColor: '#217cc7',
+																		borderColor: '#007bff',
+																		color: '#fff',
+																	},
+																}}
 																variant="outlined"
 																onClick={() => handleMarkRead(n._id)}
 																disabled={markOneLoading}
 																startIcon={<CheckCircle size={16} />}
 															>
-																{t('Mark as read')}
+																{t('Read')}
 															</Button>
 														</span>
 													</Tooltip>
@@ -274,7 +286,14 @@ const Notifications = ({ initialInput, open, onClose }: NotificationsProps) => {
 													<span>
 														<Button
 															size="small"
-															color="error"
+															sx={{
+																color: '#181a20',
+																borderColor: '#ff0000',
+																'&:hover': {
+																	backgroundColor: '#c72121',
+																	color: '#fff',
+																},
+															}}
 															variant="outlined"
 															onClick={() => handleRemove(n._id)}
 															disabled={removeOneLoading}
@@ -287,6 +306,7 @@ const Notifications = ({ initialInput, open, onClose }: NotificationsProps) => {
 											</Stack>
 										</Stack>
 									</ListItem>
+
 									<Divider component="li" />
 								</React.Fragment>
 							);

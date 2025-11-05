@@ -19,6 +19,7 @@ import { useRouter } from 'next/router';
 import CancelRoundedIcon from '@mui/icons-material/CancelRounded';
 import { propertySquare } from '../../config';
 import RefreshIcon from '@mui/icons-material/Refresh';
+import { useTranslation } from 'next-i18next';
 
 const MenuProps = {
 	PaperProps: {
@@ -42,6 +43,8 @@ const Filter = (props: FilterType) => {
 	const [propertyType, setPropertyType] = useState<PropertyType[]>(Object.values(PropertyType));
 	const [searchText, setSearchText] = useState<string>('');
 	const [showMore, setShowMore] = useState<boolean>(false);
+
+	const { t, i18n } = useTranslation('common');
 
 	/** LIFECYCLES **/
 	useEffect(() => {
@@ -531,7 +534,7 @@ const Filter = (props: FilterType) => {
 		return (
 			<Stack className={'filter-main'}>
 				<Stack className={'find-your-home'} mb={'40px'}>
-					<Typography className={'title-main'}>Find Your Stay</Typography>
+					<Typography className={'title-main'}>{t('search.findYourStay')}</Typography>
 					<Stack className={'input-box'}>
 						<OutlinedInput
 							sx={{
@@ -575,7 +578,7 @@ const Filter = (props: FilterType) => {
 					</Stack>
 				</Stack>
 				<Stack className={'find-your-home'} mb={'30px'}>
-					<Typography className={'title'}>Category</Typography>
+					<Typography className={'title'}>{t('search.category')}</Typography>
 					{propertyType.map((type: string) => (
 						<Stack className={'input-box'} key={type}>
 							<Checkbox
@@ -594,7 +597,7 @@ const Filter = (props: FilterType) => {
 					))}
 				</Stack>
 				<Stack className={'find-your-home'} mb={'30px'}>
-					<p className={'title'}>Destination</p>
+					<p className={'title'}>{t('search.destination')}</p>
 					<Stack
 						className={`property-location`}
 						onMouseEnter={() => setShowMore(true)}
@@ -626,7 +629,7 @@ const Filter = (props: FilterType) => {
 				</Stack>
 
 				<Stack className={'find-your-home'}>
-					<Typography className={'title'}>Price</Typography>
+					<Typography className={'title'}>{t('search.price')}</Typography>
 					<Stack className="square-year-input">
 						<input
 							type="number"

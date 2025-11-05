@@ -6,9 +6,12 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import useDeviceDetect from '../hooks/useDeviceDetect';
 import { Stack, Box, Link } from '@mui/material';
 import moment from 'moment';
+import { useTranslation } from 'next-i18next';
 
 const Footer = () => {
 	const device = useDeviceDetect();
+
+	const { t, i18n } = useTranslation('common');
 
 	if (device == 'mobile') {
 		return (
@@ -74,15 +77,15 @@ const Footer = () => {
 				<Stack className={'main'}>
 					<Stack className={'left'}>
 						<Box component={'div'} className={'footer-box'}>
-							<span>Support</span>
+							<span>{t('footer.support')}</span>
 							<p>+82 10 8747 9313</p>
 						</Box>
 						<Box component={'div'} className={'footer-box'}>
-							<span>Live Assistance</span>
+							<span>{t('footer.live')}</span>
 							<p>+82 10 8747 9313</p>
 						</Box>
 						<Box component={'div'} className={'footer-box'}>
-							<span>Connect with us on social media</span>
+							<span>{t('footer.connect')}</span>
 							<div className={'media-box'}>
 								<FacebookOutlinedIcon />
 								<TelegramIcon />
@@ -102,31 +105,31 @@ const Footer = () => {
 					<Stack className={'right'}>
 						<Box component={'div'} className={'top'}>
 							<strong>
-								Discover Türkiye from your inbox
-								<br /> Get inspired with new destinations,
-								<br /> stories, and travel offers.
+								<strong>
+									{t('footer.discoverLine1')} <br />
+									{t('footer.discoverLine2')} <br />
+									{t('footer.discoverLine3')}
+								</strong>
 							</strong>
 							<div>
 								<input type="text" placeholder={'Your Email'} />
-								<span>Subscribe</span>
+								<span>{t('footer.subscribe')}</span>
 							</div>
 
 							<label className={'custom-checkbox'}>
 								<input type="checkbox" />
 								<span className={'checkmark'}></span>
-								<p>Your information is safe and secure. By subscribing, you consent to receive updates.</p>
+								<p>{t('footer.checkbox')}</p>
 							</label>
 						</Box>
 					</Stack>
 				</Stack>
 				<Stack className={'second'}>
-					<span>
-						Copyright <span className="copyright"> © </span> Anadoli 2025. All Rights Reserved.
-					</span>
+					<span>{t('footer.copyright')}</span>
 					<div className={'pts'}>
-						<a href="/privacy">Privacy Policy</a>
-						<a href="/terms">Terms of Service</a>
-						<a href="/sitemap">Sitemap</a>
+						<a href="/privacy">{t('footer.privacy')}</a>
+						<a href="/terms">{t('footer.terms')}</a>
+						<a href="/sitemap">{t('footer.sitemap')}</a>
 					</div>
 				</Stack>
 			</Stack>

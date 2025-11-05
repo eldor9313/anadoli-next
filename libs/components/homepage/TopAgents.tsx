@@ -11,6 +11,7 @@ import { AgentsInquiry } from '../../types/member/member.input';
 import { useQuery } from '@apollo/client';
 import { GET_AGENTS } from '../../../apollo/user/query';
 import { T } from '../../types/common';
+import { useTranslation } from 'next-i18next';
 
 interface TopAgentsProps {
 	initialInput: AgentsInquiry;
@@ -21,6 +22,8 @@ const TopAgents = (props: TopAgentsProps) => {
 	const device = useDeviceDetect();
 	const router = useRouter();
 	const [topAgents, setTopAgents] = useState<Member[]>([]);
+
+	const { t, i18n } = useTranslation('common');
 
 	/** APOLLO REQUESTS **/
 
@@ -72,12 +75,12 @@ const TopAgents = (props: TopAgentsProps) => {
 				<Stack className={'container'}>
 					<Stack className={'info-box'}>
 						<Box component={'div'} className={'left'}>
-							<span>Top Agents</span>
-							<p>Our Top Agents always ready to serve you</p>
+							<span>{t('agents.title')}</span>
+							<p>{t('agents.desc')}</p>
 						</Box>
 						<Box component={'div'} className={'right'}>
 							<div className={'more-box'}>
-								<span>See All Agents</span>
+								<span>{t('seeAllAgents')}</span>
 								<img src="/img/icons/rightup.svg" alt="" />
 							</div>
 						</Box>

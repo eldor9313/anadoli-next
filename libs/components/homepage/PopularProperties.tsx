@@ -12,6 +12,7 @@ import { PropertiesInquiry } from '../../types/property/property.input';
 import { useQuery } from '@apollo/client';
 import { GET_PROPERTIES } from '../../../apollo/user/query';
 import { T } from '../../types/common';
+import { useTranslation } from 'next-i18next';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -24,6 +25,8 @@ const PopularProperties = (props: PopularPropertiesProps) => {
 	const { initialInput } = props;
 	const device = useDeviceDetect();
 	const [popularProperties, setPopularProperties] = useState<Property[]>([]);
+
+	const { t, i18n } = useTranslation('common');
 
 	/** APOLLO REQUESTS **/
 
@@ -77,13 +80,13 @@ const PopularProperties = (props: PopularPropertiesProps) => {
 				<Stack className={'container'}>
 					<Stack className={'info-box'}>
 						<Box component={'div'} className={'left'}>
-							<span>Explore Türkiye</span>
-							<p>Based on popular views</p>
+							<span>{t('explore.title')}</span>
+							<p>{t('explore.desc')}</p>
 						</Box>
 						<Box component={'div'} className={'right'}>
 							<div className={'more-box'}>
 								<Link href={'/property'}>
-									<span>See All Categories</span>
+									<span>{t('seeAllCategories')}</span>
 								</Link>
 								<img src="/img/icons/rightup.svg" alt="" />
 							</div>

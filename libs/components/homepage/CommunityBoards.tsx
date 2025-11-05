@@ -8,6 +8,7 @@ import { useQuery } from '@apollo/client';
 import { GET_BOARD_ARTICLES } from '../../../apollo/user/query';
 import { BoardArticleCategory } from '../../enums/board-article.enum';
 import { T } from '../../types/common';
+import { useTranslation } from 'next-i18next';
 
 const CommunityBoards = () => {
 	const device = useDeviceDetect();
@@ -18,6 +19,8 @@ const CommunityBoards = () => {
 	});
 	const [newsArticles, setNewsArticles] = useState<BoardArticle[]>([]);
 	const [freeArticles, setFreeArticles] = useState<BoardArticle[]>([]);
+
+	const { t, i18n } = useTranslation('common');
 
 	/** APOLLO REQUESTS **/
 	const {
@@ -55,13 +58,13 @@ const CommunityBoards = () => {
 			<Stack className={'community-board'}>
 				<Stack className={'container'}>
 					<Stack>
-						<Typography variant={'h1'}>What’s Hot in the Community</Typography>
+						<Typography variant={'h1'}>{t('community.title')}</Typography>
 					</Stack>
 					<Stack className="community-main">
 						<Stack className={'community-left'}>
 							<Stack className={'content-top'}>
 								<Link href={'/community?articleCategory=NEWS'}>
-									<span>News</span>
+									<span>{t('community.news')}</span>
 								</Link>
 								<img src="/img/icons/arrowBig.svg" alt="" />
 							</Stack>
@@ -74,7 +77,7 @@ const CommunityBoards = () => {
 						<Stack className={'community-right'}>
 							<Stack className={'content-top'}>
 								<Link href={'/community?articleCategory=FREE'}>
-									<span>Free</span>
+									<span>{t('community.free')}</span>
 								</Link>
 								<img src="/img/icons/arrowBig.svg" alt="" />
 							</Stack>

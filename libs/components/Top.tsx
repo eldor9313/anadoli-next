@@ -201,13 +201,13 @@ const Top = () => {
 					<div>{t('Home')}</div>
 				</Link>
 				<Link href={'/property'}>
-					<div>{t('Properties')}</div>
+					<div>{t('Places')}</div>
 				</Link>
 				<Link href={'/agent'}>
 					<div> {t('Agents')} </div>
 				</Link>
 				<Link href={'/community?articleCategory=FREE'}>
-					<div> {t('Community')} </div>
+					<div> {t('Experiences')} </div>
 				</Link>
 				<Link href={'/cs'}>
 					<div> {t('CS')} </div>
@@ -220,10 +220,10 @@ const Top = () => {
 				<Stack className={'navbar'}>
 					<Stack className={'home-top'}>
 						<Box className={'top-left'}>
-							<span className={'text first-text'}>Welcome to Anadoli.</span>
-							<span className={'text second-text'}>
-								Discover the soul of Turkey through its hotels, historical treasures, and culinary delights.
-							</span>
+							<Box className={'top-left'}>
+								<span className={'text first-text'}>{t('welcomeTitle')}</span>
+								<span className={'text second-text'}>{t('welcomeDesc')}</span>
+							</Box>
 						</Box>
 						<Box className={'top-right'}>
 							<svg className={'icon1'} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -354,21 +354,33 @@ const Top = () => {
 												className="img-flag"
 												src={'/img/flag/langkr.png'}
 												onClick={langChoice}
-												id="uz"
+												id="kr"
 												alt={'koreanFlag'}
 											/>
 											{t('Korean')}
 										</MenuItem>
-										<MenuItem disableRipple onClick={langChoice} id="ru">
+										<MenuItem disableRipple onClick={langChoice} id="tr">
 											<img
 												className="img-flag"
 												src={'/img/flag/langtr.png'}
 												onClick={langChoice}
-												id="ru"
+												id="tr"
 												alt={'turkiyeFlag'}
 											/>
 											{t('Turkish')}
 										</MenuItem>
+
+										<MenuItem disableRipple onClick={langChoice} id="uz">
+											<img
+												className="img-flag"
+												src={'/img/flag/languz.png'}
+												onClick={langChoice}
+												id="uz"
+												alt={'uzbekFlag'}
+											/>
+											{t('Uzbek')}
+										</MenuItem>
+
 										<MenuItem disableRipple onClick={langChoice} id="ru">
 											<img
 												className="img-flag"

@@ -1,22 +1,204 @@
 {
-  "Home": "Home",
-  "Properties": "Properties",
-  "Agents": "Agents",
-  "Community": "Community",
-  "My Page": "My Page",
-  "CS": "CS",
-  "Login": "Login",
-  "Register": "Register",
-  "Location": "Location",
-  "Property type": "Property type",
-  "Rooms": "Rooms",
-  "Advanced": "Advanced",
-  "Property Search": "Property Search",
-  "We are glad to see you again!": "We are glad to see you again!",
-  "Home / For Rent": "Home / For Rent",
-  "Agent Page": "Agent Page",
-  "my page": "my page",
-  "Community Detail": "Community Detail",
-  "Login/Signup": "Login/Signup",
-  "Member Page": "Member Page"
+	"Home": "Home",
+	"Places": "Places",
+	"Agents": "Agents",
+	"Experiences": "Experiences",
+	"My Page": "My Page",
+	"CS": "CS",
+	"Login": "Login",
+	"Register": "Register",
+	"Location": "Location",
+	"Property type": "Property type",
+	"Rooms": "Rooms",
+	"Advanced": "Advanced",
+	"Property Search": "Property Search",
+	"We are glad to see you again!": "We are glad to see you again!",
+	"Home / For Rent": "Home / For Rent",
+	"Agent Page": "Agent Page",
+	"my page": "my page",
+	"Community Detail": "Community Detail",
+	"Login/Signup": "Login/Signup",
+	"Member Page": "Member Page",
+
+	"welcomeTitle": "Welcome to Anadoli.",
+	"welcomeDesc": "Discover the soul of Turkey through its hotels, historical treasures, and culinary delights.",
+
+	"slide": {
+		"sustainableTitle": "Turkiye's Sustainable",
+		"sustainableDesc": "Tourism Program",
+		"anadoluTitle": "Discover Anadolu",
+		"anadoluDesc": "Land of Culture & Nature",
+		"istanbulTitle": "Istanbul",
+		"istanbulDesc": "City of History & Culture",
+		"historyTitle": "Cultural & Historical",
+		"historyDesc": "Heritage Travel",
+		"cuisineTitle": "Turkish Cuisine",
+		"cuisineDesc": "Taste the Tradition"
+	},
+
+	"experience": {
+		"sustainable": "Sustainable Experiences",
+		"popular": "Most liked experiences"
+	},
+
+	"explore": {
+		"title": "Explore Türkiye",
+		"desc": "Based on popular views"
+	},
+
+	"seeAllCategories": "See All Categories",
+
+	"featured": {
+		"title": "Featured Destinations",
+		"desc": "Handpicked places loved by travelers"
+	},
+
+	"atv": {
+		"title": "Anadoli",
+		"desc": "TV"
+	},
+
+	"videos": {
+		"safe": {
+			"title": "Safe Tourism Türkiye",
+			"desc": "Experience Türkiye with world-class safety and hospitality."
+		},
+		"moments": { "title": "Most Shareable Moments", "desc": "Türkiye offers unforgettable experiences!" },
+		"landscapes": { "title": "Beautiful Landscapes", "desc": "Explore Türkiye's amazing scenery." },
+		"mugla": {
+			"title": "Discover Muğla",
+			"desc": "Sunny beaches, turquoise waters, and unforgettable holidays in Muğla, Türkiye."
+		},
+		"adventure": { "title": "Adventure & Nature", "desc": "Adventure awaits in Türkiye!" },
+		"winter": {
+			"title": "Winter Wonderland Türkiye",
+			"desc": "Snowy mountains, cozy villages, and magical winter adventures await in Türkiye."
+		},
+		"kids": {
+			"title": "Kids Love Türkiye",
+			"desc": "Fun adventures, amazing sights, and magical moments for the whole family in Türkiye!"
+		},
+		"gobekli": {
+			"title": "Göbekli Tepe",
+			"desc": "Explore the world’s oldest temple and uncover the mysteries of ancient Türkiye."
+		},
+		"taste": {
+			"title": "Taste of Türkiye",
+			"desc": "Experience the rich flavors and culinary traditions of Türkiye."
+		},
+		"cappadocia": {
+			"title": "Cappadocia Dreams",
+			"desc": "Fly above the fairy chimneys and feel the magic of Cappadocia’s sunrise."
+		}
+	},
+
+	"agents": {
+		"title": "Top Agents",
+		"desc": "Our Top Agents are always ready to serve you"
+	},
+
+	"seeAllAgents": "See All Agents",
+
+	"festival": {
+		"title": "Festivals & Events",
+		"desc": "Discover Türkiye’s vibrant celebrations"
+	},
+
+	"events": {
+		"tulip": {
+			"title": "Istanbul Tulip Festival",
+			"city": "Istanbul",
+			"desc": "Enjoy the stunning tulip displays at Istanbul’s annual festival!"
+		},
+		"dervish": {
+			"title": "Whirling Dervishes Festival",
+			"city": "Konya",
+			"desc": "Witness the spiritual Whirling Dervishes ceremony in Konya!"
+		},
+		"camel": {
+			"title": "Camel Wrestling Festival",
+			"city": "Eskisehir",
+			"desc": "Experience the thrilling Camel Wrestling Festival in Eskisehir!"
+		},
+		"balloon": {
+			"title": "The Hot Air Balloon Festival",
+			"city": "Cappadocia",
+			"desc": "See colorful hot air balloons over Cappadocia’s skies!"
+		}
+	},
+
+	"community": {
+		"title": "What’s Hot in the Community",
+		"news": "News",
+		"free": "Free"
+	},
+
+	"footer": {
+		"support": "Support",
+		"live": "Live Assistance",
+		"connect": "Connect with us on social media",
+		"discoverLine1": "Discover Türkiye from your inbox",
+		"discoverLine2": "Get inspired with new destinations,",
+		"discoverLine3": "stories, and travel offers.",
+		"placeholder": "Your Email",
+		"subscribe": "Subscribe",
+		"checkbox": "Your information is safe and secure. By subscribing, you consent to receive updates.",
+		"copyright": "Copyright © Anadoli 2025. All Rights Reserved.",
+		"privacy": "Privacy Policy",
+		"terms": "Terms of Service",
+		"sitemap": "Sitemap"
+	},
+
+	"pages": {
+		"property": {
+			"title": "Places Search",
+			"desc": "We are glad to see you again!"
+		},
+		"agent": { "title": "Agents", "desc": "Home / Our Agents" },
+		"agentDetail": { "title": "Agent Page", "desc": "Home / Agent Profile" },
+		"mypage": { "title": "My Page", "desc": "Home / Personal Dashboard" },
+		"community": { "title": "Community", "desc": "Home / Discussion Board" },
+		"communityDetail": {
+			"title": "Community Detail",
+			"desc": "Home / Post Details",
+			"bgImage": "/img/banner/places55.jpg"
+		},
+		"cs": { "title": "CS", "desc": "We are glad to see you again!" },
+		"accountJoin": { "title": "Login/Signup", "desc": "Authentication Process" },
+		"member": { "title": "Member Page" }
+	},
+
+	"sortMenu": {
+		"title": "Sort by",
+		"options": {
+			"new": "New",
+			"lowest": "Lowest Price",
+			"highest": "Highest Price"
+		},
+		"noProperties": "No Properties found!"
+	},
+
+	"search": {
+		"findYourStay": "Find Your Stay",
+		"category": "Category",
+		"destination": "Destination",
+		"price": "Price",
+		"totalFound": "{{count}} {{property}} Found",
+		"singular": "property",
+		"plural": "properties"
+	},
+
+	"sort": {
+		"sortBy": "Sort by",
+		"recent": "Recent",
+		"old": "Oldest",
+		"likes": "Likes",
+		"views": "Views"
+	},
+
+	"agent": {
+		"searchPlaceholder": "Search for an agent",
+		"noAgents": "No agents found!",
+		"totalAgents": "Total {{count}} agent{{plural}} available"
+	}
 }

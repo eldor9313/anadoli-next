@@ -16,6 +16,7 @@ import { GET_PROPERTIES } from '../../apollo/user/query';
 import { T } from '../../libs/types/common';
 import { LIKE_TARGET_PROPERTY } from '../../apollo/user/mutation';
 import { sweetMixinErrorAlert, sweetTopSmallSuccessAlert } from '../../libs/sweetAlert';
+import { useTranslation } from 'next-i18next';
 
 export const getStaticProps = async ({ locale }: any) => ({
 	props: {
@@ -24,6 +25,7 @@ export const getStaticProps = async ({ locale }: any) => ({
 });
 
 const PropertyList: NextPage = ({ initialInput, ...props }: any) => {
+	const { t, i18n } = useTranslation('common');
 	const device = useDeviceDetect();
 	const router = useRouter();
 	const [searchFilter, setSearchFilter] = useState<PropertiesInquiry>(
@@ -34,7 +36,7 @@ const PropertyList: NextPage = ({ initialInput, ...props }: any) => {
 	const [currentPage, setCurrentPage] = useState<number>(1);
 	const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 	const [sortingOpen, setSortingOpen] = useState(false);
-	const [filterSortName, setFilterSortName] = useState('New');
+	const [filterSortName, setFilterSortName] = useState<string>(t('sortMenu.options.new'));
 
 	/** APOLLO REQUESTS **/
 	const [likeTargetProperty] = useMutation(LIKE_TARGET_PROPERTY);
@@ -133,20 +135,20 @@ const PropertyList: NextPage = ({ initialInput, ...props }: any) => {
 			<div id="property-list-page" style={{ position: 'relative' }}>
 				<div className="container">
 					<Box component={'div'} className={'right'}>
-						<span>Sort by</span>
+						<span>{t('sortMenu.title')}</span>
 						<div>
 							<Button onClick={sortingClickHandler} endIcon={<KeyboardArrowDownRoundedIcon />}>
 								{filterSortName}
 							</Button>
 							<Menu anchorEl={anchorEl} open={sortingOpen} onClose={sortingCloseHandler} sx={{ paddingTop: '5px' }}>
 								<MenuItem onClick={sortingHandler} id={'new'} disableRipple>
-									New
+									{t('sortMenu.options.new')}
 								</MenuItem>
 								<MenuItem onClick={sortingHandler} id={'lowest'} disableRipple>
-									Lowest Price
+									{t('sortMenu.options.lowest')}
 								</MenuItem>
 								<MenuItem onClick={sortingHandler} id={'highest'} disableRipple>
-									Highest Price
+									{t('sortMenu.options.highest')}
 								</MenuItem>
 							</Menu>
 						</div>
@@ -161,7 +163,7 @@ const PropertyList: NextPage = ({ initialInput, ...props }: any) => {
 								{properties?.length === 0 ? (
 									<div className={'no-data'}>
 										<img src="/img/icons/icoAlert.svg" alt="" />
-										<p>No Properties found!</p>
+										<p>{t('sortMenu.noProperties')}</p>
 									</div>
 								) : (
 									properties.map((property: Property) => {
@@ -186,7 +188,10 @@ const PropertyList: NextPage = ({ initialInput, ...props }: any) => {
 								{properties.length !== 0 && (
 									<Stack className="total-result">
 										<Typography>
-											{total} {total > 1 ? 'Properties' : 'Property'} Found
+											{t('search.totalFound', {
+												count: total,
+												property: total > 1 ? t('search.plural') : t('search.singular'),
+											})}
 										</Typography>
 									</Stack>
 								)}

@@ -1,0 +1,221 @@
+{
+	"Home": "Bosh Sahifa",
+	"Places": "Joylar",
+	"Agents": "Agentlar",
+	"Experiences": "Tajriba",
+	"My Page": "Profil",
+	"CS": "Yordam",
+	"Login": "Kirish",
+	"Register": "Ro‘yxat",
+	"Location": "Manzil",
+	"Property type": "Turi",
+	"Rooms": "Xonalar",
+	"Advanced": "Kengayt.",
+	"Property Search": "Joy izlash",
+	"We are glad to see you again!": "Yana ko‘rganimizdan xursandmiz!",
+	"Home / For Rent": "Bosh / Ijara",
+	"Agent Page": "Agent sahifa",
+	"my page": "mening sahifam",
+	"Community Detail": "Jamoa tafsiloti",
+	"Login/Signup": "Kirish / Ro‘yxat",
+	"Member Page": "A’zo sahifa",
+
+	"welcomeTitle": "Anadoli saytiga xush kelibsiz.",
+	"welcomeDesc": "Turkiyaning mehmonxonalari, tarixiy boyliklari va taomlari orqali uning ruhini kashf eting.",
+
+	"Destination": "Yo‘nalish",
+	"Category": "Bo‘lim",
+
+	"slide": {
+		"sustainableTitle": "Turkiyaning barqaror",
+		"sustainableDesc": "Turizm dasturi",
+		"anadoluTitle": "Anadoluni kashf eting",
+		"anadoluDesc": "Madaniyat va tabiat yurtidir",
+		"istanbulTitle": "Istanbul",
+		"istanbulDesc": "Tarix va madaniyat shahri",
+		"historyTitle": "Madaniy va tarixiy",
+		"historyDesc": "Merosi bilan sayohat qiling",
+		"cuisineTitle": "Turk taomlari",
+		"cuisineDesc": "An’anaviy ta’mlarni tatib ko‘ring"
+	},
+
+	"experience": {
+		"sustainable": "Barqaror tajriba",
+		"popular": "Ommabop tajribalar"
+	},
+
+	"explore": {
+		"title": "Turkiyani kashf eting",
+		"desc": "Eng mashhur joylar"
+	},
+
+	"seeAllCategories": "Barcha toifalar",
+
+	"featured": {
+		"title": "Tanlangan joylar",
+		"desc": "Sayohatchilar yoqtirgan manzillar"
+	},
+
+	"atv": {
+		"title": "Anadoli",
+		"desc": "TV"
+	},
+
+	"videos": {
+		"safe": {
+			"title": "Xavfsiz Turizm",
+			"desc": "Turkiyada xavfsiz va mehmondo‘st muhitni his eting."
+		},
+		"moments": {
+			"title": "Unutilmas lahzalar",
+			"desc": "Turkiyada unutilmas tajribalarni toping!"
+		},
+		"landscapes": {
+			"title": "Go‘zal manzaralar",
+			"desc": "Tabiat mo‘jizalarini ko‘ring."
+		},
+		"mugla": {
+			"title": "Muğlani kashf eting",
+			"desc": "Quyoshli sohil va sokin dam olish sizni kutmoqda."
+		},
+		"adventure": {
+			"title": "Sarguzasht va tabiat",
+			"desc": "Sarguzasht Turkiyada sizni kutmoqda!"
+		},
+		"winter": {
+			"title": "Qish mo‘jizasi",
+			"desc": "Qorli tog‘lar va sehrli qish manzaralari."
+		},
+		"kids": {
+			"title": "Bolalar uchun Turkiya",
+			"desc": "Butun oila uchun quvnoq sarguzashtlar!"
+		},
+		"gobekli": {
+			"title": "Göbekli Tepe",
+			"desc": "Eng qadimgi ibodatxona sirlarini oching."
+		},
+		"taste": {
+			"title": "Turkiya ta’mlari",
+			"desc": "Turk oshxonasining boy lazzatlaridan bahra oling."
+		},
+		"cappadocia": {
+			"title": "Kapadokiya orzusi",
+			"desc": "Pari bacalar ustida uchib, sehrni his eting."
+		}
+	},
+
+	"agents": {
+		"title": "Yetakchi agentlar",
+		"desc": "Eng yaxshi agentlar sizga yordam beradi"
+	},
+
+	"seeAllAgents": "Barcha agentlar",
+
+	"festival": {
+		"title": "Festival va tadbirlar",
+		"desc": "Turkiyaning bayramlarini kashf eting"
+	},
+
+	"events": {
+		"tulip": {
+			"title": "Lola festivali",
+			"city": "Istanbul",
+			"desc": "Istanbuldagi lola bayrami go‘zalligidan bahramand bo‘ling!"
+		},
+		"dervish": {
+			"title": "Darvishlar festivali",
+			"city": "Konya",
+			"desc": "Konyada darvishlar marosimini tomosha qiling!"
+		},
+		"camel": {
+			"title": "Tuya kurashlari",
+			"city": "Eskishehir",
+			"desc": "Eskishehirdagi tuya janglarini ko‘ring!"
+		},
+		"balloon": {
+			"title": "Sharlar festivali",
+			"city": "Kapadokiya",
+			"desc": "Kapadokiya osmonidagi sharlarni tomosha qiling!"
+		}
+	},
+
+	"community": {
+		"title": "Jamoada dolzarb",
+		"news": "Yangiliklar",
+		"free": "Erkin mavzu"
+	},
+
+	"footer": {
+		"support": "Yordam",
+		"live": "Jonli aloqa",
+		"connect": "Biz bilan bog‘laning",
+		"discoverLine1": "Turkiyani pochtangizda kashf eting",
+		"discoverLine2": "Yangi yo‘nalishlardan ilhom oling,",
+		"discoverLine3": "sayohat hikoyalari va takliflar oling.",
+		"placeholder": "Email manzilingiz",
+		"subscribe": "Obuna bo‘ling",
+		"checkbox": "Ma’lumotlaringiz xavfsiz. Obuna bo‘lish orqali yangiliklarni olasiz.",
+		"copyright": "© Anadoli 2025. Barcha huquqlar himoyalangan.",
+		"privacy": "Maxfiylik",
+		"terms": "Shartlar",
+		"sitemap": "Xarita"
+	},
+
+	"pages": {
+		"property": {
+			"title": "Joylarni izlash",
+			"desc": "Sizni yana ko‘rganimizdan xursandmiz!"
+		},
+		"agent": { "title": "Agentlar", "desc": "Bosh sahifa / Bizning agentlar" },
+		"agentDetail": {
+			"title": "Agent sahifasi",
+			"desc": "Bosh sahifa / Agent profili"
+		},
+		"mypage": { "title": "Mening sahifam", "desc": "Bosh sahifa / Shaxsiy panel" },
+		"community": { "title": "Jamoa", "desc": "Bosh sahifa / Munozara taxtasi" },
+		"communityDetail": {
+			"title": "Jamoa tafsilotlari",
+			"desc": "Bosh sahifa / Post tafsilotlari"
+		},
+		"cs": { "title": "Yordam", "desc": "Sizni yana ko‘rganimizdan xursandmiz!" },
+		"accountJoin": {
+			"title": "Kirish / Ro‘yxatdan o‘tish",
+			"desc": "Autentifikatsiya jarayoni"
+		},
+		"member": { "title": "A’zo sahifasi" }
+	},
+
+	"sortMenu": {
+		"title": "Saralash",
+		"options": {
+			"new": "Yangi",
+			"lowest": "Eng past narx",
+			"highest": "Eng yuqori narx"
+		},
+		"noProperties": "Hech qanday uy topilmadi!"
+	},
+
+	"search": {
+		"findYourStay": "Turar joyingizni toping",
+		"category": "Kategoriya",
+		"destination": "Manzil",
+		"price": "Narx",
+		"totalFound": "{{count}} ta {{property}} topildi",
+		"singular": "obyekt",
+		"plural": "obyektlar"
+	},
+
+	"sort": {
+		"sortBy": "Saralash",
+		"recent": "Eng yangilari",
+		"old": "Eng eskilari",
+		"likes": "Layklar bo‘yicha",
+		"views": "Ko‘rishlar bo‘yicha"
+	},
+
+	"agent": {
+		"searchPlaceholder": "Agent qidiring",
+		"noAgents": "Hech qanday agent topilmadi!",
+		"totalAgents": "Jami {{count}} ta agent mavjud"
+	}
+}

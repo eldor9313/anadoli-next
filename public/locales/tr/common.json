@@ -1,0 +1,209 @@
+{
+	"Home": "Ana Sayfa",
+	"Places": "Yerler",
+	"Agents": "Ajanlar",
+	"Experiences": "Deneyim",
+	"My Page": "Profil",
+	"CS": "Destek",
+	"Login": "Giriş",
+	"Register": "Kayit",
+	"Location": "Konum",
+	"Property type": "Emlak Türü",
+	"Rooms": "Odalar",
+	"Advanced": "Gelişmiş Filtre",
+	"Property Search": "Emlak Arama",
+	"We are glad to see you again!": "Seni tekrar gördüğümüze sevindik!",
+	"Home / For Rent": "Ana Sayfa / Kiralik",
+	"Agent Page": "Ajan Sayfasi",
+	"my page": "benim sayfam",
+	"Community Detail": "Topluluk Detayi",
+	"Login/Signup": "Giriş / Kayit",
+	"Member Page": "Üye Sayfasi",
+
+	"welcomeTitle": "Anadoli'ye hoş geldiniz.",
+	"welcomeDesc": "Otelleri, tarihî hazineleri ve mutfak lezzetleriyle Türkiye'nin ruhunu keşfedin.",
+
+	"Destination": "Rota",
+	"Category": "Kategori",
+
+	"slide": {
+		"sustainableTitle": "Türkiye'nin Sürdürülebilir Turizm Programi",
+		"sustainableDesc": "Doğa ve Kültürle Uyum İçinde Seyahat",
+		"anadoluTitle": "Anadolu'yu Keşfet",
+		"anadoluDesc": "Kültür ve Doğanin Buluştuğu Diyar",
+		"istanbulTitle": "İstanbul",
+		"istanbulDesc": "Tarihin ve Kültürün Şehri",
+		"historyTitle": "Kültürel ve Tarihî Miras",
+		"historyDesc": "Miras Yolculuğu",
+		"cuisineTitle": "Türk Mutfaği",
+		"cuisineDesc": "Geleneklerin Tadina Varin"
+	},
+
+	"experience": {
+		"sustainable": "Sürdürülebilir Deneyimler",
+		"popular": "En Beğenilen Deneyimler"
+	},
+
+	"explore": {
+		"title": "Türkiye’yi Keşfet",
+		"desc": "Popüler görüşlere göre"
+	},
+
+	"seeAllCategories": "Tüm Kategorileri Gör",
+
+	"featured": {
+		"title": "Öne Çıkan Destinasyonlar",
+		"desc": "Seyahatseverlerin sevdiği özenle seçilmiş yerler"
+	},
+
+	"atv": {
+		"title": "Anadoli",
+		"desc": "TV"
+	},
+
+	"videos": {
+		"safe": {
+			"title": "Güvenli Turizm Türkiye",
+			"desc": "Dünya standartlarında güvenlik ve misafirperverlikle Türkiye’yi deneyimleyin."
+		},
+		"moments": { "title": "Paylaşılabilir Anlar", "desc": "Türkiye unutulmaz deneyimler sunuyor!" },
+		"landscapes": { "title": "Güzel Manzaralar", "desc": "Türkiye'nin muhteşem doğasını keşfedin." },
+		"mugla": {
+			"title": "Muğla’yı Keşfet",
+			"desc": "Güneşli plajlar, turkuaz sular ve unutulmaz tatiller Türkiye’nin Muğla şehrinde sizi bekliyor."
+		},
+		"adventure": { "title": "Macera ve Doğa", "desc": "Macera Türkiye’de sizi bekliyor!" },
+		"winter": {
+			"title": "Kış Masalı Türkiye",
+			"desc": "Karlı dağlar, sıcak köyler ve büyüleyici kış maceraları sizi bekliyor."
+		},
+		"kids": {
+			"title": "Çocuklar Türkiye’yi Seviyor",
+			"desc": "Tüm aile için eğlenceli maceralar, harika manzaralar ve büyülü anlar!"
+		},
+		"gobekli": {
+			"title": "Göbekli Tepe",
+			"desc": "Dünyanın en eski tapınağını keşfedin ve antik Türkiye’nin gizemini çözün."
+		},
+		"taste": {
+			"title": "Türkiye’nin Lezzeti",
+			"desc": "Türkiye’nin zengin tatlarını ve mutfak geleneklerini deneyimleyin."
+		},
+		"cappadocia": {
+			"title": "Kapadokya Rüyası",
+			"desc": "Peri bacalarının üzerinde uçun ve Kapadokya’nın büyülü gün doğumunu hissedin."
+		}
+	},
+
+	"agents": {
+		"title": "En İyi Acenteler",
+		"desc": "En iyi acentelerimiz size her zaman hizmet etmeye hazırdır."
+	},
+
+	"seeAllAgents": "Tüm Acenteleri Gör",
+
+	"festival": {
+		"title": "Festivaller ve Etkinlikler",
+		"desc": "Türkiye’nin renkli kutlamalarını keşfedin"
+	},
+
+	"events": {
+		"tulip": {
+			"title": "İstanbul Lale Festivali",
+			"city": "İstanbul",
+			"desc": "İstanbul’un yıllık festivalinde muhteşem lale gösterilerinin keyfini çıkarın!"
+		},
+		"dervish": {
+			"title": "Mevlevi Dervişleri Festivali",
+			"city": "Konya",
+			"desc": "Konya’da manevi Mevlevi sema törenine tanık olun!"
+		},
+		"camel": {
+			"title": "Deve Güreşi Festivali",
+			"city": "Eskişehir",
+			"desc": "Eskişehir’de heyecan dolu Deve Güreşi Festivali’ni deneyimleyin!"
+		},
+		"balloon": {
+			"title": "Sıcak Hava Balonu Festivali",
+			"city": "Kapadokya",
+			"desc": "Kapadokya semalarında rengarenk sıcak hava balonlarını izleyin!"
+		}
+	},
+
+	"community": {
+		"title": "Toplulukta Neler Popüler",
+		"news": "Haberler",
+		"free": "Serbest"
+	},
+
+	"footer": {
+		"support": "Destek",
+		"live": "Canlı Yardım",
+		"connect": "Bizi sosyal medyada takip edin",
+		"discoverLine1": "E-posta kutunuzdan Türkiye'yi keşfedin",
+		"discoverLine2": "Yeni destinasyonlardan ilham alın,",
+		"discoverLine3": "hikayeler ve seyahat fırsatlarını keşfedin.",
+		"placeholder": "E-posta adresiniz",
+		"subscribe": "Abone Ol",
+		"checkbox": "Bilgileriniz güvende. Abone olarak güncellemeleri almayı kabul ediyorsunuz.",
+		"copyright": "Telif Hakkı © Anadoli 2025. Tüm Hakları Saklıdır.",
+		"privacy": "Gizlilik Politikası",
+		"terms": "Hizmet Şartları",
+		"sitemap": "Site Haritası"
+	},
+
+	"pages": {
+		"property": {
+			"title": "Mekan Arama",
+			"desc": "Sizi tekrar görmekten mutluyuz!"
+		},
+		"agent": { "title": "Acenteler", "desc": "Ana Sayfa / Acentelerimiz" },
+		"agentDetail": {
+			"title": "Acenta Sayfası",
+			"desc": "Ana Sayfa / Acenta Profili"
+		},
+		"mypage": { "title": "Benim Sayfam", "desc": "Ana Sayfa / Kişisel Panel" },
+		"community": { "title": "Topluluk", "desc": "Ana Sayfa / Tartışma Panosu" },
+		"communityDetail": {
+			"title": "Topluluk Detayı",
+			"desc": "Ana Sayfa / Gönderi Detayları"
+		},
+		"cs": { "title": "CS", "desc": "Sizi tekrar görmekten mutluyuz!" },
+		"accountJoin": { "title": "Giriş/Kayıt", "desc": "Kimlik Doğrulama Süreci" },
+		"member": { "title": "Üye Sayfası" }
+	},
+
+	"sortMenu": {
+		"title": "Sırala",
+		"options": {
+			"new": "Yeni",
+			"lowest": "En Düşük Fiyat",
+			"highest": "En Yüksek Fiyat"
+		},
+		"noProperties": "Mülk bulunamadı!"
+	},
+
+	"search": {
+		"findYourStay": "Konaklamanizi bulun",
+		"category": "Kategori",
+		"destination": "Hedef",
+		"price": "Fiyat",
+		"totalFound": "Найдено {{count}} {{property}}",
+		"singular": "mülk",
+		"plural": "mülkler"
+	},
+
+	"sort": {
+		"sortBy": "Sirala",
+		"recent": "En yeni",
+		"old": "En eski",
+		"likes": "Beğeniler",
+		"views": "Görüntüleme"
+	},
+
+	"agent": {
+		"searchPlaceholder": "Ajan ara",
+		"noAgents": "Ajan bulunamadi!",
+		"totalAgents": "Toplam {{count}} ajan mevcut"
+	}
+}

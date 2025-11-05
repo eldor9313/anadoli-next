@@ -29,48 +29,49 @@ const withLayoutBasic = (Component: any) => {
 
 			switch (router.pathname) {
 				case '/property':
-					title = 'Places Search';
-					desc = 'We are glad to see you again!';
+					title = t('pages.property.title');
+					desc = t('pages.property.desc');
 					bgImage = '/img/banner/places2.jpg';
 					break;
 				case '/agent':
-					title = 'Agents';
-					desc = 'Home / Our Agents';
+					title = t('pages.agent.title');
+					desc = t('pages.agent.desc');
 					bgImage = '/img/banner/places2.jpg';
 					break;
 				case '/agent/detail':
-					title = 'Agent Page';
-					desc = 'Home / Agent Profile';
+					title = t('pages.agentDetail.title');
+					desc = t('pages.agentDetail.desc');
 					bgImage = '/img/banner/places2.jpg';
 					break;
 				case '/mypage':
-					title = 'my page';
-					desc = 'Home / Personal Dashboard';
+					title = t('pages.mypage.title');
+					desc = t('pages.mypage.desc');
 					bgImage = '/img/banner/place4.jpg';
 					break;
 				case '/community':
-					title = 'Community';
-					desc = 'Home / Discussion Board';
+					title = t('pages.community.title');
+					desc = t('pages.community.desc');
 					bgImage = '/img/banner/places55.jpg';
 					break;
 				case '/community/detail':
-					title = 'Community Detail';
-					desc = 'Home / Post Details';
+					title = t('pages.communityDetail.title');
+					desc = t('pages.communityDetail.desc');
 					bgImage = '/img/banner/places55.jpg';
 					break;
 				case '/cs':
-					title = 'CS';
-					desc = 'We are glad to see you again!';
+					title = t('pages.cs.title');
+					desc = t('pages.cs.desc');
 					bgImage = '/img/banner/places3.jpg';
 					break;
 				case '/account/join':
-					title = 'Login/Signup';
-					desc = 'Authentication Process';
+					title = t('pages.accountJoin.title');
+					desc = t('pages.accountJoin.desc');
 					bgImage = '/img/banner/log-sig.jpg';
 					setAuthHeader(true);
 					break;
 				case '/member':
-					title = 'Member Page';
+					title = t('pages.member.title');
+					desc = t('pages.member.desc');
 					bgImage = '/img/banner/places2.jpg';
 					break;
 				default:

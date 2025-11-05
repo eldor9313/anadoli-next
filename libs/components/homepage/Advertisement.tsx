@@ -1,59 +1,7 @@
 import React, { useRef, useState, useCallback, useEffect } from 'react';
 import useDeviceDetect from '../../hooks/useDeviceDetect';
 import { Box, Stack } from '@mui/material';
-
-const videos = [
-	{
-		id: 1,
-		src: '/video/tv/002.mp4',
-		title: 'Safe Tourism Türkiye',
-		desc: 'Experience Türkiye with world-class safety and hospitality.',
-	},
-	{
-		id: 2,
-		src: '/video/tv/003.mp4',
-		title: 'Most Shareable Moments',
-		desc: 'Türkiye offers unforgettable experiences!',
-	},
-	{ id: 3, src: '/video/tv/004.mp4', title: 'Beautiful Landscapes', desc: "Explore Türkiye's amazing scenery." },
-	{
-		id: 4,
-		src: '/video/tv/005.mp4',
-		title: 'Discover Muğla',
-		desc: 'Sunny beaches, turquoise waters, and unforgettable holidays in Muğla, Türkiye.',
-	},
-	{ id: 5, src: '/video/tv/006.mp4', title: 'Adventure & Nature', desc: 'Adventure awaits in Türkiye!' },
-	{
-		id: 6,
-		src: '/video/tv/007.mp4',
-		title: 'Winter Wonderland Türkiye',
-		desc: 'Snowy mountains, cozy villages, and magical winter adventures await in Türkiye.',
-	},
-	{
-		id: 7,
-		src: '/video/tv/008.mp4',
-		title: 'Kids Love Türkiye',
-		desc: 'Fun adventures, amazing sights, and magical moments for the whole family in Türkiye!',
-	},
-	{
-		id: 8,
-		src: '/video/tv/009.mp4',
-		title: 'Göbekli Tepe',
-		desc: 'Explore the world’s oldest temple and uncover the mysteries of ancient Türkiye.',
-	},
-	{
-		id: 9,
-		src: '/video/tv/010.mp4',
-		title: 'Taste of Türkiye',
-		desc: 'Experience the rich flavors and culinary traditions of Türkiye.',
-	},
-	{
-		id: 10,
-		src: '/video/tv/012.mp4',
-		title: 'Cappadocia Dreams',
-		desc: 'Fly above the fairy chimneys and feel the magic of Cappadocia’s sunrise.',
-	},
-];
+import { useTranslation } from 'next-i18next';
 
 const Advertisement = () => {
 	const device = useDeviceDetect();
@@ -62,10 +10,63 @@ const Advertisement = () => {
 	const carouselRef = useRef<HTMLDivElement>(null);
 	const videoRefs = useRef<{ [key: number]: HTMLVideoElement | null }>({});
 
-	// Faqat 3 ta videoni ko'rsatish
+	const { t, i18n } = useTranslation('common');
+
+	const videos = [
+		{
+			id: 1,
+			src: '/video/tv/002.mp4',
+			title: t('videos.safe.title'),
+			desc: t('videos.safe.desc'),
+		},
+		{
+			id: 2,
+			src: '/video/tv/003.mp4',
+			title: t('videos.moments.title'),
+			desc: t('videos.moments.desc'),
+		},
+		{ id: 3, src: '/video/tv/004.mp4', title: t('videos.landscapes.title'), desc: t('videos.landscapes.desc') },
+		{
+			id: 4,
+			src: '/video/tv/005.mp4',
+			title: t('videos.mugla.title'),
+			desc: t('videos.mugla.desc'),
+		},
+		{ id: 5, src: '/video/tv/006.mp4', title: t('videos.adventure.title'), desc: t('videos.adventure.desc') },
+		{
+			id: 6,
+			src: '/video/tv/007.mp4',
+			title: t('videos.winter.title'),
+			desc: t('videos.winter.desc'),
+		},
+		{
+			id: 7,
+			src: '/video/tv/008.mp4',
+			title: t('videos.kids.title'),
+			desc: t('videos.kids.desc'),
+		},
+		{
+			id: 8,
+			src: '/video/tv/009.mp4',
+			title: t('videos.gobekli.title'),
+			desc: t('videos.gobekli.desc'),
+		},
+		{
+			id: 9,
+			src: '/video/tv/010.mp4',
+			title: t('videos.taste.title'),
+			desc: t('videos.taste.desc'),
+		},
+		{
+			id: 10,
+			src: '/video/tv/012.mp4',
+			title: t('videos.cappadocia.title'),
+			desc: t('videos.cappadocia.desc'),
+		},
+	];
+
 	const visibleVideos = videos.slice(currentIndex, currentIndex + 3);
 
-	// Agar oxiriga yetib borsa, boshidan boshlash
 	useEffect(() => {
 		if (currentIndex + 3 > videos.length) {
 			setCurrentIndex(0);
@@ -140,8 +141,8 @@ const Advertisement = () => {
 		<Stack className={'tv-box'}>
 			<Stack className={'tv-text'}>
 				<Box className={'text'}>
-					<span>Anadoli </span>
-					<p>tv</p>
+					<span>{t('atv.title')}</span>
+					<p>{t('atv.desc')}</p>
 				</Box>
 			</Stack>
 			<Stack className="video-carousel-container">

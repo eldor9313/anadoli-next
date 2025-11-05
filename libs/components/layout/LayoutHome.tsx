@@ -10,59 +10,61 @@ import { userVar } from '../../../apollo/store';
 import { useReactiveVar } from '@apollo/client';
 import { getJwtToken, updateUserInfo } from '../../auth';
 import Chat from '../Chat';
-
-const slideContents = [
-	{
-		type: 'imageGroup',
-		// src: '/img/banner/header01.webp',
-		slides: [
-			'/img/banner/header01.webp',
-			'/img/banner/header02.webp',
-			'/img/banner/header03.webp',
-			'/img/banner/header04.webp',
-		],
-		thumb: '/img/thumbs/travel.jpg',
-		title: "Turkiye's Sustainable",
-		description: 'Tourism Program',
-	},
-	{
-		type: 'video',
-		src: '/video/Anadolu.mp4',
-		thumb: '/img/thumbs/anadolu1.jpg',
-		title: 'Discover Anadolu',
-		description: 'Land of Culture & Nature',
-	},
-	{
-		type: 'video',
-		src: '/video/Istanbul001.mp4',
-		thumb: '/img/thumbs/istanbul1.jpg',
-		title: 'Istanbul',
-		description: 'City of History & Culture',
-	},
-	{
-		type: 'video',
-		src: '/video/Historical001.mp4',
-		thumb: '/img/thumbs/history.jpg',
-		title: 'Cultural & Historical',
-		description: 'Heritage Travel',
-	},
-	{
-		type: 'video',
-		src: '/video/Cuisine001.mp4',
-		thumb: '/img/thumbs/cuisine.jpg',
-		title: 'Turkish Cuisine',
-		description: 'Taste the Tradition',
-	},
-];
+import { useTranslation } from 'next-i18next';
 
 const withLayoutMain = (Component: any) => {
 	return (props: any) => {
 		const device = useDeviceDetect();
 		const user = useReactiveVar(userVar);
 
+		const { t, i18n } = useTranslation('common');
+
 		// Background img handler
 		const [mainIndex, setMainIndex] = useState(0);
 		const [innerIndex, setInnerIndex] = useState(0);
+
+		const slideContents = [
+			{
+				type: 'imageGroup',
+				slides: [
+					'/img/banner/header01.webp',
+					'/img/banner/header02.webp',
+					'/img/banner/header03.webp',
+					'/img/banner/header04.webp',
+				],
+				thumb: '/img/thumbs/travel.jpg',
+				title: t('slide.sustainableTitle'),
+				description: t('slide.sustainableDesc'),
+			},
+			{
+				type: 'video',
+				src: '/video/Anadolu.mp4',
+				thumb: '/img/thumbs/anadolu1.jpg',
+				title: t('slide.anadoluTitle'),
+				description: t('slide.anadoluDesc'),
+			},
+			{
+				type: 'video',
+				src: '/video/Istanbul001.mp4',
+				thumb: '/img/thumbs/istanbul1.jpg',
+				title: t('slide.istanbulTitle'),
+				description: t('slide.istanbulDesc'),
+			},
+			{
+				type: 'video',
+				src: '/video/Historical001.mp4',
+				thumb: '/img/thumbs/history.jpg',
+				title: t('slide.historyTitle'),
+				description: t('slide.historyDesc'),
+			},
+			{
+				type: 'video',
+				src: '/video/Cuisine001.mp4',
+				thumb: '/img/thumbs/cuisine.jpg',
+				title: t('slide.cuisineTitle'),
+				description: t('slide.cuisineDesc'),
+			},
+		];
 
 		useEffect(() => {
 			if (slideContents[mainIndex]?.type === 'imageGroup') {
