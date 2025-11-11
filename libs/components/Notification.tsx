@@ -181,6 +181,7 @@ const Notifications = ({ initialInput, open, onClose }: NotificationsProps) => {
 				<Divider sx={{ mb: 1 }} />
 
 				{/* Tabs */}
+				{/* @ts-ignore */}
 				<Box sx={{ mb: 1 }}>
 					<Tabs
 						value={tab}
