@@ -96,11 +96,11 @@ const Footer = () => {
 						</Box>
 					</Stack>
 					<Stack>
-						<Box className={'footer-box'}>
+						<div className="footer-box">
 							<Link href={'/'}>
 								<img src="/img/logo/logofoot001.png" alt="" className={'logo'} />
 							</Link>
-						</Box>
+						</div>
 					</Stack>
 					<Stack className={'right'}>
 						<Box component={'div'} className={'top'}>
