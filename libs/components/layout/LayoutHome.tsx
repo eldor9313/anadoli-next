@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import useDeviceDetect from '../../hooks/useDeviceDetect';
 import Head from 'next/head';
 import Top from '../Top';
@@ -23,48 +23,51 @@ const withLayoutMain = (Component: any) => {
 		const [mainIndex, setMainIndex] = useState(0);
 		const [innerIndex, setInnerIndex] = useState(0);
 
-		const slideContents = [
-			{
-				type: 'imageGroup',
-				slides: [
-					'/img/banner/header01.webp',
-					'/img/banner/header02.webp',
-					'/img/banner/header03.webp',
-					'/img/banner/header04.webp',
-				],
-				thumb: '/img/thumbs/travel.jpg',
-				title: t('slide.sustainableTitle'),
-				description: t('slide.sustainableDesc'),
-			},
-			{
-				type: 'video',
-				src: '/video/Anadolu.mp4',
-				thumb: '/img/thumbs/anadolu1.jpg',
-				title: t('slide.anadoluTitle'),
-				description: t('slide.anadoluDesc'),
-			},
-			{
-				type: 'video',
-				src: '/video/Istanbul001.mp4',
-				thumb: '/img/thumbs/istanbul1.jpg',
-				title: t('slide.istanbulTitle'),
-				description: t('slide.istanbulDesc'),
-			},
-			{
-				type: 'video',
-				src: '/video/Historical001.mp4',
-				thumb: '/img/thumbs/history.jpg',
-				title: t('slide.historyTitle'),
-				description: t('slide.historyDesc'),
-			},
-			{
-				type: 'video',
-				src: '/video/Cuisine001.mp4',
-				thumb: '/img/thumbs/cuisine.jpg',
-				title: t('slide.cuisineTitle'),
-				description: t('slide.cuisineDesc'),
-			},
-		];
+		const slideContents = useMemo(
+			() => [
+				{
+					type: 'imageGroup',
+					slides: [
+						'/img/banner/header01.webp',
+						'/img/banner/header02.webp',
+						'/img/banner/header03.webp',
+						'/img/banner/header04.webp',
+					],
+					thumb: '/img/thumbs/travel.jpg',
+					title: t('slide.sustainableTitle'),
+					description: t('slide.sustainableDesc'),
+				},
+				{
+					type: 'video',
+					src: '/video/Anadolu.mp4',
+					thumb: '/img/thumbs/anadolu1.jpg',
+					title: t('slide.anadoluTitle'),
+					description: t('slide.anadoluDesc'),
+				},
+				{
+					type: 'video',
+					src: '/video/Istanbul001.mp4',
+					thumb: '/img/thumbs/istanbul1.jpg',
+					title: t('slide.istanbulTitle'),
+					description: t('slide.istanbulDesc'),
+				},
+				{
+					type: 'video',
+					src: '/video/Historical001.mp4',
+					thumb: '/img/thumbs/history.jpg',
+					title: t('slide.historyTitle'),
+					description: t('slide.historyDesc'),
+				},
+				{
+					type: 'video',
+					src: '/video/Cuisine001.mp4',
+					thumb: '/img/thumbs/cuisine.jpg',
+					title: t('slide.cuisineTitle'),
+					description: t('slide.cuisineDesc'),
+				},
+			],
+			[],
+		);
 
 		useEffect(() => {
 			if (slideContents[mainIndex]?.type === 'imageGroup') {
@@ -73,7 +76,7 @@ const withLayoutMain = (Component: any) => {
 					if (current?.type === 'imageGroup' && current.slides?.length) {
 						setInnerIndex((prev) => (prev + 1) % current.slides.length);
 					}
-				}, 4000);
+				}, 6000);
 				return () => clearInterval(innerTimer);
 			}
 		}, [mainIndex]);

@@ -46,7 +46,7 @@ interface MessagePayload {
 
 interface InfoPayload {
 	event: string;
-	totalClient: number;
+	totalClients: number;
 	memberData: Member;
 	action: string;
 }
@@ -67,25 +67,19 @@ const Chat = () => {
 	useEffect(() => {
 		socket.onmessage = (msg) => {
 			const data = JSON.parse(msg.data);
-			console.log('WebSocket message:', data);
-
 			switch (data.event) {
 				case 'info':
-					const newInfo: InfoPayload = data;
-					setOnlineUsers(newInfo.totalClient);
+					setOnlineUsers((data as InfoPayload).totalClients);
 					break;
 				case 'getMessages':
-					const list: MessagePayload[] = data.list;
-					setMessagesList(list);
+					setMessagesList(data.list as MessagePayload[]);
 					break;
 				case 'message':
-					const NewMessage: MessagePayload = data;
-					messagesList.push(NewMessage);
-					setMessagesList([...messagesList]);
+					setMessagesList((prev) => [...prev, data as MessagePayload]);
 					break;
 			}
 		};
-	}, [socket, messagesList]);
+	}, [socket]);
 
 	useEffect(() => {
 		const timeoutId = setTimeout(() => {
@@ -103,17 +97,14 @@ const Chat = () => {
 		setOpen((prevState) => !prevState);
 	};
 
-	const getInputMessageHandler = useCallback(
-		(e: any) => {
-			const text = e.target.value;
-			setMessageInput(text);
-		},
-		[messageInput],
-	);
+	const getInputMessageHandler = useCallback((e: any) => {
+		const text = e.target.value;
+		setMessageInput(text);
+	}, []);
 
 	const getKeyHandler = (e: any) => {
 		try {
-			if (e.key == 'Enter') {
+			if (e.key === 'Enter') {
 				onClickHandler();
 			}
 		} catch (err: any) {
@@ -147,7 +138,7 @@ const Chat = () => {
 							<Box flexDirection={'row'} style={{ display: 'flex' }} sx={{ m: '10px 0px' }} component={'div'}>
 								<div className={'welcome'}>Welcome to Live chat!</div>
 							</Box>
-							{messagesList.map((ele: MessagePayload) => {
+							{messagesList.map((ele: MessagePayload, idx) => {
 								const { text, memberData } = ele;
 								const memberImage = memberData?.memberImage
 									? `${REACT_APP_API_URL}/${memberData.memberImage}`
@@ -155,6 +146,7 @@ const Chat = () => {
 
 								return memberData?._id === user?._id ? (
 									<Box
+										key={idx}
 										component={'div'}
 										flexDirection={'row'}
 										style={{ display: 'flex' }}
@@ -165,8 +157,14 @@ const Chat = () => {
 										<div className={'msg-right'}>{text}</div>
 									</Box>
 								) : (
-									<Box flexDirection={'row'} style={{ display: 'flex' }} sx={{ m: '10px 0px' }} component={'div'}>
-										<Avatar alt={'jonik'} src={memberImage} />
+									<Box
+										key={idx}
+										flexDirection={'row'}
+										style={{ display: 'flex' }}
+										sx={{ m: '10px 0px' }}
+										component={'div'}
+									>
+										<Avatar alt={'member'} src={memberImage} />
 										<div className={'msg-left'}>{text}</div>
 									</Box>
 								);
